@@ -4,7 +4,8 @@
   "description": "Attila Szeremi's portfolio website",
   "main": "index.js",
   "scripts": {
-    "dev-server": "node webpack-dev-server.js"
+    "dev-server": "node webpack-dev-server.js",
+    "webpack": "node node_modules/webpack/bin/webpack.js"
   },
   "repository": {
     "type": "git",
