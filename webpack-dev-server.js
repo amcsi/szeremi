@@ -7,7 +7,7 @@ config.entry.app.unshift("webpack-dev-server/client?http://localhost:" + port);
 var compiler = webpack(config);
 
 var devServer = new WebpackDevServer(compiler, {
-    contentBase: 'public',
+    contentBase: config.output.publicPath,
     inline: true,
     hot: true,
     quiet: false,
