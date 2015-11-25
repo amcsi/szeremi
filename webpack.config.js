@@ -15,6 +15,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.jsx?$/,
+                include: /\/app\//,
                 loader: 'babel',
                 query: {
                     presets: ['react', 'es2015']
@@ -51,5 +52,3 @@ module.exports = {
         new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 20 })
     ]
 };
-function escapeRegExpString(str) { return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&"); }
-function pathToRegExp(p) { return new RegExp("^" + escapeRegExpString(p)); }
