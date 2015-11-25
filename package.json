@@ -1,0 +1,44 @@
+{
+  "name": "szeremi",
+  "version": "1.0.0",
+  "description": "Attila Szeremi's portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "dev-server": "node webpack-dev-server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amcsi/szeremi.git"
+  },
+  "author": "Attila Szeremi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amcsi/szeremi/issues"
+  },
+  "homepage": "https://github.com/amcsi/szeremi#readme",
+  "devDependencies": {
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "bootstrap": "^3.3.6",
+    "css-loader": "^0.23.0",
+    "eslint": "^1.10.1",
+    "eslint-loader": "^1.1.1",
+    "eslint-plugin-react": "^3.10.0",
+    "history": "^1.13.1",
+    "jshint": "^2.8.0",
+    "jshint-loader": "^0.8.3",
+    "node-sass": "^3.4.2",
+    "path": "^0.12.7",
+    "react": "^0.14.3",
+    "react-bootstrap": "^0.28.1",
+    "react-dom": "^0.14.3",
+    "react-hot-loader": "^1.3.0",
+    "react-router": "^1.0.0",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  }
+}
