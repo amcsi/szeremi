@@ -8,14 +8,14 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, "public/build"),
-        publicPath: "public/",
+        publicPath: "/build/",
         filename: "app.js"
     },
     module: {
         loaders: [
             {
                 test: /\.jsx?$/,
-                include: /\/app\//,
+                include: /[\/\\]app[\/\\]/,
                 loader: 'babel',
                 query: {
                     presets: ['react', 'es2015']
@@ -33,7 +33,7 @@ module.exports = {
             { test: /\.svg$/,    loader: "file-loader?prefix=font/" },
         ],
         preLoaders: [
-            {test: /\.jsx?$/, loader: "eslint-loader", exclude: /node_modules/}
+            //{test: /\.jsx?$/, loader: "eslint-loader", exclude: /node_modules/}
         ]
     },
     eslint: {

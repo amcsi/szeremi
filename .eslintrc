@@ -1,11 +1,3 @@
 {
-  "ecmaFeatures": {
-    "arrowFunctions": true,
-    "destructuring": true,
-    "generators": true,
-    "objectLiteralShorthandMethods": true,
-    "modules": true,
-    "jsx": true
-  },
-  "plugins": [ "react" ]
+  "extends": "airbnb/base"
 }
