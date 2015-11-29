@@ -1,12 +1,17 @@
-var webpack = require('webpack');
-var config = require('./webpack.config.js');
-var WebpackDevServer = require('webpack-dev-server');
+// Strict mode is needed for 'let' to work.
+'use strict';
+const webpack = require('webpack');
+const config = require('./webpack.config.js');
+const WebpackDevServer = require('webpack-dev-server');
+const port = 3000;
+let compiler;
+let devServer;
 
-var port = 3000;
-config.entry.app.unshift("webpack-dev-server/client?http://localhost:" + port);
-var compiler = webpack(config);
+config.entry.app.unshift('webpack-dev-server/client?http://localhost:' + port, 'webpack/hot/dev-server');
+config.plugins.push(new webpack.HotModuleReplacementPlugin());
+compiler = webpack(config);
 
-var devServer = new WebpackDevServer(compiler, {
+devServer = new WebpackDevServer(compiler, {
   // Where the fallback files e.g. index.html and images should be served from.
   contentBase: 'public/',
   // Where the webpack magic files should be server from.
@@ -15,10 +20,13 @@ var devServer = new WebpackDevServer(compiler, {
   hot: true,
   quiet: false,
   noInfo: false,
-  stats: { colors: true }
+  stats: {colors: true},
 });
-// launch webpack dev server
-devServer.listen(port, function() {
+
+function DevServer() {
   console.log('[webpack-dev-server]' + ' listening on port ' + port);
   console.log('[webpack-dev-server]' + ' building the app...');
-});
+}
+
+// launch webpack dev server
+devServer.listen(port, DevServer);
