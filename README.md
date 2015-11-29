@@ -3,6 +3,10 @@ Source code for Attila Szeremi's portfolio website
 
 Follows atomic design: http://patternlab.io/
 
+## License
+
+MIT
+
 ## Requirements
 
 `node` and `npm` need to have been installed.
@@ -19,10 +23,15 @@ cd ~/szeremi
 # 3. Install the dependencies.
 npm install
 ```
+
 ## Running
 
 ```sh
 npm run dev-server
 ```
 
-You should now be able to access the website on http://localhost:3000/app
+You should now be able to access the website on http://localhost:3000/
+
+## Contributing
+
+This project follows the [Airbnb Javascript Style Guide](https://github.com/airbnb/javascript)
