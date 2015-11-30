@@ -20,7 +20,11 @@ devServer = new WebpackDevServer(compiler, {
   hot: true,
   quiet: false,
   noInfo: false,
-  stats: {colors: true},
+  stats: {
+    // Do not display chunk information on output.
+    chunks: false,
+    colors: true,
+  },
 });
 
 function DevServer() {
