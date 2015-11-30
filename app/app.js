@@ -1,5 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from 'pages/App';
 
-ReactDOM.render(<App />, document.getElementById('main'));
+/**
+ * Wrapper to catch errors during development with the help of the react-redbox transformer.
+ */
+const Root = React.createClass({
+  render() {
+    const App = require('pages/App');
+    return (
+      <App {...this.props}/>
+    );
+  },
+})
+
+ReactDOM.render(<Root />, document.getElementById('main'));
