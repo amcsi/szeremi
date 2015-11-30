@@ -8,7 +8,7 @@ let compiler;
 let devServer;
 
 config.entry.app.unshift('webpack-dev-server/client?http://localhost:' + port, 'webpack/hot/dev-server');
-config.plugins.push(new webpack.HotModuleReplacementPlugin());
+config.plugins.unshift(new webpack.HotModuleReplacementPlugin());
 compiler = webpack(config);
 
 devServer = new WebpackDevServer(compiler, {

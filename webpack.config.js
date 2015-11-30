@@ -18,9 +18,6 @@ module.exports = {
         test: /\.jsx?$/,
         include: /[\/\\]app[\/\\]/,
         loader: 'babel',
-        query: {
-          presets: ['react', 'es2015'],
-        },
       },
       {test: /\.json$/, loader: 'json-loader'},
       {test: /\.css$/, loader: 'style-loader!css-loader'},
@@ -50,6 +47,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.NoErrorsPlugin(),
     new webpack.optimize.LimitChunkCountPlugin({maxChunks: 20}),
   ],
 };
