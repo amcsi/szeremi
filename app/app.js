@@ -11,6 +11,6 @@ const Root = React.createClass({
       <App {...this.props}/>
     );
   },
-})
+});
 
 ReactDOM.render(<Root />, document.getElementById('main'));
