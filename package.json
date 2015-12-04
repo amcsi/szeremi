@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev-server": "node webpack-dev-server.js",
-    "webpack": "node node_modules/webpack/bin/webpack.js"
+    "start": "node server.js",
+    "build": "BABEL_ENV=production node node_modules/webpack/bin/webpack.js",
+    "build:windows": "SET BABEL_ENV=production && node node_modules/webpack/bin/webpack.js"
   },
   "repository": {
     "type": "git",
