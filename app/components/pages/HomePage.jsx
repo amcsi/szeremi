@@ -1,11 +1,14 @@
 import React from 'react';
-import HomePage from './HomePage';
+
+import t from '../../core/translator';
 
 export default React.createClass({
   render() {
     return (
       <div>
-        <HomePage />
+        <main>
+          <h1>{t.t('homepage.title')}</h1>
+        </main>
       </div>
     );
   },
