@@ -1,3 +1,3 @@
 export default {
-  title: 'Full-Stack Web fejlesztő',
+  title: 'Full-Stack web fejlesztő',
 };
