@@ -16,9 +16,9 @@ export default React.createClass({
     return (
       <div>
         <Router history={history}>
-          <Route path="/" onLanguageChange={this.onLanguageChange}>
-            <IndexRoute component={HomePage}/>
-            <Route path="resume" component={Resume}/>
+          <Route path="/">
+            <IndexRoute component={HomePage} onLanguageChange={this.onLanguageChange}/>
+            <Route path="resume" component={Resume} onLanguageChange={this.onLanguageChange}/>
           </Route>
         </Router>
       </div>
