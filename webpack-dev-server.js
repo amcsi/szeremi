@@ -6,6 +6,8 @@ const webpack = require('webpack');
 const port = 3000;
 
 const config = require('./webpack.config.js');
+config.devtool = 'eval';
+config.debug = true;
 config.entry.app.unshift('webpack-hot-middleware/client');
 config.plugins.unshift(new webpack.HotModuleReplacementPlugin());
 const compiler = webpack(config);

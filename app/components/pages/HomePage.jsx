@@ -11,10 +11,12 @@ export default React.createClass({
   propTypes: {
     route: React.PropTypes.shape({
       onLanguageChange: React.PropTypes.func.isRequired,
+      store: React.PropTypes.object.isRequired,
     }),
   },
 
   render() {
+    console.info('props', this.props);
     return (
       <div>
         <HeaderSection/>
