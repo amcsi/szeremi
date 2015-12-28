@@ -8,11 +8,13 @@ require('./HomePage.scss');
 export default React.createClass({
 
   propTypes: {
-    onLanguageChange: React.PropTypes.func.isRequired,
+    route: React.PropTypes.shape({
+      onLanguageChange: React.PropTypes.func.isRequired,
+    }),
   },
 
   onLanguageChange(code, evt) {
-    this.props.onLanguageChange(code, evt);
+    this.props.route.onLanguageChange(code, evt);
   },
 
   render() {
