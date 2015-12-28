@@ -2,6 +2,7 @@ import React from 'react';
 
 import t from '../../core/translator';
 import HomePageLanguageSelector from '../molecules/HomePageLanguageSelector';
+import HeaderSection from '../organisms/HeaderSection';
 
 require('./HomePage.scss');
 
@@ -20,9 +21,9 @@ export default React.createClass({
   render() {
     return (
       <div>
+        <HeaderSection/>
         <main className="text-center">
           <h1>{t.t('homepage.title')}</h1>
-
           <HomePageLanguageSelector onClick={this.onLanguageChange} />
         </main>
       </div>
