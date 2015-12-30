@@ -7,8 +7,11 @@ import history from '../../core/history';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from '../../core/reducers';
+import { syncReduxAndRouter } from 'redux-simple-router';
 
 const store = createStore(reducers);
+
+syncReduxAndRouter(history, store);
 
 export default React.createClass({
 

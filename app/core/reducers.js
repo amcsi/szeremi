@@ -3,6 +3,7 @@
  */
 import { combineReducers } from 'redux';
 import { CHANGE_LANGUAGE } from '../actions/actions';
+import { routeReducer as routing } from 'redux-simple-router';
 
 function currentLanguage(state = 'en', action) {
   switch (action.type) {
@@ -15,6 +16,7 @@ function currentLanguage(state = 'en', action) {
 
 const reducers = combineReducers({
   currentLanguage,
+  routing,
 });
 
 export default reducers;
