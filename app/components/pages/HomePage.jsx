@@ -14,17 +14,13 @@ export default React.createClass({
     }),
   },
 
-  onLanguageChange(code, evt) {
-    this.props.route.onLanguageChange(code, evt);
-  },
-
   render() {
     return (
       <div>
         <HeaderSection/>
         <main className="text-center">
           <h1>{t.t('homepage.title')}</h1>
-          <HomePageLanguageSelector onClick={this.onLanguageChange} />
+          <HomePageLanguageSelector onClick={this.props.route.onLanguageChange} />
         </main>
       </div>
     );

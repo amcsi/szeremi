@@ -15,13 +15,9 @@ export default React.createClass({
     };
   },
 
-  onClick(evt) {
-    this.props.onClick(evt);
-  },
-
   render() {
     return (
-      <Button className="clickable" onClick={this.onClick}>
+      <Button className="clickable" onClick={this.props.onClick}>
         {this.props.name}
       </Button>
     );
