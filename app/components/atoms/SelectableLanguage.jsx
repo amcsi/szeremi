@@ -1,26 +1,29 @@
 import React from 'react';
 
 import {Button} from 'react-bootstrap';
+import { connect } from 'react-redux';
+import { CHANGE_LANGUAGE } from '../../actions/actions';
 
-export default React.createClass({
+export default connect()(React.createClass({
 
   propTypes: {
     name: React.PropTypes.string.isRequired,
-    onClick: React.PropTypes.func,
+    code: React.PropTypes.string.isRequired,
+    dispatch: React.PropTypes.func.isRequired,
   },
 
-  getDefaultProps() {
-    return {
-      onClick: () => {},
-    };
+  changeLanguage() {
+    const type = CHANGE_LANGUAGE;
+    const languageCode = this.props.code;
+    this.props.dispatch({type, languageCode});
   },
 
   render() {
     return (
-      <Button className="clickable" onClick={this.props.onClick}>
+      <Button className="clickable" onClick={this.changeLanguage}>
         {this.props.name}
       </Button>
     );
   },
 
-});
+}));

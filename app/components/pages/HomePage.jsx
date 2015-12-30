@@ -1,30 +1,27 @@
 import React from 'react';
 
-import t from '../../core/translator';
+import { translate } from 'react-i18next/lib/index';
 import HomePageLanguageSelector from '../molecules/HomePageLanguageSelector';
 import HeaderSection from '../organisms/HeaderSection';
 
 require('./HomePage.scss');
 
-export default React.createClass({
+export default translate()(React.createClass({
 
   propTypes: {
-    route: React.PropTypes.shape({
-      onLanguageChange: React.PropTypes.func.isRequired,
-      store: React.PropTypes.object.isRequired,
-    }),
+    t: React.PropTypes.func.isRequired,
   },
 
   render() {
-    console.info('props', this.props);
+    const t = this.props.t;
     return (
       <div>
         <HeaderSection/>
         <main className="text-center">
-          <h1>{t.t('homepage.title')}</h1>
-          <HomePageLanguageSelector onClick={this.props.route.onLanguageChange} />
+          <h1>{t('homepage.title')}</h1>
+          <HomePageLanguageSelector/>
         </main>
       </div>
     );
   },
-});
+}));
