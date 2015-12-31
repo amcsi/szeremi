@@ -30,6 +30,7 @@
     "eslint-loader": "^1.1.1",
     "eslint-plugin-react": "^3.11.1",
     "express": "^4.13.3",
+    "file-loader": "^0.8.5",
     "history": "^1.17.0",
     "i18next": "^2.0.9",
     "jshint": "^2.8.0",
@@ -51,6 +52,7 @@
     "redux-simple-router": "^1.0.2",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
     "webpack": "^1.12.9",
     "webpack-dev-middleware": "^1.4.0",
     "webpack-hot-middleware": "^2.6.0"

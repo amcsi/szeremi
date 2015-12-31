@@ -14,7 +14,7 @@ const store = createStore(reducers);
 
 syncReduxAndRouter(history, store);
 
-console.info(i18next.get);
+require('bootstrap/dist/css/bootstrap.min.css');
 
 export default React.createClass({
 
