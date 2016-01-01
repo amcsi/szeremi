@@ -4,9 +4,7 @@ import { translate } from 'react-i18next/lib/index';
 import HomePageLanguageSelector from '../molecules/HomePageLanguageSelector';
 import HeaderSection from '../organisms/HeaderSection';
 
-require('./HomePage.scss');
-
-export default translate()(React.createClass({
+export default translate([])(React.createClass({
 
   propTypes: {
     t: React.PropTypes.func.isRequired,
