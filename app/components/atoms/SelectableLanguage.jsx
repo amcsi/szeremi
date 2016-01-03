@@ -10,6 +10,7 @@ const SelectableLanguage = React.createClass({
     name: React.PropTypes.string.isRequired,
     code: React.PropTypes.string.isRequired,
     dispatch: React.PropTypes.func.isRequired,
+    currentLanguage: React.PropTypes.string.isRequired,
   },
 
   changeLanguage() {
@@ -19,8 +20,13 @@ const SelectableLanguage = React.createClass({
   },
 
   render() {
+    const {code, currentLanguage} = this.props;
     return (
-      <Button className="clickable" onClick={this.changeLanguage}>
+      <Button
+          className="clickable"
+          onClick={this.changeLanguage}
+          bsStyle={currentLanguage === code ? 'success' : 'default'}
+      >
         {this.props.name}
       </Button>
     );
@@ -28,4 +34,6 @@ const SelectableLanguage = React.createClass({
 
 });
 
-export default connect()(SelectableLanguage);
+const mapStateToProps = ({currentLanguage}) => ({currentLanguage});
+
+export default connect(mapStateToProps)(SelectableLanguage);
