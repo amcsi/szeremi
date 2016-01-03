@@ -4,7 +4,7 @@ import {Button} from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { CHANGE_LANGUAGE } from '../../actions/actions';
 
-export default connect()(React.createClass({
+const SelectableLanguage = React.createClass({
 
   propTypes: {
     name: React.PropTypes.string.isRequired,
@@ -26,4 +26,6 @@ export default connect()(React.createClass({
     );
   },
 
-}));
+});
+
+export default connect()(SelectableLanguage);

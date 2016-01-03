@@ -12,6 +12,17 @@ import { I18nextProvider } from 'react-i18next/lib';
 
 const store = createStore(reducers);
 
+/**
+ * Subscribe to change the language
+ */
+store.subscribe(() => {
+  const newLanguage = store.getState().currentLanguage;
+
+  if (newLanguage) {
+    i18next.changeLanguage(newLanguage);
+  }
+});
+
 syncReduxAndRouter(history, store);
 
 require('bootstrap/dist/css/bootstrap.min.css');
