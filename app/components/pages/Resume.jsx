@@ -7,7 +7,8 @@ export default React.createClass({
     return (
       <div>
         <HeaderSection/>
-        (Resumé page)
+
+        Coming soon...
       </div>
     );
   },
