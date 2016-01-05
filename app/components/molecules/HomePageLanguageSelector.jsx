@@ -6,9 +6,9 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <SelectableLanguage name="English" code="en"/>
-        <SelectableLanguage name="Magyar" code="hu"/>
-        <SelectableLanguage name="Español" code="es"/>
+        <SelectableLanguage name="English" code="en"/>{' '}
+        <SelectableLanguage name="Magyar" code="hu"/>{' '}
+        <SelectableLanguage name="Español" code="es"/>{' '}
       </div>
     );
   },
