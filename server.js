@@ -7,16 +7,20 @@ const publicPath = path.join(__dirname, './public');
 
 app.enable('trust proxy');
 
-app.route('/').get(function onRoot(req, res) {
+function onRoot(req, res) {
   res.header('Cache-Control', 'max-age=60, must-revalidate, private');
   res.sendFile('index.html', {
     root: publicPath,
   });
-});
+}
+
+app.route('/').get(onRoot);
 
 app.use('/', express.static(publicPath, {
   maxage: 31557600,
 }));
+
+app.use(onRoot);
 
 const server = app.listen(process.env.PORT || 8080, function listen() {
   const host = server.address().address;
