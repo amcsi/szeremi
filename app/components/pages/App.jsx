@@ -5,7 +5,7 @@ import {Router, Route, IndexRoute} from 'react-router';
 import history from '../../core/history';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import reducers from '../../core/reducers';
+import reducers from '../../reducers';
 import { syncReduxAndRouter } from 'redux-simple-router';
 import { I18nextProvider } from 'react-i18next/lib';
 
