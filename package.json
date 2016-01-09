@@ -6,8 +6,8 @@
   "scripts": {
     "dev-server": "node webpack-dev-server.js",
     "start": "node server.js",
-    "build": "BABEL_ENV=production node node_modules/webpack/bin/webpack.js",
-    "build:windows": "SET BABEL_ENV=production && node node_modules/webpack/bin/webpack.js"
+    "build": "BABEL_ENV=production node node_modules/webpack/bin/webpack.js --bail",
+    "build:windows": "SET BABEL_ENV=production && node node_modules/webpack/bin/webpack.js --bail"
   },
   "repository": {
     "type": "git",
