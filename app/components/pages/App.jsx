@@ -1,7 +1,6 @@
 import React from 'react';
-import HomePage from './HomePage';
-import Resume from './Resume';
 import i18next from '../../core/translator';
+import routes from '../../core/routes';
 import {Router, Route, IndexRoute} from 'react-router';
 import history from '../../core/history';
 import { createStore } from 'redux';
@@ -33,12 +32,7 @@ export default React.createClass({
     return (
       <Provider store={store}>
         <I18nextProvider i18n={i18next}>
-          <Router history={history}>
-            <Route path="/">
-              <IndexRoute component={HomePage} />
-              <Route path="resume" component={Resume} />
-            </Route>
-          </Router>
+          <Router history={history} routes={routes}/>
         </I18nextProvider>
       </Provider>
     );
