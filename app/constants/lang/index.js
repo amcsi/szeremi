@@ -1,5 +1,5 @@
-export default {
-  en: require('./en.js'),
-  es: require('./es.js'),
-  hu: require('./hu.js'),
-};
+import en from './en';
+import es from './es';
+import hu from './hu';
+
+export default {en, es, hu};

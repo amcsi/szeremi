@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
  */
 const Root = React.createClass({
   render() {
-    const App = require('pages/App');
+    const App = require('pages/App').default;
     return (
       <App {...this.props}/>
     );

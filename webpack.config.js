@@ -18,6 +18,7 @@ module.exports = {
         test: /\.jsx?$/,
         include: /[\/\\]app[\/\\]/,
         loader: 'babel',
+        presets: ['react', 'es2015'],
       },
       {test: /\.json$/, loader: 'json-loader'},
       {test: /\.css$/, loader: 'style-loader!css-loader'},
