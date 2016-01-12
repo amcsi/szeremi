@@ -1,24 +1,21 @@
-const webpack = require('webpack');
 const path = require('path');
 // noinspection JSUnresolvedVariable
 module.exports = {
-  entry: {
-    app: [
-      './app/app.js',
-    ],
-  },
   output: {
-    path: path.join(__dirname, 'public/build'),
+    path: path.join(__dirname, '../public/build'),
     publicPath: '/build/',
-    filename: 'app.js',
+    filename: '[name].js',
   },
   module: {
     loaders: [
+      // Index 0 is reserved for js(x)
       {
         test: /\.jsx?$/,
-        include: /[\/\\]app[\/\\]/,
         loader: 'babel',
-        presets: ['react', 'es2015'],
+        query: {
+          presets: ['react', 'es2015', 'stage-0'],
+        },
+        exclude: /node_modules/,
       },
       {test: /\.json$/, loader: 'json-loader'},
       {test: /\.css$/, loader: 'style-loader!css-loader'},
@@ -31,9 +28,7 @@ module.exports = {
       {test: /\.ttf$/, loader: 'file-loader?prefix=font/'},
       {test: /\.svg$/, loader: 'file-loader?prefix=font/'},
     ],
-    preLoaders: [
-      // {test: /\.jsx?$/, loader: "eslint-loader", exclude: /node_modules/}
-    ],
+    noParse: /\.min\.js/,
   },
   eslint: {
     eslint: {
@@ -47,8 +42,8 @@ module.exports = {
       'app/components',
     ],
   },
-  plugins: [
-    new webpack.NoErrorsPlugin(),
-    new webpack.optimize.LimitChunkCountPlugin({maxChunks: 20}),
-  ],
+  node: {
+    __dirname: true,
+    fs: 'empty',
+  },
 };
