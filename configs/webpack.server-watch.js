@@ -4,7 +4,9 @@ const baseConfig = require('./webpack.server.js');
 module.exports = Object.assign({}, baseConfig, {
   cache: true,
   debug: true,
-  entry: ['webpack/hot/poll?1000', ...baseConfig.entry],
+  entry: Object.assign({}, baseConfig.entry, {
+    server: ['webpack/hot/poll?1000', ...baseConfig.entry.server],
+  }),
   module: Object.assign({}, baseConfig.module, {
     loaders: baseConfig.module.loaders.map(function loaderMap(loader, index) {
       if (index === 0) {

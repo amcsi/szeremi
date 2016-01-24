@@ -10,9 +10,9 @@
     "build": "node ./node_modules/concurrently/src/main.js \"npm run build-server\" \"npm run build-client\"",
     "watch-server": "node ./node_modules/webpack/bin/webpack.js --watch --verbose --colors --display-error-details --config configs/webpack.server-watch.js",
     "watch-server-start": "node ./node_modules/wait-run/bin/wait-run.js --pattern \"dist/*.js\" \"node --harmony ./dist/server.js\"",
-    "watch-client": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config configs/webpack.client-watch.js",
-    "watch-client-hot": "node hot.js",
-    "watch": "node ./node_modules/concurrently/src/main.js \"npm run watch-server-start\" \"npm run watch-server\" \"npm run watch-client\""
+    "watch-client": "node hot.js",
+    "watch-start": "node ./node_modules/concurrently/src/main.js \"npm run watch-server-start\" \"npm run watch-server\" \"npm run watch-client\"",
+    "watch": "node ./node_modules/concurrently/src/main.js \"npm run watch-server\" \"npm run watch-client\""
   },
   "repository": {
     "type": "git",
@@ -49,6 +49,7 @@
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
+    "wait-run": "^1.1.0",
     "webpack": "^1.12.9"
   },
   "dependencies": {
@@ -65,6 +66,8 @@
     "react-transform-catch-errors": "^1.0.1",
     "react-transform-hmr": "^1.0.1",
     "redbox-react": "^1.2.0",
+    "source-map-index-generator": "^0.1.2",
+    "source-map-support": "^0.4.0",
     "webpack-dev-middleware": "^1.4.0",
     "webpack-dev-server": "^1.14.0",
     "webpack-hot-middleware": "^2.6.0"

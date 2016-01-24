@@ -1,11 +1,7 @@
-const path = require('path');
 // noinspection JSUnresolvedVariable
 module.exports = {
-  output: {
-    path: path.join(__dirname, '../public/build'),
-    publicPath: '/build/',
-    filename: '[name].js',
-  },
+  cache: false,
+  debug: false,
   module: {
     loaders: [
       // Index 0 is reserved for js(x)

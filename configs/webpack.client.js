@@ -3,10 +3,16 @@ const path = require('path');
 
 // noinspection JSUnresolvedVariable
 module.exports = Object.assign({}, require('./webpack.base.js'), {
+  target: 'web',
   entry: {
     app: [
-      './app/app.js',
+      './app/client.js',
     ],
+  },
+  output: {
+    path: path.join(__dirname, '../public/build'),
+    publicPath: '/build/',
+    filename: '[name].js',
   },
   plugins: [
     new webpack.DefinePlugin({__CLIENT__: true, __SERVER__: false, __PRODUCTION__: true, __DEV__: false}),
