@@ -29,7 +29,8 @@ const publicPath = path.join(__dirname, './public');
 app.enable('trust proxy');
 
 function onRoot(req, res) {
-  const location = history.createLocation(req.path);g
+  const location = history.createLocation(req.path);
+  console.info('routes:', routes, 'location:', location);
   // Note that req.url here should be the full URL path from
   // the original request, including the query string.
   match({ routes, location }, (error, redirectLocation, renderProps) => {

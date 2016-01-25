@@ -14,11 +14,12 @@ fs.readdirSync('node_modules')
 
 // noinspection JSUnresolvedVariable
 module.exports = Object.assign({}, require('./webpack.base.js'), {
+  context: __dirname,
   target: 'node',
   devtool: 'source-map',
   entry: {
     server: [
-      './server.js',
+      '../server.js',
     ],
   },
   output: {
