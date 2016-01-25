@@ -7,7 +7,7 @@ After=docker.service
 Restart=always
 ExecStartPre=-/usr/bin/docker kill %p
 ExecStartPre=-/usr/bin/docker rm -f %p
-ExecStart=/usr/bin/docker run -t --rm --name %p \
+ExecStart=/usr/bin/docker run --rm --name %p \
   -p 80:8080 \
   amcsi/szeremi
 ExecStop=/usr/bin/docker stop %p

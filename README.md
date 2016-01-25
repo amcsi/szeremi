@@ -39,6 +39,8 @@ This project can be run with Docker.
 It's also suggested to run the systemd file to run the project as a service.
 It can be found in [configs/szeremi.service](configs/szeremi.service)
 
+To make the service start automatically on system boot, run `sudo systemctl enable szeremi.service` once the service file has been copied over to the right systemd folder.
+
 ## Contributing
 
 This project follows the [Airbnb Javascript Style Guide](https://github.com/airbnb/javascript)
