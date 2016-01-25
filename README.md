@@ -32,6 +32,13 @@ npm run dev-server
 
 You should now be able to access the website on http://localhost:3000/
 
+### Docker
+
+This project can be run with Docker.
+
+It's also suggested to run the systemd file to run the project as a service.
+It can be found in [configs/szeremi.service](configs/szeremi.service)
+
 ## Contributing
 
 This project follows the [Airbnb Javascript Style Guide](https://github.com/airbnb/javascript)
