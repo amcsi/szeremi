@@ -13,18 +13,9 @@ import { I18nextProvider } from 'react-i18next/lib';
 import { createStore } from 'redux';
 import i18next from './core/translator';
 
-/*
-// Enable sourcemaps in node.
-// Load in SourceMapIndexGenerator
-const generator = new SourceMapIndexGenerator('./dist/server.js');
-require('source-map-support').install({
-  retrieveSourceMap: () => generator.toString(),
-});
-*/
-
 const app = express();
 
-const publicPath = path.join(__dirname, './public');
+const publicPath = './public';
 
 app.enable('trust proxy');
 
