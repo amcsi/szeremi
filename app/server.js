@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const { renderToString } = require('react-dom/server');
 import routes from './core/routes';
-const { match, RouterContext } = require('react-router');
+import { match, RoutingContext } from 'react-router';
 const fs = require('fs');
 const React = require('react');
 import * as history from 'history';
@@ -49,7 +49,7 @@ function onRoot(req, res) {
         const rendered = renderToString(
           <Provider store={store}>
             <I18nextProvider i18n={i18next}>
-              <RouterContext {...renderProps} />
+              <RoutingContext {...renderProps} />
             </I18nextProvider>
           </Provider>
         );
