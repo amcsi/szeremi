@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const { renderToString } = require('react-dom/server');
-const routes = require('./core/routes');
+import routes from './core/routes';
 const { match, RouterContext } = require('react-router');
 const fs = require('fs');
 const React = require('react');
@@ -30,7 +30,6 @@ app.enable('trust proxy');
 
 function onRoot(req, res) {
   const location = history.createLocation(req.path);
-  console.info('routes:', routes, 'location:', location);
   // Note that req.url here should be the full URL path from
   // the original request, including the query string.
   match({ routes, location }, (error, redirectLocation, renderProps) => {
