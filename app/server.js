@@ -53,7 +53,7 @@ function onRoot(req, res) {
             </I18nextProvider>
           </Provider>
         );
-        res.status(200).send(data.replace('>.<', `>${rendered}<`));
+        res.status(200).send(data.toString().replace('>.<', `>${rendered}<`));
       });
     } else {
       res.status(404).send('Not found');
