@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node --harmony ./dist/server.js",
-    "build-server": "webpack --colors --display-error-details --config configs/webpack.server.js",
-    "build-client": "webpack --colors --display-error-details --config configs/webpack.client.js",
+    "build-server": "webpack --colors --display-error-details --config configs/webpack.server.js --bail",
+    "build-client": "webpack --colors --display-error-details --config configs/webpack.client.js --bail",
     "build": "concurrent \"npm run build-server\" \"npm run build-client\"",
     "watch-server": "webpack --watch --verbose --colors --display-error-details --config configs/webpack.server-watch.js",
     "watch-server-start": "node ./node_modules/wait-run/bin/wait-run.js --pattern \"dist/*.js\" \"node --harmony ./dist/server.js\"",
