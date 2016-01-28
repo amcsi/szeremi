@@ -5,12 +5,11 @@ WORKDIR /src
 RUN cd /src
 # Copy just the package.json file file as a cache step.
 COPY package.json /src/package.json
-# This makes npm install much faster.
-RUN npm set progress=false
-# Do not show colors, because Dockerhub can't display them.
-RUN npm set color=false
+# Disable progress so npm would install faster.
+# Disable colors, because Dockerhub can't display them.
 # Install NPM packages excluding the dev dependencies.
-RUN npm install --production
+RUN npm set progress=false && npm set color=false && npm install --production
+
 COPY . .
 RUN npm run build
 EXPOSE  8080
