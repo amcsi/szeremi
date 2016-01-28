@@ -27,7 +27,7 @@ npm install
 ## Running
 
 ```sh
-npm run dev-server
+npm run watch-start
 ```
 
 You should now be able to access the website on http://localhost:3000/
