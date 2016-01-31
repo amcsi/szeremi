@@ -1,11 +1,26 @@
 import React from 'react';
-
+import { connect } from 'react-redux';
 import ResumeBasics from '../molecules/ResumeBasics';
 
-export default React.createClass({
+class ResumeSection extends React.Component {
   render() {
+    const { resume } = this.props;
     return (
-      <ResumeBasics/>
+      <div className="container">
+        <ResumeBasics basics={resume.basics} />
+      </div>
     );
-  },
-});
+  }
+}
+
+ResumeSection.propTypes = {
+  resume: React.PropTypes.object.isRequired,
+};
+
+function mapStateToProps(state) {
+  return {
+    resume: state.resume,
+  };
+}
+
+export default connect(mapStateToProps)(ResumeSection);
