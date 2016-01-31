@@ -28,7 +28,9 @@ module.exports = Object.assign({}, baseConfig, {
     }),
   }),
   devServer: {
-    contentBase: 'public/',
+    // Maybe this needs a trailing slash?
+    contentBase: 'public',
+    // e.g. '/build'
     publicPath: baseConfig.output.publicPath,
     hot: true,
     inline: true,
