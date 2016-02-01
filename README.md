@@ -41,6 +41,9 @@ It can be found in [configs/szeremi.service](configs/szeremi.service)
 
 Run `sudo systemctl enable configs/szeremi.service`.
 
+It will listen on port *10082*
+
 ## Contributing
 
 This project follows the [Airbnb Javascript Style Guide](https://github.com/airbnb/javascript)
+
