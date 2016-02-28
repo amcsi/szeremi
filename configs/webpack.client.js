@@ -20,5 +20,6 @@ module.exports = Object.assign({}, require('./webpack.base.js'), {
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.LimitChunkCountPlugin({maxChunks: 20}),
+    new webpack.optimize.UglifyJsPlugin({ minimize: true }),
   ],
 });
