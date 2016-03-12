@@ -1,5 +1,6 @@
 export default {
   translation: {
+    blog: 'Blog',
     countryCodes: {
       ES: 'Spain',
       GB: 'United Kingdom',

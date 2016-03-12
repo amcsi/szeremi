@@ -23,6 +23,7 @@ const HeaderSection = React.createClass({
           </Navbar.Header>
           <Nav pullRight>
             <li><Link to="/">{t('home')}</Link></li>
+            <li><a href="http://blog.szeremi.org/">{t('blog')}</a></li>
             <li><Link to="/resume">{t('resumé')}</Link></li>
           </Nav>
         </Navbar>
