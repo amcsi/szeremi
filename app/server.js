@@ -5,6 +5,7 @@ import routes from './core/routes';
 import { match, RoutingContext } from 'react-router';
 const fs = require('fs');
 const React = require('react');
+const compress = require('compression');
 import * as history from 'history';
 // Component stuff.
 import reducers from './reducers';
@@ -14,6 +15,8 @@ import { createStore } from 'redux';
 import i18next from './core/translator';
 
 const app = express();
+// Use gzip compression.g
+app.use(compress());
 
 const publicPath = './public';
 
