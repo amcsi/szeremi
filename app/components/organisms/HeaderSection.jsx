@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { translate } from 'react-i18next/lib/index';
+import { translate } from 'react-i18next';
 import {Navbar, Nav} from 'react-bootstrap';
 import {Link} from 'react-router';
 

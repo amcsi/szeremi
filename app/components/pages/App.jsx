@@ -7,7 +7,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from '../../reducers';
 import { syncReduxAndRouter } from 'redux-simple-router';
-import { I18nextProvider } from 'react-i18next/lib';
+import { I18nextProvider } from 'react-i18next';
 
 const store = createStore(reducers);
 

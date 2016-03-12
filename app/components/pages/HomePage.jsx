@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { translate } from 'react-i18next/lib/index';
+import { translate } from 'react-i18next';
 import HomePageLanguageSelector from '../molecules/HomePageLanguageSelector';
 import HeaderSection from '../organisms/HeaderSection';
 

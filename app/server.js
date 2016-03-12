@@ -10,7 +10,7 @@ import * as history from 'history';
 // Component stuff.
 import reducers from './reducers';
 import { Provider } from 'react-redux';
-import { I18nextProvider } from 'react-i18next/lib';
+import { I18nextProvider } from 'react-i18next';
 import { createStore } from 'redux';
 import i18next from './core/translator';
 
