@@ -1,4 +1,4 @@
-import i18next from 'i18next/lib/index';
+import i18next from 'i18next';
 
 i18next.init({
   lng: 'en',
