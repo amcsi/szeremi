@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ResumeBasics from '../molecules/ResumeBasics';
 
-class ResumeSection extends React.Component {
+class Resume extends React.Component {
   render() {
     const { resume } = this.props;
     return (
@@ -13,7 +13,7 @@ class ResumeSection extends React.Component {
   }
 }
 
-ResumeSection.propTypes = {
+Resume.propTypes = {
   resume: React.PropTypes.object.isRequired,
 };
 
@@ -23,4 +23,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(ResumeSection);
+export default connect(mapStateToProps)(Resume);

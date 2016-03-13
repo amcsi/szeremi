@@ -4,7 +4,7 @@ import { translate } from 'react-i18next';
 import {Navbar, Nav} from 'react-bootstrap';
 import {Link} from 'react-router';
 
-const HeaderSection = React.createClass({
+const Header = React.createClass({
 
   propTypes: {
     t: React.PropTypes.func.isRequired,
@@ -32,4 +32,4 @@ const HeaderSection = React.createClass({
   },
 });
 
-export default translate(['translation'])(HeaderSection);
+export default translate(['translation'])(Header);

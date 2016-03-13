@@ -2,7 +2,7 @@ import React from 'react';
 
 import { translate } from 'react-i18next';
 import HomePageLanguageSelector from '../molecules/HomePageLanguageSelector';
-import HeaderSection from '../organisms/HeaderSection';
+import Header from '../organisms/Header';
 
 const HomePage = React.createClass({
 
@@ -15,7 +15,7 @@ const HomePage = React.createClass({
 
     return (
       <div>
-        <HeaderSection/>
+        <Header/>
         <main className="text-center">
           <h1>{t('homepage.title')}</h1>
           <HomePageLanguageSelector/>

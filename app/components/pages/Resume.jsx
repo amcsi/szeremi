@@ -1,19 +1,19 @@
 import React from 'react';
 
-import HeaderSection from '../organisms/HeaderSection';
-import ResumeSection from '../organisms/ResumeSection';
-import {connect} from 'react-redux';
+import Header from '../organisms/Header';
+import OrganismResume from '../organisms/Resume';
+import { connect } from 'react-redux';
 
-var Resume = React.createClass({
+class Resume extends React.Component {
   render() {
     return (
       <div>
-        <HeaderSection/>
+        <Header/>
 
-        <ResumeSection/>
+        <OrganismResume/>
       </div>
     );
-  },
-});
+  }
+}
 
 export default connect()(Resume);
