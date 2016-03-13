@@ -4,8 +4,9 @@ module.exports = {
   debug: false,
   module: {
     loaders: [
-      // Index 0 is reserved for js(x)
       {
+        // This is a custom property.
+        name: 'jsx',
         test: /\.jsx?$/,
         loader: 'babel',
         query: {

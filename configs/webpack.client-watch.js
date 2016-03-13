@@ -14,9 +14,8 @@ module.exports = Object.assign({}, baseConfig, {
     new webpack.NoErrorsPlugin(),
   ],
   module: Object.assign({}, baseConfig.module, {
-    loaders: baseConfig.module.loaders.map(function loaderMap(loader, index) {
-      if (index === 0) {
-        // js(x) config
+    loaders: baseConfig.module.loaders.map(function loaderMap(loader) {
+      if (loader.name === 'jsx') {
         return Object.assign({}, loader, {
           query: Object.assign({}, loader.query, {
             presets: [...loader.query.presets, 'react-hmre'],
