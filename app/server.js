@@ -47,7 +47,9 @@ function onRoot(req, res) {
             </I18nextProvider>
           </Provider>
         );
-        res.status(200).send(data.toString().replace('>.<', `>${rendered}<`));
+        const html = data.toString().replace('>.<', `>${rendered}<`).
+          replace('<!-- head -->', '<link rel="stylesheet" href="/build/styles.css">');
+        res.status(200).send(html);
       });
     } else {
       res.status(404).send('Not found');

@@ -15,8 +15,6 @@ module.exports = {
         exclude: /node_modules/,
       },
       {test: /\.json$/, loader: 'json-loader'},
-      {test: /\.css$/, loader: 'style-loader!css-loader'},
-      {test: /\.scss/, loader: 'style-loader!css-loader!sass-loader'},
       {test: /\.png$/, loader: 'url-loader?prefix=img/&limit=5000'},
       {test: /\.jpg$/, loader: 'url-loader?prefix=img/&limit=5000'},
       {test: /\.gif$/, loader: 'url-loader?prefix=img/&limit=5000'},

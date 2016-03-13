@@ -1,14 +1,30 @@
 const webpack = require('webpack');
 const path = require('path');
-
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 // noinspection JSUnresolvedVariable
-module.exports = Object.assign({}, require('./webpack.base.js'), {
+const base = require('./webpack.base.js');
+module.exports = Object.assign({}, base, {
   target: 'web',
   entry: {
     app: [
       './app/client.js',
     ],
   },
+  module: Object.assign({}, base.module, {
+    loaders: [
+      ...base.module.loaders,
+      {
+        name: 'css',
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
+      },
+      {
+        name: 'sass',
+        test: /\.scss/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader', 'sass-loader'),
+      },
+    ],
+  }),
   output: {
     path: path.join(__dirname, '../public/build'),
     publicPath: '/build/',
@@ -21,5 +37,6 @@ module.exports = Object.assign({}, require('./webpack.base.js'), {
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.LimitChunkCountPlugin({maxChunks: 20}),
     new webpack.optimize.UglifyJsPlugin({ minimize: true }),
+    new ExtractTextPlugin('styles.css'),
   ],
 });

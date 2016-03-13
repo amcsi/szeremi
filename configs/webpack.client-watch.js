@@ -23,6 +23,12 @@ module.exports = Object.assign({}, baseConfig, {
           }),
         });
       }
+      if (loader.name === 'css') {
+        return Object.assign({}, loader, { loader: 'style-loader!css-loader' });
+      }
+      if (loader.name === 'sass') {
+        return Object.assign({}, loader, { loader: 'style-loader!css-loader!sass-loader' });
+      }
       return loader;
     }),
   }),
