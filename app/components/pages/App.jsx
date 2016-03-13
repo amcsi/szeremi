@@ -25,6 +25,8 @@ store.subscribe(() => {
 syncReduxAndRouter(history, store);
 
 require('bootstrap/dist/css/bootstrap.min.css');
+require('bootstrap-social');
+require('font-awesome/css/font-awesome.min.css');
 
 export default React.createClass({
 

@@ -3,6 +3,7 @@ import ResumeLabelValue from '../atoms/ResumeLabelValue';
 import ResumeLabelUrl from '../atoms/ResumeLabelUrl';
 import Address from '../atoms/Address';
 import ResumeSection from './ResumeSection';
+import SocialButtons from './SocialButtons';
 import { translate } from 'react-i18next';
 
 class ResumeBasics extends React.Component {
@@ -11,7 +12,8 @@ class ResumeBasics extends React.Component {
     return (
       <div>
         <div className="col-md-4">
-          <img src={basics.picture} style={{ maxWidth: '100%' }} />
+          <img src={basics.picture} style={{ maxWidth: '100%', marginBottom: 5 }} />
+          <SocialButtons profiles={basics.profiles}/>
         </div>
         <div className="col-md-8">
           <ResumeLabelValue label={t('resumePage.name')} value={basics.name}/>
