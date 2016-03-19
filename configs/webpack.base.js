@@ -1,5 +1,7 @@
+const path = require('path');
 // noinspection JSUnresolvedVariable
 module.exports = {
+  context: path.normalize(__dirname + '/..'),
   cache: false,
   debug: false,
   module: {

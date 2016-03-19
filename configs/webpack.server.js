@@ -12,18 +12,18 @@ fs.readdirSync('node_modules')
     externals[mod] = 'commonjs ' + mod;
   });
 
+const webpackBase = require('./webpack.base.js');
 // noinspection JSUnresolvedVariable
-module.exports = Object.assign({}, require('./webpack.base.js'), {
-  context: __dirname,
+module.exports = Object.assign({}, webpackBase, {
   target: 'node',
   devtool: 'source-map',
   entry: {
     server: [
-      '../server.js',
+      './app/server.js',
     ],
   },
   output: {
-    path: path.join(__dirname, '../dist'),
+    path: path.join(webpackBase.context, 'dist'),
     filename: '[name].js',
   },
   plugins: [
