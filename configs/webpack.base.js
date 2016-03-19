@@ -1,7 +1,6 @@
 const path = require('path');
-// noinspection JSUnresolvedVariable
 module.exports = {
-  context: path.normalize(__dirname + '/..'),
+  context: path.normalize(`${__dirname}/..`),
   cache: false,
   debug: false,
   module: {
@@ -16,10 +15,10 @@ module.exports = {
         },
         exclude: /node_modules/,
       },
-      {test: /\.json$/, loader: 'json-loader'},
-      {test: /\.png$/, loader: 'url-loader?prefix=img/&limit=5000'},
-      {test: /\.jpg$/, loader: 'url-loader?prefix=img/&limit=5000'},
-      {test: /\.gif$/, loader: 'url-loader?prefix=img/&limit=5000'},
+      { test: /\.json$/, loader: 'json-loader' },
+      { test: /\.png$/, loader: 'url-loader?prefix=img/&limit=5000' },
+      { test: /\.jpg$/, loader: 'url-loader?prefix=img/&limit=5000' },
+      { test: /\.gif$/, loader: 'url-loader?prefix=img/&limit=5000' },
       { test: /\.woff2?(\?.*)?$/, loader: 'url-loader?prefix=font/&limit=5000' },
       { test: /\.(eot|ttf|svg)(\?.*)?$/, loader: 'file-loader?prefix=font/' },
     ],

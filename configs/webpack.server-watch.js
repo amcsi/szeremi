@@ -8,7 +8,7 @@ module.exports = Object.assign({}, baseConfig, {
     server: ['webpack/hot/poll?1000', ...baseConfig.entry.server],
   }),
   module: Object.assign({}, baseConfig.module, {
-    loaders: baseConfig.module.loaders.map(function loaderMap(loader, index) {
+    loaders: baseConfig.module.loaders.map((loader, index) => {
       if (index === 0) {
         // js(x) config
         return Object.assign({}, loader, {
@@ -22,7 +22,12 @@ module.exports = Object.assign({}, baseConfig, {
     }),
   }),
   plugins: [
-    new webpack.DefinePlugin({__CLIENT__: false, __SERVER__: true, __PRODUCTION__: false, __DEV__: true}),
+    new webpack.DefinePlugin({
+      __CLIENT__: false,
+      __SERVER__: true,
+      __PRODUCTION__: false,
+      __DEV__: true,
+    }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
   ],

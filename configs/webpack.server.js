@@ -9,11 +9,11 @@ const externals = {};
 fs.readdirSync('node_modules')
   .filter((x) => ['.bin'].indexOf(x) === -1)
   .forEach((mod) => {
-    externals[mod] = 'commonjs ' + mod;
+    externals[mod] = `commonjs ${mod}`;
   });
 
 const webpackBase = require('./webpack.base.js');
-// noinspection JSUnresolvedVariable
+// noinspection JSUnresolvedFunction
 module.exports = Object.assign({}, webpackBase, {
   target: 'node',
   devtool: 'source-map',
@@ -27,10 +27,15 @@ module.exports = Object.assign({}, webpackBase, {
     filename: '[name].js',
   },
   plugins: [
-    new webpack.DefinePlugin({__CLIENT__: false, __SERVER__: true, __PRODUCTION__: true, __DEV__: false}),
-    new webpack.DefinePlugin({'process.env': {NODE_ENV: '"production"'}}),
+    new webpack.DefinePlugin({
+      __CLIENT__: false,
+      __SERVER__: true,
+      __PRODUCTION__: true,
+      __DEV__: false,
+    }),
+    new webpack.DefinePlugin({ 'process.env': { NODE_ENV: '"production"' } }),
     new webpack.NoErrorsPlugin(),
-    new webpack.optimize.LimitChunkCountPlugin({maxChunks: 20}),
+    new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 20 }),
   ],
   externals,
 });

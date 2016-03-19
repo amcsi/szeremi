@@ -8,13 +8,18 @@ module.exports = Object.assign({}, baseConfig, {
   cache: true,
   debug: true,
   plugins: [
-    new webpack.DefinePlugin({__CLIENT__: true, __SERVER__: false, __PRODUCTION__: false, __DEV__: true}),
-    new webpack.DefinePlugin({'process.env': {NODE_ENV: '"development"'}}),
+    new webpack.DefinePlugin({
+      __CLIENT__: true,
+      __SERVER__: false,
+      __PRODUCTION__: false,
+      __DEV__: true,
+    }),
+    new webpack.DefinePlugin({ 'process.env': { NODE_ENV: '"development"' } }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
   ],
   module: Object.assign({}, baseConfig.module, {
-    loaders: baseConfig.module.loaders.map(function loaderMap(loader) {
+    loaders: baseConfig.module.loaders.map(loader => {
       if (loader.name === 'jsx') {
         return Object.assign({}, loader, {
           query: Object.assign({}, loader.query, {
@@ -42,8 +47,8 @@ module.exports = Object.assign({}, baseConfig, {
     lazy: false,
     quiet: false,
     noInfo: false,
-    headers: {'Access-Control-Allow-Origin': '*'},
-    stats: {colors: true, chunks: false},
+    headers: { 'Access-Control-Allow-Origin': '*' },
+    stats: { colors: true, chunks: false },
     host: hostname,
     port,
   },
