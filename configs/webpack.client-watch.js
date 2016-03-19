@@ -15,7 +15,6 @@ module.exports = Object.assign({}, baseConfig, {
       __DEV__: true,
     }),
     new webpack.DefinePlugin({ 'process.env': { NODE_ENV: '"development"' } }),
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
   ],
   module: Object.assign({}, baseConfig.module, {
