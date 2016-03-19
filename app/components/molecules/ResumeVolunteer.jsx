@@ -3,6 +3,7 @@ import { translate } from 'react-i18next';
 import ResumeSection from './ResumeSection';
 import ResumeLabelValue from '../atoms/ResumeLabelValue';
 import ResumeLabelUrl from '../atoms/ResumeLabelUrl';
+import ResumeHighlights from '../atoms/ResumeHighlights';
 import moment from 'moment';
 
 class ResumeVolunteer extends React.Component {
@@ -25,6 +26,7 @@ class ResumeVolunteer extends React.Component {
             <ResumeLabelValue label={t('resumePage.startDate')} value={startDateFormatted} />
             <ResumeLabelValue label={t('resumePage.endDate')} value={endDateFormatted} />
             <ResumeLabelValue label={t('resumePage.summary')} value={volunteer.summary} />
+            <ResumeHighlights highlights={volunteer.highlights} />
           </ResumeSection>
           );
         })}
