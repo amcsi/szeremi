@@ -7,6 +7,9 @@ export default {
       HU: 'Hungary',
       US: 'United States',
     },
+    dateFormats: {
+      date: 'DD MMMM YYYY',
+    },
     home: 'Home',
     homepage: {
       title: 'Full-Stack Web Developer',
@@ -18,6 +21,12 @@ export default {
       website: 'Website',
       summary: 'Summary',
       address: 'Address',
+      work: 'Work',
+      company: 'Company',
+      position: 'Position',
+      startDate: 'Start date',
+      endDate: 'End date',
+      highlights: 'Highlights',
     },
     resumé: 'Resumé',
   },

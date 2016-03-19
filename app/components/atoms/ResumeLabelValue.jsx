@@ -7,7 +7,7 @@ const ResumeLabelValue = React.createClass({
   },
 
   render() {
-    const {label, value} = this.props;
+    const { label, value } = this.props;
 
     return (
       <div>

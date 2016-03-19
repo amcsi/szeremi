@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ResumeBasics from '../molecules/ResumeBasics';
+import ResumeWork from '../molecules/ResumeWork';
 
 class Resume extends React.Component {
   render() {
@@ -8,6 +9,7 @@ class Resume extends React.Component {
     return (
       <div className="container">
         <ResumeBasics basics={resume.basics} />
+        <ResumeWork works={resume.work} />
       </div>
     );
   }
