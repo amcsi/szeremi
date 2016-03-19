@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ResumeBasics from '../molecules/ResumeBasics';
 import ResumeWork from '../molecules/ResumeWork';
+import ResumeVolunteer from '../molecules/ResumeVolunteer';
 
 class Resume extends React.Component {
   render() {
@@ -10,6 +11,7 @@ class Resume extends React.Component {
       <div className="container">
         <ResumeBasics basics={resume.basics} />
         <ResumeWork works={resume.work} />
+        <ResumeVolunteer volunteers={resume.volunteer} />
       </div>
     );
   }
