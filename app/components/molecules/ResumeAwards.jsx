@@ -10,7 +10,7 @@ class ResumeAwards extends React.Component {
     if (!items || !items.length) {
       return null;
     }
-    
+
     return (
       <div className="clearfix">
         <h2>{t('resumePage.awards')}</h2>
