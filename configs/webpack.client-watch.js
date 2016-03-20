@@ -4,7 +4,7 @@ const hostname = process.env.HOSTNAME || 'localhost';
 
 const baseConfig = require('./webpack.client.js');
 module.exports = Object.assign({}, baseConfig, {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'eval',
   cache: true,
   debug: true,
   plugins: [
