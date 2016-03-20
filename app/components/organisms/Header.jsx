@@ -3,6 +3,7 @@ import React from 'react';
 import { translate } from 'react-i18next';
 import {Navbar, Nav} from 'react-bootstrap';
 import {Link} from 'react-router';
+import ExternalLink from '../atoms/ExternalLink';
 
 const Header = React.createClass({
 
@@ -23,8 +24,8 @@ const Header = React.createClass({
           </Navbar.Header>
           <Nav pullRight>
             <li><Link to="/">{t('home')}</Link></li>
-            <li><a href="http://blog.szeremi.org/">{t('blog')}</a></li>
             <li><Link to="/resume">{t('resumé')}</Link></li>
+            <li><ExternalLink href="http://blog.szeremi.org/">{t('blog')}</ExternalLink></li>
           </Nav>
         </Navbar>
       </div>

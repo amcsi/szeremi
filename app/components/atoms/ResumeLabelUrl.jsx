@@ -1,4 +1,5 @@
 import React from 'react';
+import ExternalLink from './ExternalLink';
 
 const ResumeLabelUrl = React.createClass({
   propTypes: {
@@ -11,7 +12,7 @@ const ResumeLabelUrl = React.createClass({
 
     return (
       <div>
-        <strong>{label}:</strong> <a href={url}>{url}</a>
+        <strong>{label}:</strong> <ExternalLink href={url}>{url}</ExternalLink>
       </div>
     );
   },
