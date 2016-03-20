@@ -5,6 +5,7 @@ import ResumeWork from '../molecules/ResumeWork';
 import ResumeVolunteer from '../molecules/ResumeVolunteer';
 import ResumeEducation from '../molecules/ResumeEducation';
 import ResumeAwards from '../molecules/ResumeAwards';
+import ResumePublications from '../molecules/ResumePublications';
 
 class Resume extends React.Component {
   render() {
@@ -16,6 +17,7 @@ class Resume extends React.Component {
         <ResumeVolunteer volunteers={resume.volunteer} />
         <ResumeEducation items={resume.education} />
         <ResumeAwards items={resume.awards} />
+        <ResumePublications items={resume.publications} />
       </div>
     );
   }
