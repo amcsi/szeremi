@@ -8,6 +8,9 @@ const ResumeLabelValue = React.createClass({
 
   render() {
     const { label, value } = this.props;
+    if (!value) {
+      return null;
+    }
 
     return (
       <div>

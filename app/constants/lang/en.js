@@ -26,7 +26,7 @@ export default {
       email: 'Email',
       endDate: 'End date',
       fluency: 'Fluency',
-      gpa: '4.0',
+      gpa: 'GPA',
       highlights: 'Highlights',
       interests: 'Interests',
       keywords: 'Keywords',

@@ -3,7 +3,7 @@ import { translate } from 'react-i18next';
 import ResumeSection from './ResumeSection';
 import ResumeLabelValue from '../atoms/ResumeLabelValue';
 import ResumeLabelUrl from '../atoms/ResumeLabelUrl';
-import ResumeHighlights from '../atoms/ResumeHighlights';
+import ResumeHighlights from '../atoms/ResumeListing';
 import moment from 'moment';
 
 class ResumeWork extends React.Component {
@@ -26,7 +26,7 @@ class ResumeWork extends React.Component {
             <ResumeLabelValue label={t('resumePage.startDate')} value={startDateFormatted} />
             <ResumeLabelValue label={t('resumePage.endDate')} value={endDateFormatted} />
             <ResumeLabelValue label={t('resumePage.summary')} value={work.summary} />
-            <ResumeHighlights highlights={work.highlights} />
+            <ResumeHighlights highlights={work.items} />
           </ResumeSection>
           );
         })}
