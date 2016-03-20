@@ -13,7 +13,7 @@ class ResumeVolunteer extends React.Component {
       return null;
     }
     return (
-      <div>
+      <div className="clearfix">
         <h2>{t('resumePage.volunteer')}</h2>
         {volunteers.map(volunteer => {
           const dateFormat = t('dateFormats.date');

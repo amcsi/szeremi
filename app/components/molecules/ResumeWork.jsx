@@ -13,7 +13,7 @@ class ResumeWork extends React.Component {
       return null;
     }
     return (
-      <div>
+      <div className="clearfix">
         <h2>{t('resumePage.work')}</h2>
         {works.map(work => {
           const dateFormat = t('dateFormats.date');

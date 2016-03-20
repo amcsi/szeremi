@@ -10,7 +10,7 @@ class ResumeBasics extends React.Component {
   render() {
     const { basics, t } = this.props;
     return (
-      <div>
+      <div className="clearfix">
         <div className="col-md-4">
           <img src={basics.picture} style={{ maxWidth: '100%', marginBottom: 5 }} />
           <SocialButtons profiles={basics.profiles}/>
@@ -21,10 +21,10 @@ class ResumeBasics extends React.Component {
           <ResumeLabelValue label={t('resumePage.telephone')} value={basics.telephone}/>
           <ResumeLabelUrl label={t('resumePage.website')} url={basics.website}/>
           <ResumeLabelValue Value label={t('resumePage.summary')} value={basics.summary}/>
+          <ResumeSection title={t('resumePage.address')}>
+            <Address location={basics.location}/>
+          </ResumeSection>
         </div>
-        <ResumeSection title={t('resumePage.address')}>
-          <Address location={basics.location}/>
-        </ResumeSection>
       </div>
     );
   }
