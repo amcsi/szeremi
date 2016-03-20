@@ -17,13 +17,13 @@ class ResumeVolunteer extends React.Component {
         <h2>{t('resumePage.volunteer')}</h2>
         {volunteers.map(volunteer => {
           const dateFormat = t('dateFormats.date');
-          const startDateFormatted = moment(volunteer.startDate).format(dateFormat);
+          const startDateFormatted = moment(volunteer.releaseDate).format(dateFormat);
           const endDateFormatted = moment(volunteer.endDate).format(dateFormat);
           return (
           <ResumeSection key={volunteer.organization} title={volunteer.organization}>
             <ResumeLabelValue label={t('resumePage.position')} value={volunteer.position} />
             <ResumeLabelUrl label={t('resumePage.website')} url={volunteer.website} />
-            <ResumeLabelValue label={t('resumePage.startDate')} value={startDateFormatted} />
+            <ResumeLabelValue label={t('resumePage.releaseDate')} value={startDateFormatted} />
             <ResumeLabelValue label={t('resumePage.endDate')} value={endDateFormatted} />
             <ResumeLabelValue label={t('resumePage.summary')} value={volunteer.summary} />
             <ResumeListing title={t('resumePage.highlights')} items={volunteer.highlights} />

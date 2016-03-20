@@ -41,7 +41,7 @@ export default {
       reference: 'Reference',
       references: 'References',
       skills: 'Skills',
-      startDate: 'Start date',
+      releaseDate: 'Start date',
       summary: 'Summary',
       telephone: 'Name',
       volunteer: 'Volunteer',

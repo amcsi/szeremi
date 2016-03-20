@@ -24,9 +24,8 @@ class SocialButtons extends React.Component {
             params.href = profile.url;
           }
           return (
-            <span>
+            <span key={profile.network}>
               <Button
-                key={profile.network}
                 className={`btn-social btn-${socialKey}`}
                 {...params}
                 style={{ marginBottom: 5 }}

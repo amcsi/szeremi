@@ -18,7 +18,7 @@ class ResumeSection extends React.Component {
 
 ResumeSection.propTypes = {
   title: React.PropTypes.string.isRequired,
-  children: React.PropTypes.element,
+  children: React.PropTypes.node,
 };
 
 export default ResumeSection;

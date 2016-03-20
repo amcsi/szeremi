@@ -14,8 +14,8 @@ class ResumeListing extends React.Component {
       <div>
         <h4>{title}</h4>
         <ul>
-          {items.map(item => (
-            <li>{item}</li>
+          {items.map((item, index) => (
+            <li key={index}>{item}</li>
           ))}
         </ul>
       </div>

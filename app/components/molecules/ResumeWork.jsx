@@ -17,16 +17,16 @@ class ResumeWork extends React.Component {
         <h2>{t('resumePage.work')}</h2>
         {works.map(work => {
           const dateFormat = t('dateFormats.date');
-          const startDateFormatted = moment(work.startDate).format(dateFormat);
+          const startDateFormatted = moment(work.releaseDate).format(dateFormat);
           const endDateFormatted = moment(work.endDate).format(dateFormat);
           return (
           <ResumeSection key={work.company} title={work.company}>
             <ResumeLabelValue label={t('resumePage.position')} value={work.position} />
             <ResumeLabelUrl label={t('resumePage.website')} url={work.website} />
-            <ResumeLabelValue label={t('resumePage.startDate')} value={startDateFormatted} />
+            <ResumeLabelValue label={t('resumePage.releaseDate')} value={startDateFormatted} />
             <ResumeLabelValue label={t('resumePage.endDate')} value={endDateFormatted} />
             <ResumeLabelValue label={t('resumePage.summary')} value={work.summary} />
-            <ResumeHighlights highlights={work.items} />
+            <ResumeHighlights title={t('resumePage.highlights')} items={work.highlights} />
           </ResumeSection>
           );
         })}

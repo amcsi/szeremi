@@ -16,13 +16,13 @@ class ResumeEducation extends React.Component {
         <h2>{t('resumePage.education')}</h2>
         {items.map(item => {
           const dateFormat = t('dateFormats.date');
-          const startDateFormatted = moment(item.startDate).format(dateFormat);
+          const startDateFormatted = moment(item.releaseDate).format(dateFormat);
           const endDateFormatted = moment(item.endDate).format(dateFormat);
           return (
             <ResumeSection key={item.institution} title={item.institution}>
               <ResumeLabelValue label={t('resumePage.area')} value={item.area} />
               <ResumeLabelValue label={t('resumePage.studyType')} value={item.studyType} />
-              <ResumeLabelValue label={t('resumePage.startDate')} value={startDateFormatted} />
+              <ResumeLabelValue label={t('resumePage.releaseDate')} value={startDateFormatted} />
               <ResumeLabelValue label={t('resumePage.endDate')} value={endDateFormatted} />
               <ResumeLabelValue label={t('resumePage.gpa')} value={item.gpa} />
               <ResumeListing title={t('resumePage.courses')} items={item.courses} />
