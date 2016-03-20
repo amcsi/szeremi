@@ -3,7 +3,7 @@ import { translate } from 'react-i18next';
 import ResumeSection from './ResumeSection';
 import ResumeLabelValue from '../atoms/ResumeLabelValue';
 import ResumeListing from '../atoms/ResumeListing';
-import moment from 'moment';
+import AfterTitleMonthRange from '../atoms/AfterTitleMonthRange';
 
 class ResumeEducation extends React.Component {
   render() {
@@ -15,15 +15,11 @@ class ResumeEducation extends React.Component {
       <div className="clearfix">
         <h2>{t('resumePage.education')}</h2>
         {items.map(item => {
-          const dateFormat = t('dateFormats.date');
-          const startDateFormatted = moment(item.releaseDate).format(dateFormat);
-          const endDateFormatted = moment(item.endDate).format(dateFormat);
+          const date = <AfterTitleMonthRange startDate={item.releaseDate} endDate={item.endDate} />;
           return (
-            <ResumeSection key={item.institution} title={item.institution}>
+            <ResumeSection key={item.institution} title={item.institution} afterTitle={date}>
               <ResumeLabelValue label={t('resumePage.area')} value={item.area} />
               <ResumeLabelValue label={t('resumePage.studyType')} value={item.studyType} />
-              <ResumeLabelValue label={t('resumePage.releaseDate')} value={startDateFormatted} />
-              <ResumeLabelValue label={t('resumePage.endDate')} value={endDateFormatted} />
               <ResumeLabelValue label={t('resumePage.gpa')} value={item.gpa} />
               <ResumeListing title={t('resumePage.courses')} items={item.courses} />
             </ResumeSection>

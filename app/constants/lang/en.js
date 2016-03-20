@@ -9,6 +9,7 @@ export default {
     },
     dateFormats: {
       date: 'DD MMMM YYYY',
+      monthYear: 'MMMM YYYY',
     },
     home: 'Home',
     homepage: {

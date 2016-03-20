@@ -2,14 +2,16 @@ import React from 'react';
 
 class ResumeSection extends React.Component {
   render() {
-    const { title, children } = this.props;
+    const { title, afterTitle, children } = this.props;
     if (!children) {
       // If there are no children to render, don't render this section either.
       return null;
     }
     return (
       <div className="col-md-6">
-        <h2>{title}</h2>
+        <div style={{ marginBottom: 5 }}>
+          <h3 style={{ display: 'inline' }}>{title}</h3> {afterTitle}
+        </div>
         {children}
       </div>
     );
@@ -18,6 +20,7 @@ class ResumeSection extends React.Component {
 
 ResumeSection.propTypes = {
   title: React.PropTypes.string.isRequired,
+  afterTitle: React.PropTypes.oneOf([React.PropTypes.string, React.PropTypes.node]),
   children: React.PropTypes.node,
 };
 

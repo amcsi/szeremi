@@ -3,7 +3,7 @@ import { translate } from 'react-i18next';
 import ResumeSection from './ResumeSection';
 import ResumeLabelValue from '../atoms/ResumeLabelValue';
 import ResumeLabelUrl from '../atoms/ResumeLabelUrl';
-import moment from 'moment';
+import AfterTitleMonthRange from '../atoms/AfterTitleMonthRange';
 
 class ResumePublications extends React.Component {
   render() {
@@ -16,12 +16,10 @@ class ResumePublications extends React.Component {
       <div className="clearfix">
         <h2>{t('resumePage.publications')}</h2>
         {items.map(item => {
-          const dateFormat = t('dateFormats.date');
-          const dateFormatted = moment(item.releaseDate).format(dateFormat);
+          const date = <AfterTitleMonthRange startDate={item.releaseDate} />;
           return (
-            <ResumeSection key={item.name} title={item.name}>
+            <ResumeSection key={item.name} title={item.name} afterTitle={date}>
               <ResumeLabelValue label={t('resumePage.publisher')} value={item.publisher} />
-              <ResumeLabelValue label={t('resumePage.date')} value={dateFormatted} />
               <ResumeLabelUrl label={t('resumePage.website')} url={item.website} />
               <ResumeLabelValue label={t('resumePage.summary')} value={item.summary} />
             </ResumeSection>

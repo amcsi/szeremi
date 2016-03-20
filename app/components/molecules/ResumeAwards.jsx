@@ -2,7 +2,7 @@ import React from 'react';
 import { translate } from 'react-i18next';
 import ResumeSection from './ResumeSection';
 import ResumeLabelValue from '../atoms/ResumeLabelValue';
-import moment from 'moment';
+import AfterTitleMonthRange from '../atoms/AfterTitleMonthRange';
 
 class ResumeAwards extends React.Component {
   render() {
@@ -15,12 +15,10 @@ class ResumeAwards extends React.Component {
       <div className="clearfix">
         <h2>{t('resumePage.awards')}</h2>
         {items.map(item => {
-          const dateFormat = t('dateFormats.date');
-          const dateFormatted = moment(item.date).format(dateFormat);
+          const date = <AfterTitleMonthRange startDate={item.date} />;
           return (
-            <ResumeSection key={item.title} title={item.title}>
+            <ResumeSection key={item.title} title={item.title} afterTitle={date}>
               <ResumeLabelValue label={t('resumePage.area')} value={item.area} />
-              <ResumeLabelValue label={t('resumePage.date')} value={dateFormatted} />
               <ResumeLabelValue label={t('resumePage.awarder')} value={item.awarder} />
               <ResumeLabelValue label={t('resumePage.summary')} value={item.summary} />
             </ResumeSection>

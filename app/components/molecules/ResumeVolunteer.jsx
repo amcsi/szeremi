@@ -4,29 +4,25 @@ import ResumeSection from './ResumeSection';
 import ResumeLabelValue from '../atoms/ResumeLabelValue';
 import ResumeLabelUrl from '../atoms/ResumeLabelUrl';
 import ResumeListing from '../atoms/ResumeListing';
-import moment from 'moment';
+import AfterTitleMonthRange from '../atoms/AfterTitleMonthRange';
 
 class ResumeVolunteer extends React.Component {
   render() {
-    const { t, volunteers } = this.props;
-    if (!volunteers || !volunteers.length) {
+    const { t, items } = this.props;
+    if (!items || !items.length) {
       return null;
     }
     return (
       <div className="clearfix">
         <h2>{t('resumePage.volunteer')}</h2>
-        {volunteers.map(volunteer => {
-          const dateFormat = t('dateFormats.date');
-          const startDateFormatted = moment(volunteer.releaseDate).format(dateFormat);
-          const endDateFormatted = moment(volunteer.endDate).format(dateFormat);
+        {items.map(item => {
+          const date = <AfterTitleMonthRange startDate={item.releaseDate} endDate={item.endDate} />;
           return (
-          <ResumeSection key={volunteer.organization} title={volunteer.organization}>
-            <ResumeLabelValue label={t('resumePage.position')} value={volunteer.position} />
-            <ResumeLabelUrl label={t('resumePage.website')} url={volunteer.website} />
-            <ResumeLabelValue label={t('resumePage.releaseDate')} value={startDateFormatted} />
-            <ResumeLabelValue label={t('resumePage.endDate')} value={endDateFormatted} />
-            <ResumeLabelValue label={t('resumePage.summary')} value={volunteer.summary} />
-            <ResumeListing title={t('resumePage.highlights')} items={volunteer.highlights} />
+          <ResumeSection key={item.organization} title={item.organization} afterTitle={date}>
+            <ResumeLabelValue label={t('resumePage.position')} value={item.position} />
+            <ResumeLabelUrl label={t('resumePage.website')} url={item.website} />
+            <ResumeLabelValue label={t('resumePage.summary')} value={item.summary} />
+            <ResumeListing title={t('resumePage.highlights')} items={item.highlights} />
           </ResumeSection>
           );
         })}
@@ -36,7 +32,7 @@ class ResumeVolunteer extends React.Component {
 }
 
 ResumeVolunteer.propTypes = {
-  volunteers: React.PropTypes.array,
+  items: React.PropTypes.array,
   t: React.PropTypes.func.isRequired,
 };
 

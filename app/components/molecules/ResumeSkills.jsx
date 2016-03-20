@@ -25,6 +25,9 @@ class ResumeSkills extends React.Component {
   }
 }
 
-ResumeSkills.propTypes = {};
+ResumeSkills.propTypes = {
+  items: React.PropTypes.array,
+  t: React.PropTypes.func.isRequired,
+};
 
 export default translate(['translation'])(ResumeSkills);

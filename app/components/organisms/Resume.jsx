@@ -15,8 +15,8 @@ class Resume extends React.Component {
     return (
       <div className="container">
         <ResumeBasics basics={resume.basics} />
-        <ResumeWork works={resume.work} />
-        <ResumeVolunteer volunteers={resume.volunteer} />
+        <ResumeWork items={resume.work} />
+        <ResumeVolunteer items={resume.volunteer} />
         <ResumeEducation items={resume.education} />
         <ResumeAwards items={resume.awards} />
         <ResumePublications items={resume.publications} />
