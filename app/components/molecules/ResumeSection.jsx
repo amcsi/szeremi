@@ -3,7 +3,7 @@ import ExternalLink from '../atoms/ExternalLink';
 
 class ResumeSection extends React.Component {
   render() {
-    const { title, titleUrl, afterTitle, children } = this.props;
+    const { title, titleUrl, afterTitle, sizeClassName, children } = this.props;
     if (!children) {
       // If there are no children to render, don't render this section either.
       return null;
@@ -11,7 +11,7 @@ class ResumeSection extends React.Component {
 
     const displayTitle = titleUrl ? <span>{title} <ExternalLink href={titleUrl} /></span> : title;
     return (
-      <div className="col-md-6">
+      <div className={sizeClassName || 'col-md-6'}>
         <div style={{ marginBottom: 5 }}>
           <h3 style={{ display: 'inline' }}>{displayTitle}</h3> {afterTitle}
         </div>
@@ -25,6 +25,7 @@ ResumeSection.propTypes = {
   title: React.PropTypes.string.isRequired,
   titleUrl: React.PropTypes.string,
   afterTitle: React.PropTypes.oneOf([React.PropTypes.string, React.PropTypes.node]),
+  sizeClassName: React.PropTypes.string,
   children: React.PropTypes.node,
 };
 
