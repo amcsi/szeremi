@@ -3,7 +3,7 @@ import React from 'react';
 class ExternalLink extends React.Component {
   render() {
     return (
-      <a {...this.props}>
+      <a target="_blank" rel="noopener" {...this.props}>
         {this.props.children} <span className="fa fa-external-link" />
       </a>
     );
