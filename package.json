@@ -6,8 +6,8 @@
   "scripts": {
     "clean": "rimraf dist/* public/build/*",
     "start": "node --harmony ./dist/server.js",
-    "build-server": "webpack --colors --display-error-details --config configs/webpack.server.js --bail",
-    "build-client": "webpack --colors --display-error-details --config configs/webpack.client.js --bail",
+    "build-server": "webpack --display-error-details --config configs/webpack.server.js --bail",
+    "build-client": "webpack --display-error-details --config configs/webpack.client.js --bail",
     "prebuild": "npm run clean",
     "build": "concurrent \"npm run build-server\" \"npm run build-client\"",
     "watch-server": "webpack --watch --verbose --colors --display-error-details --config configs/webpack.server-watch.js",
