@@ -6,15 +6,14 @@
   "scripts": {
     "clean": "rimraf dist/* public/build/*",
     "start": "node --harmony ./dist/server.js",
+    "build": "concurrent 'npm run build-server' 'npm run build-client'",
     "build-server": "webpack --display-error-details --config configs/webpack.server.js --bail",
     "build-client": "webpack --display-error-details --config configs/webpack.client.js --bail",
-    "prebuild": "npm run clean",
-    "build": "concurrent \"npm run build-server\" \"npm run build-client\"",
-    "watch-server": "webpack --watch --verbose --colors --display-error-details --config configs/webpack.server-watch.js",
-    "watch-server-start": "node ./node_modules/wait-run/bin/wait-run.js --pattern \"dist/*.js\" \"node --harmony ./dist/server.js\"",
+    "prebuild-server": "rimraf dist/*",
+    "prebuild-client": "rimraf public/build/*",
+    "watch-server": "npm run prebuild-server && webpack --watch --verbose --display-error-details --config configs/webpack.server.js",
     "watch-client": "node hot.js",
-    "watch-start": "concurrent \"npm run watch-server-start\" \"npm run watch-server\" \"npm run watch-client\"",
-    "watch": "concurrent \"npm run watch-server\" \"npm run watch-client\""
+    "watch": "concurrent 'npm run watch-server' 'npm run watch-client' 'nodemon --harmony ./dist/server.js'"
   },
   "repository": {
     "type": "git",
@@ -60,7 +59,6 @@
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
-    "wait-run": "^1.1.0",
     "webpack": "^1.12.12"
   },
   "devDependencies": {
@@ -71,12 +69,11 @@
     "eslint-loader": "^1.1.1",
     "eslint-plugin-react": "^4.2.3",
     "net": "^1.0.2",
+    "nodemon": "^1.9.1",
     "react-hot-loader": "^1.3.0",
     "react-transform-catch-errors": "^1.0.1",
     "react-transform-hmr": "^1.0.1",
     "redbox-react": "^1.2.0",
-    "source-map-index-generator": "^0.1.2",
-    "source-map-support": "^0.4.0",
     "webpack-dev-middleware": "^1.4.0",
     "webpack-dev-server": "^1.14.0",
     "webpack-hot-middleware": "^2.6.0"
