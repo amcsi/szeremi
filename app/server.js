@@ -7,6 +7,7 @@ const fs = require('fs');
 const React = require('react');
 const compress = require('compression');
 import * as history from 'history';
+import gaTrackingScriptTemplate from './content/ga.html';
 // Component stuff.
 import reducers from './reducers';
 import { Provider } from 'react-redux';
@@ -47,8 +48,15 @@ function onRoot(req, res) {
             </I18nextProvider>
           </Provider>
         );
+
+        let headString = '<link rel="stylesheet" href="/build/styles.css">\n';
+        // Google analytics script tag.
+        const gaTrackingId = process.env.SZEREMI_GA_TRACKING_ID;
+        if (gaTrackingId) {
+          headString += gaTrackingScriptTemplate.replace('{{ gaTrackingId }}', gaTrackingId);
+        }
         const html = data.toString().replace('>.<', `>${rendered}<`).
-          replace('<!-- head -->', '<link rel="stylesheet" href="/build/styles.css">');
+          replace('<!-- head -->\n', headString);
         res.status(200).send(html);
       });
     } else {

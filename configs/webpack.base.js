@@ -21,6 +21,7 @@ module.exports = {
       { test: /\.gif$/, loader: 'url-loader?prefix=img/&limit=5000' },
       { test: /\.woff2?(\?.*)?$/, loader: 'url-loader?prefix=font/&limit=5000' },
       { test: /\.(eot|ttf|svg)(\?.*)?$/, loader: 'file-loader?prefix=font/' },
+      { test: /\.html/, loader: 'html-loader' },
     ],
     noParse: /\.min\.js/,
   },
