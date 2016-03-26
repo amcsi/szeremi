@@ -9,12 +9,11 @@ const compress = require('compression');
 import * as history from 'history';
 import gaTrackingScriptTemplate from './content/ga.html';
 // Component stuff.
-import reducers from './reducers';
 import { Provider } from 'react-redux';
 import { I18nextProvider } from 'react-i18next';
-import { createStore } from 'redux';
 import i18next from './core/translator';
 import calculateInitialState from './core/calculateInitialState';
+import configureStore from './core/configureStore';
 
 const app = express();
 // Use gzip compression.g
@@ -44,7 +43,7 @@ function onRoot(req, res) {
       }
       const initialState = calculateInitialState(req);
       const initialStateJson = JSON.stringify(initialState || {});
-      const store = createStore(reducers, initialState);
+      const store = configureStore(initialState);
       // You can also check renderProps.components or renderProps.routes for
       // your "not found" component or route respectively, and send a 404 as
       // below, if you're using a catch-all route.
