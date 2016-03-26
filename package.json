@@ -12,8 +12,8 @@
     "prebuild-server": "rimraf dist/*",
     "prebuild-client": "rimraf public/build/*",
     "watch-server": "npm run prebuild-server && webpack --watch --verbose --display-error-details --config configs/webpack.server.js",
-    "watch-client": "node hot.js",
-    "watch": "concurrent 'npm run watch-server' 'npm run watch-client' 'nodemon --harmony ./dist/server.js'"
+    "watch-client": "npm run prebuild-client && webpack --watch --verbose --display-error-details --config configs/webpack.client.js",
+    "watch": "concurrent 'node hot.js' 'npm run watch-server' 'npm run watch-client' 'nodemon --harmony ./dist/server.js'"
   },
   "repository": {
     "type": "git",
