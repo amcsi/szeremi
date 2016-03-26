@@ -14,6 +14,7 @@ import { Provider } from 'react-redux';
 import { I18nextProvider } from 'react-i18next';
 import { createStore } from 'redux';
 import i18next from './core/translator';
+import calculateInitialState from './core/calculateInitialState';
 
 const app = express();
 // Use gzip compression.g
@@ -37,7 +38,9 @@ function onRoot(req, res) {
         if (err) {
           throw err;
         }
-        const store = createStore(reducers);
+        const initialState = calculateInitialState(req);
+        const initialStateJson = JSON.stringify(initialState || {});
+        const store = createStore(reducers, initialState);
         // You can also check renderProps.components or renderProps.routes for
         // your "not found" component or route respectively, and send a 404 as
         // below, if you're using a catch-all route.
@@ -50,6 +53,7 @@ function onRoot(req, res) {
         );
 
         let headString = '<link rel="stylesheet" href="/build/styles.css">\n';
+        headString += `<script>state = ${initialStateJson};</script>\n`;
         // Google analytics script tag.
         const gaTrackingId = process.env.SZEREMI_GA_TRACKING_ID;
         if (gaTrackingId) {
