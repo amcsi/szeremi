@@ -24,7 +24,7 @@ class ResumeSection extends React.Component {
 ResumeSection.propTypes = {
   title: React.PropTypes.string.isRequired,
   titleUrl: React.PropTypes.string,
-  afterTitle: React.PropTypes.oneOf([React.PropTypes.string, React.PropTypes.node]),
+  afterTitle: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.node]),
   sizeClassName: React.PropTypes.string,
   children: React.PropTypes.node,
 };
