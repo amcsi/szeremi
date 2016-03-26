@@ -1,7 +1,7 @@
 import React from 'react';
 import i18next from '../../core/translator';
 import routes from '../../core/routes';
-import {Router, Route, IndexRoute} from 'react-router';
+import { Router } from 'react-router';
 import history from '../../core/history';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
@@ -9,7 +9,14 @@ import reducers from '../../reducers';
 import { syncReduxAndRouter } from 'redux-simple-router';
 import { I18nextProvider } from 'react-i18next';
 
-const store = createStore(reducers);
+const store = createStore(
+  reducers,
+  undefined,
+  // Redux dev tools extension.
+  typeof window === 'object' && typeof window.devToolsExtension !== 'undefined' ?
+    window.devToolsExtension() :
+    undefined
+);
 
 /**
  * Subscribe to change the language
