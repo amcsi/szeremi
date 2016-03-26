@@ -30,42 +30,43 @@ function onRoot(req, res) {
   // the original request, including the query string.
   match({ routes, location }, (error, redirectLocation, renderProps) => {
     if (error) {
-      res.status(500).send(error.message);
-    } else if (redirectLocation) {
-      res.redirect(302, redirectLocation.pathname + redirectLocation.search);
-    } else if (renderProps) {
-      fs.readFile('./public/index.html', (err, data) => {
-        if (err) {
-          throw err;
-        }
-        const initialState = calculateInitialState(req);
-        const initialStateJson = JSON.stringify(initialState || {});
-        const store = createStore(reducers, initialState);
-        // You can also check renderProps.components or renderProps.routes for
-        // your "not found" component or route respectively, and send a 404 as
-        // below, if you're using a catch-all route.
-        const rendered = renderToString(
-          <Provider store={store}>
-            <I18nextProvider i18n={i18next}>
-              <RoutingContext {...renderProps} />
-            </I18nextProvider>
-          </Provider>
-        );
-
-        let headString = '<link rel="stylesheet" href="/build/styles.css">\n';
-        headString += `<script>state = ${initialStateJson};</script>\n`;
-        // Google analytics script tag.
-        const gaTrackingId = process.env.SZEREMI_GA_TRACKING_ID;
-        if (gaTrackingId) {
-          headString += gaTrackingScriptTemplate.replace('{{ gaTrackingId }}', gaTrackingId);
-        }
-        const html = data.toString().replace('>.<', `>${rendered}<`).
-          replace('<!-- head -->\n', headString);
-        res.status(200).send(html);
-      });
-    } else {
-      res.status(404).send('Not found');
+      return res.status(500).send(error.message);
     }
+    if (redirectLocation) {
+      return res.redirect(302, redirectLocation.pathname + redirectLocation.search);
+    }
+    if (!renderProps) {
+      return res.status(404).send('Not found');
+    }
+    fs.readFile('./public/index.html', (err, data) => {
+      if (err) {
+        throw err;
+      }
+      const initialState = calculateInitialState(req);
+      const initialStateJson = JSON.stringify(initialState || {});
+      const store = createStore(reducers, initialState);
+      // You can also check renderProps.components or renderProps.routes for
+      // your "not found" component or route respectively, and send a 404 as
+      // below, if you're using a catch-all route.
+      const rendered = renderToString(
+        <Provider store={store}>
+          <I18nextProvider i18n={i18next}>
+            <RoutingContext {...renderProps} />
+          </I18nextProvider>
+        </Provider>
+      );
+
+      let headString = '<link rel="stylesheet" href="/build/styles.css">\n';
+      headString += `<script>state = ${initialStateJson};</script>\n`;
+      // Google analytics script tag.
+      const gaTrackingId = process.env.SZEREMI_GA_TRACKING_ID;
+      if (gaTrackingId) {
+        headString += gaTrackingScriptTemplate.replace('{{ gaTrackingId }}', gaTrackingId);
+      }
+      const html = data.toString().replace('>.<', `>${rendered}<`).
+        replace('<!-- head -->\n', headString);
+      res.status(200).send(html);
+    });
   });
 }
 
