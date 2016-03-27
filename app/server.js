@@ -3,11 +3,10 @@ const express = require('express');
 const path = require('path');
 const { renderToString } = require('react-dom/server');
 import routes from './core/routes';
-import { match, RoutingContext } from 'react-router';
+import { match, RouterContext } from 'react-router';
 const fs = require('fs');
 const React = require('react');
 const compress = require('compression');
-import * as history from 'history';
 import gaTrackingScriptTemplate from './content/ga.html';
 // Component stuff.
 import { Provider } from 'react-redux';
@@ -25,10 +24,9 @@ const publicPath = './public';
 app.enable('trust proxy');
 
 function onRoot(req, res) {
-  const location = history.createLocation(req.path);
   // Note that req.url here should be the full URL path from
   // the original request, including the query string.
-  match({ routes, location }, (error, redirectLocation, renderProps) => {
+  match({ routes, location: req.path }, (error, redirectLocation, renderProps) => {
     if (error) {
       return res.status(500).send(error.message);
     }
@@ -51,7 +49,7 @@ function onRoot(req, res) {
       const rendered = renderToString(
         <Provider store={store}>
           <I18nextProvider i18n={i18next}>
-            <RoutingContext {...renderProps} />
+            <RouterContext {...renderProps} />
           </I18nextProvider>
         </Provider>
       );

@@ -4,6 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const base = require('./webpack.base.js');
 // noinspection JSUnresolvedFunction
 module.exports = Object.assign({}, base, {
+  devtool: process.env.NODE_ENV !== 'production' ? 'source-map' : null,
   target: 'web',
   entry: {
     app: [

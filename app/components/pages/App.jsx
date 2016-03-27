@@ -1,7 +1,6 @@
 import React from 'react';
 import routes from '../../core/routes';
-import { Router } from 'react-router';
-import history from '../../core/history';
+import { Router, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import TranslatorContext from './TranslatorContext';
 import i18next from '../../core/translator';
@@ -18,7 +17,7 @@ class App extends React.Component {
     return (
       <Provider store={store}>
         <TranslatorContext i18next={i18next}>
-          <Router history={history} routes={routes} />
+          <Router history={browserHistory} routes={routes} />
         </TranslatorContext>
       </Provider>
     );
