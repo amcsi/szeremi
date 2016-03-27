@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from 'pages/App';
+import App from './components/pages/App';
 import configureStore from './core/configureStore';
 import { syncReduxAndRouter } from 'redux-simple-router';
 import history from './core/history';
