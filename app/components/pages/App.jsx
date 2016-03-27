@@ -4,6 +4,7 @@ import { Router } from 'react-router';
 import history from '../../core/history';
 import { Provider } from 'react-redux';
 import TranslatorContext from './TranslatorContext';
+import i18next from '../../core/translator';
 
 class App extends React.Component {
   static propTypes() {
@@ -16,7 +17,7 @@ class App extends React.Component {
     const { store } = this.props;
     return (
       <Provider store={store}>
-        <TranslatorContext>
+        <TranslatorContext i18next={i18next}>
           <Router history={history} routes={routes} />
         </TranslatorContext>
       </Provider>
