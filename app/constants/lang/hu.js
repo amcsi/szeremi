@@ -12,6 +12,10 @@ export default {
       date: 'YYYY MMMM DD',
       monthYear: 'YYYY MMM',
     },
+    footer: {
+      openSourceProject: 'Ez a honlap egy nyílt forráskódú project, amelynek forráskódját el' +
+      ' lehet érni itt: {{link}}.',
+    },
     home: 'Főoldal',
     homepage: {
       title: 'Full-Stack Web Fejlesztő',

@@ -11,6 +11,10 @@ export default {
       date: 'DD MMMM YYYY',
       monthYear: 'MMM YYYY',
     },
+    footer: {
+      openSourceProject: 'This website is an open source project whose source code can be found' +
+        ' at {{link}}.',
+    },
     home: 'Home',
     homepage: {
       title: 'Full-Stack Web Developer',
