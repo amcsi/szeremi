@@ -1,3 +1,4 @@
+require('source-map-support').install();
 const express = require('express');
 const path = require('path');
 const { renderToString } = require('react-dom/server');
