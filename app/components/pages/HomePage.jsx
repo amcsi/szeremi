@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { translate } from 'react-i18next';
-import HomePageLanguageSelector from '../molecules/HomePageLanguageSelector';
 import Header from '../organisms/Header';
+import Footer from '../organisms/Footer';
 
 const HomePage = React.createClass({
 
@@ -18,8 +18,8 @@ const HomePage = React.createClass({
         <Header/>
         <main className="text-center">
           <h1>{t('homepage.title')}</h1>
-          <HomePageLanguageSelector/>
         </main>
+        <Footer />
       </div>
     );
   },
