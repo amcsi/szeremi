@@ -6,13 +6,13 @@ import ResumeKeywords from '../atoms/ResumeKeywords';
 
 class ResumeSkills extends React.Component {
   render() {
-    const { items, t } = this.props;
+    const { items, previousLength, t } = this.props;
     if (!items || !items.length) {
       return null;
     }
-
+    const className = previousLength === 1 && items.length === 1 ? '' : 'clearfix';
     return (
-      <div className="clearfix">
+      <div className={className}>
         <h2>{t('resumePage.skills')}</h2>
         {items.map(item => (
             <ResumeSection sizeClassName="col-md-4" key={item.name} title={item.name}>
@@ -27,6 +27,7 @@ class ResumeSkills extends React.Component {
 
 ResumeSkills.propTypes = {
   items: React.PropTypes.array,
+  previousLength: React.PropTypes.number,
   t: React.PropTypes.func.isRequired,
 };
 

@@ -10,17 +10,17 @@ class ResumePublications extends React.Component {
     if (!items || !items.length) {
       return null;
     }
-
     return (
-      <div className="clearfix">
-        <h2>{t('resumePage.publications')}</h2>
+      <div>
         {items.map(item => {
           const date = <AfterTitleMonthRange startDate={item.releaseDate} />;
           return (
-            <ResumeSection key={item.name} title={item.name} titleUrl={item.website} afterTitle={date}>
-              <ResumeLabelValue label={t('resumePage.publisher')} value={item.publisher} />
-              <ResumeLabelValue label={t('resumePage.summary')} value={item.summary} />
-            </ResumeSection>
+            <div style={{ float: 'left' }} className={items.length > 1 ? 'col-md-6' : ''}>
+              <ResumeSection key={item.name} title={item.name} titleUrl={item.website} afterTitle={date}>
+                <ResumeLabelValue label={t('resumePage.publisher')} value={item.publisher} />
+                <ResumeLabelValue label={t('resumePage.summary')} value={item.summary} />
+              </ResumeSection>
+            </div>
           );
         })}
       </div>

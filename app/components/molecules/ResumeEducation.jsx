@@ -12,17 +12,18 @@ class ResumeEducation extends React.Component {
       return null;
     }
     return (
-      <div className="clearfix">
-        <h2>{t('resumePage.education')}</h2>
+      <div>
         {items.map(item => {
           const date = <AfterTitleMonthRange startDate={item.releaseDate} endDate={item.endDate} />;
           return (
-            <ResumeSection key={item.institution} title={item.institution} afterTitle={date}>
-              <ResumeLabelValue label={t('resumePage.area')} value={item.area} />
-              <ResumeLabelValue label={t('resumePage.studyType')} value={item.studyType} />
-              <ResumeLabelValue label={t('resumePage.gpa')} value={item.gpa} />
-              <ResumeListing title={t('resumePage.courses')} items={item.courses} />
-            </ResumeSection>
+            <div style={{ float: 'left' }} className={items.length > 1 ? 'col-md-6' : ''}>
+              <ResumeSection key={item.institution} title={item.institution} afterTitle={date}>
+                <ResumeLabelValue label={t('resumePage.area')} value={item.area} />
+                <ResumeLabelValue label={t('resumePage.studyType')} value={item.studyType} />
+                <ResumeLabelValue label={t('resumePage.gpa')} value={item.gpa} />
+                <ResumeListing title={t('resumePage.courses')} items={item.courses} />
+              </ResumeSection>
+            </div>
           );
         })}
       </div>

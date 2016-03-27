@@ -11,7 +11,7 @@ class ResumeSection extends React.Component {
 
     const displayTitle = titleUrl ? <span>{title} <ExternalLink href={titleUrl} /></span> : title;
     return (
-      <div className={sizeClassName || 'col-md-6'}>
+      <div className={sizeClassName} style={{ marginBottom: 20 }}>
         <div style={{ marginBottom: 5 }}>
           <h3 style={{ display: 'inline' }}>{displayTitle}</h3> {afterTitle}
         </div>

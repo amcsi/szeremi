@@ -12,16 +12,17 @@ class ResumeWork extends React.Component {
       return null;
     }
     return (
-      <div className="clearfix">
-        <h2>{t('resumePage.work')}</h2>
+      <div>
         {items.map(item => {
           const date = <AfterTitleMonthRange startDate={item.releaseDate} endDate={item.endDate} />;
           return (
-          <ResumeSection key={item.company} title={item.company} titleUrl={item.website} afterTitle={date}>
-            <ResumeLabelValue label={t('resumePage.position')} value={item.position} />
-            <ResumeLabelValue label={t('resumePage.summary')} value={item.summary} />
-            <ResumeHighlights title={t('resumePage.highlights')} items={item.highlights} />
-          </ResumeSection>
+            <div style={{ float: 'left' }} className={items.length > 1 ? 'col-md-6' : ''}>
+              <ResumeSection key={item.company} title={item.company} titleUrl={item.website} afterTitle={date}>
+                <ResumeLabelValue label={t('resumePage.position')} value={item.position} />
+                <ResumeLabelValue label={t('resumePage.summary')} value={item.summary} />
+                <ResumeHighlights title={t('resumePage.highlights')} items={item.highlights} />
+              </ResumeSection>
+            </div>
           );
         })}
       </div>
