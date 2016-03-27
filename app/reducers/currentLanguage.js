@@ -1,4 +1,4 @@
-import { CHANGE_LANGUAGE } from '../actions/actions';
+import { CHANGE_LANGUAGE } from '../constants/actions';
 
 function currentLanguage(state = 'en', action) {
   switch (action.type) {

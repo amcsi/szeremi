@@ -2,38 +2,41 @@ import React from 'react';
 
 import {Button} from 'react-bootstrap';
 import { connect } from 'react-redux';
-import { CHANGE_LANGUAGE } from '../../actions/actions';
+import { CHANGE_LANGUAGE } from '../../constants/actions';
 
-const SelectableLanguage = React.createClass({
+class SelectableLanguage extends React.Component {
 
-  propTypes: {
-    name: React.PropTypes.string.isRequired,
-    code: React.PropTypes.string.isRequired,
-    dispatch: React.PropTypes.func.isRequired,
-    currentLanguage: React.PropTypes.string.isRequired,
-  },
-
-  changeLanguage() {
-    const type = CHANGE_LANGUAGE;
-    const languageCode = this.props.code;
-    this.props.dispatch({type, languageCode});
-  },
+  static propTypes() {
+    return {
+      name: React.PropTypes.string.isRequired,
+      languageCode: React.PropTypes.string.isRequired,
+      countryCode: React.PropTypes.string,
+      dispatch: React.PropTypes.func.isRequired,
+      currentLanguage: React.PropTypes.string.isRequired,
+    };
+  }
 
   render() {
-    const {code, currentLanguage} = this.props;
+    const { dispatch, languageCode, countryCode, currentLanguage, name } = this.props;
+    const countryFlag = countryCode ?
+      <span className={`flag-icon flag-icon-${countryCode.toLowerCase()}`} /> :
+      null;
+
+    function changeLanguage() { dispatch({ type: CHANGE_LANGUAGE, languageCode }); }
+
     return (
       <Button
-          className="clickable"
-          onClick={this.changeLanguage}
-          bsStyle={currentLanguage === code ? 'success' : 'default'}
+        className="clickable"
+        onClick={changeLanguage}
+        bsStyle={currentLanguage === languageCode ? 'success' : 'default'}
       >
-        {this.props.name}
+        {countryFlag} {name}
       </Button>
     );
-  },
+  }
 
-});
+}
 
-const mapStateToProps = ({currentLanguage}) => ({currentLanguage});
+const mapStateToProps = ({ currentLanguage }) => ({ currentLanguage });
 
 export default connect(mapStateToProps)(SelectableLanguage);
