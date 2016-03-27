@@ -6,14 +6,14 @@
   "scripts": {
     "clean": "rimraf dist/* public/build/*",
     "start": "node --harmony ./dist/server.js",
-    "build": "concurrent 'npm run build-server' 'npm run build-client'",
+    "build": "concurrently \"npm run build-server\" \"npm run build-client\"",
     "build-server": "webpack --display-error-details --config configs/webpack.server.js --bail",
     "build-client": "webpack --display-error-details --config configs/webpack.client.js --bail",
     "prebuild-server": "rimraf dist/*",
     "prebuild-client": "rimraf public/build/*",
     "watch-server": "npm run prebuild-server && webpack --watch --verbose --display-error-details --config configs/webpack.server.js",
     "watch-client": "npm run prebuild-client && webpack --watch --verbose --display-error-details --config configs/webpack.client.js",
-    "watch": "concurrent 'node hot.js' 'npm run watch-server' 'npm run watch-client' 'nodemon --harmony ./dist/server.js'"
+    "watch": "concurrently \"node hot.js\" \"npm run watch-server\" \"npm run watch-client\" \"nodemon --harmony ./dist/server.js\""
   },
   "repository": {
     "type": "git",
@@ -35,7 +35,7 @@
     "bootstrap": "^3.3.6",
     "bootstrap-social": "^4.11.0",
     "compression": "^1.6.1",
-    "concurrently": "^1.0.0",
+    "concurrently": "^2.0.0",
     "css-loader": "^0.23.0",
     "express": "^4.13.3",
     "extract-text-webpack-plugin": "^1.0.1",
