@@ -17,7 +17,6 @@ class ResumePublications extends React.Component {
           return (
             <ResumeSection
               key={item.name}
-              style={{ float: 'left' }}
               sizeClassName={items.length > 1 ? 'col-md-6' : ''}
               title={item.name}
               titleUrl={item.website}

@@ -13,9 +13,8 @@ class MonthRange extends React.Component {
     }
 
     const startDateFormatted = moment(startDate).format(t('dateFormats.monthYear'));
-    const displayDate = endDate ?
-      `${startDateFormatted} - ${moment(endDate).format(t('dateFormats.monthYear'))}` :
-      startDateFormatted;
+    const endDateFormatted = endDate ? moment(endDate).format(t('dateFormats.monthYear')) : '';
+    const displayDate = `${startDateFormatted} - ${endDateFormatted}`;
 
     return <span>{displayDate}</span>;
   }

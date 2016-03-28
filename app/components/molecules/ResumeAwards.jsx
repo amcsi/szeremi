@@ -18,7 +18,6 @@ class ResumeAwards extends React.Component {
           return (
             <ResumeSection
               key={item.title}
-              style={{ float: 'left' }}
               sizeClassName={items.length > 1 ? 'col-md-6' : ''}
               title={item.title}
               afterTitle={date}

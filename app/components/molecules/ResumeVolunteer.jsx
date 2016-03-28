@@ -19,7 +19,6 @@ class ResumeVolunteer extends React.Component {
           return (
             <ResumeSection
               key={item.organization}
-              style={{ float: 'left' }}
               sizeClassName={items.length > 1 ? 'col-md-6' : ''}
               title={item.organization}
               titleUrl={item.website}

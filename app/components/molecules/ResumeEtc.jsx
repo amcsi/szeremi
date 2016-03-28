@@ -38,7 +38,7 @@ class ResumeEtc extends React.Component {
         ),
       });
     }
-    if (interests && interests.length) {
+    if (references && references.length) {
       sections.push({
         title: t('resumePage.references'),
         content: (

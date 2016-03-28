@@ -22,6 +22,8 @@ class SocialButtons extends React.Component {
           const params = {};
           if (profile.url) {
             params.href = profile.url;
+            params.target = '_blank';
+            params.rel = 'noopener';
           }
           return (
             <span key={profile.network}>

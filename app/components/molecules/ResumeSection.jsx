@@ -10,8 +10,15 @@ class ResumeSection extends React.Component {
     }
 
     const displayTitle = titleUrl ? <span>{title} <ExternalLink href={titleUrl} /></span> : title;
+    const defaultStyle = {
+      marginBottom: 20,
+      float: 'none',
+      display: 'inline-block',
+      verticalAlign: 'top',
+    };
+    const componentStyle = Object.assign(defaultStyle, style || {});
     return (
-      <div className={sizeClassName} style={Object.assign({ marginBottom: 20 }, style || {})}>
+      <div className={sizeClassName} style={componentStyle}>
         <div style={{ marginBottom: 5 }}>
           <h3 style={{ display: 'inline' }}>{displayTitle}</h3> {afterTitle}
         </div>

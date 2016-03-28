@@ -9,6 +9,12 @@ import { translate } from 'react-i18next';
 class ResumeBasics extends React.Component {
   render() {
     const { basics, t } = this.props;
+    const addressComponent = basics.location ? (
+      <ResumeSection title={t('resumePage.address')}>
+        <Address location={basics.location}/>
+      </ResumeSection>
+    ) : null;
+    const email = basics.email ? <a href={`mailto:${basics.email}`}>{basics.email}</a> : null;
     return (
       <div className="clearfix">
         <div className="col-md-4">
@@ -16,14 +22,15 @@ class ResumeBasics extends React.Component {
           <SocialButtons profiles={basics.profiles}/>
         </div>
         <div className="col-md-8">
-          <ResumeLabelValue label={t('resumePage.name')} value={basics.name}/>
-          <ResumeLabelValue label={t('resumePage.email')} value={basics.email}/>
+          <h3>
+            <ResumeLabelValue label={t('resumePage.name')} value={basics.name}/>
+          </h3>
+          <ResumeLabelValue label={t('resumePage.email')} value={email}/>
           <ResumeLabelValue label={t('resumePage.telephone')} value={basics.telephone}/>
           <ResumeLabelUrl label={t('resumePage.website')} url={basics.website}/>
           <ResumeLabelValue Value label={t('resumePage.summary')} value={basics.summary}/>
-          <ResumeSection title={t('resumePage.address')}>
-            <Address location={basics.location}/>
-          </ResumeSection>
+
+          {addressComponent}
         </div>
       </div>
     );
