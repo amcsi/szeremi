@@ -1,130 +1,180 @@
 {
   "basics": {
-    "name": "Richard Hendriks",
-    "label": "Programmer",
+    "name": "Attila Szeremi",
+    "label": "Web Programmer (backend and frontend)",
     "picture": "/img/attila-szeremi.jpg",
-    "email": "richard.hendriks@gmail.com",
-    "phone": "(912) 555-4321",
-    "website": "http://richardhendricks.com",
-    "summary": "Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinals!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation!",
-    "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
-    },
+    "email": "a@szeremi.org",
+    "phone": "",
+    "website": "http://www.szeremi.org",
+    "summary": "My name is Attila Szeremi and am a professional in both backend and frontend programming for the web. I started learning programming in 2007 with the help of a paid PHP course and that brought me to turn my own static HTML Dreamweaver websites dynamic. I got my first PHP job in 2009 during the summer of my education, and moved to work in London near the end of 2012.\n\nThroughout my career I've been very passionate about programming; there doesn't seem to be any end to the ways I find to improve myself, being able to keep myself up-to-date with the latest web technologies and practices. Although I've had more backend experience than frontend, I am nearly as good in frontend and I'm especially keen on doing that too.",
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "neutralthoughts",
-        "url": ""
+        "network": "LinkedIn",
+        "username": "Attila Szeremi",
+        "url": "https://www.linkedin.com/in/attila-szeremi-2733b525"
       },
       {
-        "network": "SoundCloud",
-        "username": "dandymusicnl",
-        "url": "https://soundcloud.com/dandymusicnl"
+        "network": "Twitter",
+        "username": "amcsi_san",
+        "url": "https://twitter.com/amcsi_san"
+      },
+      {
+        "network": "GitHub",
+        "username": "amcsi",
+        "url": "https://github.com/amcsi"
+      },
+      {
+        "network": "Facebook",
+        "username": "amcsi",
+        "url": "https://facebook.com/amcsi"
       }
     ]
   },
   "work": [
     {
-      "company": "Pied Piper",
-      "position": "CEO/President",
-      "website": "http://piedpiper.com",
-      "releaseDate": "2013-12-01",
-      "endDate": "2014-12-01",
-      "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.",
+      "company": "LifeWorks",
+      "position": "Backend PHP developer",
+      "website": "http://workangel.com/",
+      "releaseDate": "2015-01",
+      "endDate": "",
+      "summary": "LifeWorks (formally known as WorkAngel) located in London is a company producing a platform for a benefit system and achieving workplace social engagement in a fun way with the help of gaining achievements and badges. This has been where I have been gaining the most knowledge, being surrounded by very talented and inspirational fellow programmer colleagues, and being exposed to many different points of view for problem solving.",
       "highlights": [
-        "Build an algorithm for artist to detect if their music was violating copy right infringement laws",
-        "Successfully won Techcrunch Disrupt",
-        "Optimized an algorithm that holds the current world record for Weisman Scores"
+        "Develop with PHP the backend side of the JSON REST API which is used by the Web frontend, Android and iOS",
+        "Use ReactJS and jQuery to enrich the frontend our administration platform which is a separate project using the same API.",
+        "Migrate administration project's JavaScript tooling from Gulp and Bower to NPM and Webpack.",
+        "Write unit and end-to-end tests to ensure future extensibility of the platform",
+        "Receive and write code reviews"
       ]
-    }
-  ],
-  "volunteer": [
+    },
     {
-      "organization": "CoderDojo",
-      "position": "Teacher",
-      "website": "http://coderdojo.com/",
-      "releaseDate": "2012-01-01",
-      "endDate": "2013-01-01",
-      "summary": "Global movement of free coding clubs for young people.",
+      "company": "NetEfficiency",
+      "position": "PHP and JavaScript developer",
+      "website": "http://netefficiency.co.uk/",
+      "releaseDate": "2012-11",
+      "endDate": "2014-11",
+      "summary": "NetEfficiency Ltd. is a web development agency and was the first company in London I was working for. Here I was responsible for development of various websites, among which was Smallcharities and various worldwide versions of Autoglass.",
       "highlights": [
-        "Awarded 'Teacher of the Month'"
+        "Use both PHP and JavaScript to create full interactive booking processes for car windscreen repair",
+        "Migrate a legacy PHP project from ZF1 to using ZF2",
+        "Rewrite from scratch a booking management tool such that it be completely decoupled from the fixed booking process, making it extensible and its decoupled API usable by many projects",
+        "Migrate an old booking administration system to using Bootstrap and AngularJS",
+        "Help all colleagues move from the legacy SVN VCS to using Git"
+      ]
+    },
+    {
+      "company": "Stylers Ltd.",
+      "position": "PHP and JavaScript developer",
+      "website": "http://stylers.hu/",
+      "releaseDate": "2011-04",
+      "endDate": "2012-10",
+      "summary": "Stylers is a web development agency located in Budapest, Hungary. Here I was developing from scratch many different kinds of websites including promotional Facebook web apps.",
+      "highlights": [
+        "Develop in PHP and JavaScript many smaller website projects using an in-house CMS and deliver under tight deadlines",
+        "Work with Facebook's OAuth and other social networks' APIs to create Facebook apps and integrate with our platform",
+        "Refactor parts of the CMS to vastly reduce the steps needed to start on a new project",
+        "Maintain high knowledge of each browser's quirks, especially IE7"
+      ]
+    },
+    {
+      "company": "PPT Group Ltd.",
+      "position": "ExtJS developer",
+      "website": "http://ppt.eu/",
+      "releaseDate": "2010-09",
+      "endDate": "2011-04",
+      "summary": "PPT Group is a web development company in Budapest that also had in-house project. I was responsible for their biggest in-house project.",
+      "highlights": [
+        "Get up to a professional level of JavaScript in half a year from having very little knowledge",
+        "Develop a UI-rich social network platform using ExtJS 3",
+        "Dive deep in the depths of the source code of the framework for purposes of debugging"
       ]
     }
   ],
   "education": [
     {
-      "institution": "University of Oklahoma",
-      "area": "Information Technology",
-      "studyType": "Bachelor",
-      "releaseDate": "2011-06-01",
-      "endDate": "2014-01-01",
-      "gpa": "4.0",
+      "institution": "University of Szeged",
+      "area": "Web Programming",
+      "studyType": "Community college",
+      "releaseDate": "2009",
+      "endDate": "2010",
       "courses": [
-        "DB1101 - Basic SQL",
-        "CS2011 - Java Introduction"
+        "Algorithms and data structures",
+        "Java Introduction"
       ]
-    }
-  ],
-  "awards": [
-    {
-      "title": "Digital Compression Pioneer Award",
-      "date": "2014-11-01",
-      "awarder": "Techcrunch",
-      "summary": "There is no spoon."
     }
   ],
   "publications": [
     {
-      "name": "Video compression for 3d media",
-      "publisher": "Hooli",
-      "releaseDate": "2014-10-01",
-      "website": "http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)",
-      "summary": "Innovative middle-out compression algorithm that changes the way we store data."
+      "name": "My own website",
+      "website": "http://www.szeremi.org/",
+      "summary": "My open-source personal and professional website created with NodeJS and ReactJS. The project is hosted on Digital Ocean and I'm using Docker containers to host each application."
+    },
+    {
+      "name": "Livecoding.tv coding sessions",
+      "website": "https://www.livecoding.tv/amcsi/",
+      "summary": "I livestream as I code my personal open-source projects for entertaining viewers, hoping to give them good ideas to learn and also potentially receive help myself."
     }
   ],
   "skills": [
     {
-      "name": "Web Development",
+      "name": "Web Programming",
       "level": "Master",
-      "keywords": [
-        "HTML",
-        "CSS",
-        "Javascript"
-      ]
+      "keywords": ["PHP", "JavaScript", "CSS"]
     },
     {
-      "name": "Compression",
+      "name": "PHP frameworks",
       "level": "Master",
-      "keywords": [
-        "Mpeg",
-        "MP4",
-        "GIF"
-      ]
+      "keywords": ["Zend Framework 2", "Laravel 5"]
+    },
+    {
+      "name": "JavaScript technologies",
+      "level": "Advanced",
+      "keywords": ["Webpack", "ReactJS", "AngularJS 1", "Redux", "Isomorphic apps", "NodeJS", "ExtJS"]
+    },
+    {
+      "name": "Databases",
+      "level": "Advanced",
+      "keywords": ["MySQL", "MongoDB"]
+    },
+    {
+      "name": "System administration",
+      "level": "Intermediate",
+      "keywords": ["Linux", "Docker", "vim"]
+    },
+    {
+      "name": "Other web technologies",
+      "level": "Advanced",
+      "keywords": ["Security", "Git VCS", "Testing"]
     }
   ],
   "languages": [
     {
-      "language": "English",
+      "language": "Hungarian",
       "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Full professional proficiency"
+    },
+    {
+      "language": "Spanish",
+      "fluency": "Limited professional proficiency"
     }
   ],
   "interests": [
     {
-      "name": "Wildlife",
-      "keywords": [
-        "Ferrets",
-        "Unicorns"
-      ]
-    }
-  ],
-  "references": [
+      "name": "Spanish language"
+    },
     {
-      "name": "Erlich Bachman",
-      "reference": "It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company."
+      "name": "Hispanic culture"
+    },
+    {
+      "name": "Programming"
+    },
+    {
+      "name": "Drinks"
+    },
+    {
+      "name": "Anime"
     }
   ]
 }
