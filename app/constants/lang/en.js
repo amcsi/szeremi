@@ -52,6 +52,6 @@ export default {
       website: 'Website',
       work: 'Work',
     },
-    resumé: 'Resumé',
+    resumé: 'CV',
   },
 };
