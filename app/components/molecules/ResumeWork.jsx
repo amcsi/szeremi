@@ -16,13 +16,18 @@ class ResumeWork extends React.Component {
         {items.map(item => {
           const date = <AfterTitleMonthRange startDate={item.releaseDate} endDate={item.endDate} />;
           return (
-            <div style={{ float: 'left' }} className={items.length > 1 ? 'col-md-6' : ''}>
-              <ResumeSection key={item.company} title={item.company} titleUrl={item.website} afterTitle={date}>
+              <ResumeSection
+                key={item.company}
+                style={{ float: 'left' }}
+                sizeClassName={items.length > 1 ? 'col-md-6' : ''}
+                title={item.company}
+                titleUrl={item.website}
+                afterTitle={date}
+              >
                 <ResumeLabelValue label={t('resumePage.position')} value={item.position} />
                 <ResumeLabelValue label={t('resumePage.summary')} value={item.summary} />
                 <ResumeHighlights title={t('resumePage.highlights')} items={item.highlights} />
               </ResumeSection>
-            </div>
           );
         })}
       </div>

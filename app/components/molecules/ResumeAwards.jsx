@@ -16,13 +16,17 @@ class ResumeAwards extends React.Component {
         {items.map(item => {
           const date = <AfterTitleMonthRange startDate={item.date} />;
           return (
-            <div style={{ float: 'left' }} className={items.length > 1 ? 'col-md-6' : ''}>
-              <ResumeSection key={item.title} title={item.title} afterTitle={date}>
-                <ResumeLabelValue label={t('resumePage.area')} value={item.area} />
-                <ResumeLabelValue label={t('resumePage.awarder')} value={item.awarder} />
-                <ResumeLabelValue label={t('resumePage.summary')} value={item.summary} />
-              </ResumeSection>
-            </div>
+            <ResumeSection
+              key={item.title}
+              style={{ float: 'left' }}
+              sizeClassName={items.length > 1 ? 'col-md-6' : ''}
+              title={item.title}
+              afterTitle={date}
+            >
+              <ResumeLabelValue label={t('resumePage.area')} value={item.area} />
+              <ResumeLabelValue label={t('resumePage.awarder')} value={item.awarder} />
+              <ResumeLabelValue label={t('resumePage.summary')} value={item.summary} />
+            </ResumeSection>
           );
         })}
       </div>
