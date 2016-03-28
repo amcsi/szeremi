@@ -11,13 +11,19 @@ const HomePage = React.createClass({
   },
 
   render() {
-    const {t} = this.props;
+    const { t } = this.props;
 
     return (
       <div>
-        <Header/>
+        <Header />
         <main className="text-center">
           <h1>{t('homepage.title')}</h1>
+          <img src="/img/attila-szeremi-home.jpg"
+            style={{ marginBottom: 10, border: '1px solid gray' }}
+            alt={t('homepage.photoAlt')}
+            className="img-circle"
+          />
+          <h2 style={{ marginBottom: 20 }}>Attila Szeremi</h2>
         </main>
         <Footer />
       </div>

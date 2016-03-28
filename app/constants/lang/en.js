@@ -17,6 +17,7 @@ export default {
     },
     home: 'Home',
     homepage: {
+      photoAlt: 'Photo of Attila Szeremi',
       title: 'Full-Stack Web Developer',
     },
     resumePage: {
