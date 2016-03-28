@@ -3,7 +3,7 @@
  */
 import { combineReducers } from 'redux';
 
-import { routeReducer as routing } from 'redux-simple-router';
+import { routerReducer as routing } from 'react-router-redux';
 import currentLanguage from './currentLanguage';
 import resume from './resume';
 
