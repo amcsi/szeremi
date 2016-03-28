@@ -12,19 +12,19 @@ module.exports = Object.assign({}, base, {
     ],
   },
   module: Object.assign({}, base.module, {
-    loaders: [
-      ...base.module.loaders,
-      {
-        name: 'css',
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
-      },
-      {
-        name: 'sass',
-        test: /\.scss/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader', 'sass-loader'),
-      },
-    ],
+    loaders: base.module.loaders.map(loader => {
+      // Override CSS and related loaders to extract them into files.
+      
+      if (loader.name === 'css') {
+        const cssLoader = ExtractTextPlugin.extract('style-loader', 'css-loader');
+        return Object.assign({}, loader, { loader: cssLoader });
+      }
+      if (loader.name === 'sass') {
+        const sassLoader = ExtractTextPlugin.extract('style-loader', 'css-loader', 'sass-loader');
+        return Object.assign({}, loader, { loader: sassLoader });
+      }
+      return loader;
+    }),
   }),
   output: {
     path: path.join(__dirname, '../public/build'),

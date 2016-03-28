@@ -22,6 +22,9 @@ module.exports = {
       { test: /\.woff2?(\?.*)?$/, loader: 'url-loader?prefix=font/&limit=5000' },
       { test: /\.(eot|ttf|svg)(\?.*)?$/, loader: 'file-loader?prefix=font/' },
       { test: /\.html/, loader: 'html-loader' },
+      // Null-load these by default; they only make sense on the client side.
+      { name: 'css', test: /\.css$/, loader: 'null' },
+      { name: 'sass', test: /\.scss/, loader: 'null' },
     ],
     noParse: /\.min\.js/,
   },

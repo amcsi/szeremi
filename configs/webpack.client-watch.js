@@ -27,6 +27,7 @@ module.exports = Object.assign({}, baseConfig, {
           }),
         });
       }
+      // Override CSS and related loaders to load them into the file for the devServer.
       if (loader.name === 'css') {
         return Object.assign({}, loader, { loader: 'style-loader!css-loader' });
       }
