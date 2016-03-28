@@ -1,15 +1,20 @@
 import React from 'react';
-
 import SelectableLanguage from '../atoms/SelectableLanguage';
+import languages from '../../constants/lang/langs';
 
-export default React.createClass({
+class HomePageLanguageSelector extends React.Component {
   render() {
     return (
       <div>
-        <SelectableLanguage name="English" languageCode="en" countryCode="GB" />{' '}
-        <SelectableLanguage name="Magyar" languageCode="hu" countryCode="HU" />{' '}
-        <SelectableLanguage name="Español" languageCode="es" countryCode="ES" />{' '}
+        {languages.map(({ name, languageCode, countryCode }) => (
+          <span key={name}>
+            <SelectableLanguage name={name} languageCode={languageCode} countryCode={countryCode} />
+            {' '}
+          </span>
+        ))}
       </div>
     );
-  },
-});
+  }
+}
+
+export default HomePageLanguageSelector;

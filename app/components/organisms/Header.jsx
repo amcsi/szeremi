@@ -4,6 +4,9 @@ import { translate } from 'react-i18next';
 import {Navbar, Nav} from 'react-bootstrap';
 import {Link} from 'react-router';
 import ExternalLink from '../atoms/ExternalLink';
+import HeaderLanguageSelector from '../molecules/HeaderLanguageSelector';
+
+import './Header.css';
 
 const Header = React.createClass({
 
@@ -12,7 +15,7 @@ const Header = React.createClass({
   },
 
   render() {
-    const {t} = this.props;
+    const { t } = this.props;
 
     return (
       <div>
@@ -21,6 +24,7 @@ const Header = React.createClass({
             <Navbar.Brand>
               Szeremi
             </Navbar.Brand>
+            <HeaderLanguageSelector />
           </Navbar.Header>
           <Nav pullRight>
             <li><Link to="/">{t('home')}</Link></li>

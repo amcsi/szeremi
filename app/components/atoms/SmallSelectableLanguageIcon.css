@@ -1,0 +1,13 @@
+.small-selectable-language-icon {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.small-selectable-language-icon--not-active {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.small-selectable-language-icon--not-active:hover {
+  opacity: 0.8;
+}
