@@ -9,24 +9,24 @@
     "summary": "My name is Attila Szeremi and am a professional in both backend and frontend programming for the web. I started learning programming in 2007 with the help of a paid PHP course and that brought me to turn my own static HTML Dreamweaver websites dynamic. I got my first PHP job in 2009 during the summer of my education, and moved to work in London near the end of 2012.\n\nThroughout my career I've been very passionate about programming; there doesn't seem to be any end to the ways I find to improve myself, being able to keep myself up-to-date with the latest web technologies and practices. Although I've had more backend experience than frontend, I am nearly as good in frontend and I'm especially keen on doing that too.",
     "profiles": [
       {
-        "network": "LinkedIn",
-        "username": "Attila Szeremi",
-        "url": "https://www.linkedin.com/in/attila-szeremi-2733b525"
-      },
-      {
         "network": "GitHub",
         "username": "amcsi",
         "url": "https://github.com/amcsi"
       },
       {
-        "network": "Twitter",
-        "username": "amcsi_san",
-        "url": "https://twitter.com/amcsi_san"
+        "network": "LinkedIn",
+        "username": "Attila Szeremi",
+        "url": "https://www.linkedin.com/in/attila-szeremi-2733b525"
       },
       {
         "network": "Facebook",
         "username": "amcsi",
         "url": "https://facebook.com/amcsi"
+      },
+      {
+        "network": "Twitter",
+        "username": "amcsi_san",
+        "url": "https://twitter.com/amcsi_san"
       }
     ]
   },
@@ -168,10 +168,10 @@
       "name": "Hispanic culture"
     },
     {
-      "name": "Programming"
+      "name": "Travel"
     },
     {
-      "name": "Drinks"
+      "name": "Programming"
     },
     {
       "name": "Anime"

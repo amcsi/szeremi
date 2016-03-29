@@ -22,13 +22,13 @@ const Header = React.createClass({
         <Navbar>
           <Navbar.Header>
             <Navbar.Brand>
-              Szeremi
+              <Link to="/">Szeremi</Link>
             </Navbar.Brand>
             <HeaderLanguageSelector />
           </Navbar.Header>
           <Nav pullRight>
-            <li><Link to="/">{t('home')}</Link></li>
-            <li><Link to="/resume">{t('resumé')}</Link></li>
+            <li><Link to="/"><span className="fa fa-home" /> {t('home')}</Link></li>
+            <li><Link to="/resume"><span className="fa fa-briefcase" /> {t('resumé')}</Link></li>
             <li><ExternalLink href="http://blog.szeremi.org/">{t('blog')}</ExternalLink></li>
           </Nav>
         </Navbar>

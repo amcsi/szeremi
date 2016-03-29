@@ -19,6 +19,8 @@ const HomePage = React.createClass({
         <main className="text-center">
           <h1>{t('homepage.title')}</h1>
           <img src="/img/attila-szeremi-home.jpg"
+            width="263"
+            height="263"
             style={{ marginBottom: 10, border: '1px solid gray' }}
             alt={t('homepage.photoAlt')}
             className="img-circle"
