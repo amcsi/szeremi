@@ -26,7 +26,13 @@ const Header = React.createClass({
             </Navbar.Brand>
             <HeaderLanguageSelector />
           </Navbar.Header>
-          <Nav pullRight style={{ fontSize: '120%' }}>
+          <Nav
+            pullRight
+            style={{
+              textShadow: '1px 1px 2px rgba(0, 0, 0, .5)',
+              fontSize: '120%',
+            }}
+          >
             <li><Link to="/"><span className="fa fa-home" /> {t('home')}</Link></li>
             <li><Link to="/resume"><span className="fa fa-briefcase" /> {t('resumé')}</Link></li>
             <li><ExternalLink href="http://blog.szeremi.org/">{t('blog')}</ExternalLink></li>
