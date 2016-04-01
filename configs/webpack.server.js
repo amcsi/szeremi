@@ -12,9 +12,10 @@ fs.readdirSync('node_modules')
     externals[mod] = `commonjs ${mod}`;
   });
 
-const webpackBase = require('./webpack.base.js');
+const baseConfigMap = require('./webpack.base.js');
+const merge = require('./merge');
 // noinspection JSUnresolvedFunction
-module.exports = Object.assign({}, webpackBase, {
+const serverConfig = merge(baseConfigMap, {
   target: 'node',
   devtool: 'source-map',
   entry: {
@@ -23,7 +24,7 @@ module.exports = Object.assign({}, webpackBase, {
     ],
   },
   output: {
-    path: path.join(webpackBase.context, 'dist'),
+    path: path.join(baseConfigMap.get('context'), 'dist'),
     filename: '[name].js',
   },
   plugins: [
@@ -37,4 +38,5 @@ module.exports = Object.assign({}, webpackBase, {
     new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 20 }),
   ],
   externals,
-});
+}).toJS();
+module.exports = serverConfig;

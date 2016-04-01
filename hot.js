@@ -4,9 +4,7 @@ const webpack = require('webpack');
 const fs = require('fs');
 const port = 3000;
 
-const config = require('./configs/webpack.client-watch.js');
-config.entry.app.unshift('webpack-hot-middleware/client');
-config.plugins.unshift(new webpack.HotModuleReplacementPlugin());
+const config = require('./configs/webpack.client-dev.js');
 const compiler = webpack(config);
 
 const devServer = express();

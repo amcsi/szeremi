@@ -1,5 +1,10 @@
 const path = require('path');
-module.exports = {
+const Immutable = require('immutable');
+
+/**
+ * @type {Immutable.Map}
+ */
+const configMap = Immutable.fromJS({
   context: path.normalize(`${__dirname}/..`),
   cache: false,
   debug: false,
@@ -43,4 +48,21 @@ module.exports = {
     __dirname: true,
     fs: 'empty',
   },
-};
+  // Items meant to be shared by several configs.
+  _shared: {
+    client: {
+      target: 'web',
+      entry: {
+        app: [
+          './app/client.js',
+        ],
+      },
+      output: {
+        path: path.join(__dirname, '../public/build'),
+        publicPath: '/build/',
+        filename: '[name].js',
+      },
+    },
+  },
+});
+module.exports = configMap;

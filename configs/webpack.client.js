@@ -1,35 +1,24 @@
 const webpack = require('webpack');
 const path = require('path');
+const merge = require('./merge');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const base = require('./webpack.base.js');
+const baseConfigMap = require('./webpack.base.js');
+const sharedClientConfigMap = baseConfigMap.getIn(['_shared', 'client']);
 // noinspection JSUnresolvedFunction
-module.exports = Object.assign({}, base, {
+const clientConfig = merge(baseConfigMap, sharedClientConfigMap, {
   devtool: process.env.NODE_ENV !== 'production' ? 'source-map' : null,
-  target: 'web',
-  entry: {
-    app: [
-      './app/client.js',
-    ],
-  },
-  module: Object.assign({}, base.module, {
-    loaders: base.module.loaders.map(loader => {
+  module: {
+    loaders: baseConfigMap.getIn(['module', 'loaders']).map(loader => {
       // Override CSS and related loaders to extract them into files.
-      
-      if (loader.name === 'css') {
-        const cssLoader = ExtractTextPlugin.extract('style-loader', 'css-loader');
-        return Object.assign({}, loader, { loader: cssLoader });
+      const loaderName = loader.get('name');
+      if (loaderName === 'css') {
+        return loader.set('loader', ExtractTextPlugin.extract('style', 'css'));
       }
-      if (loader.name === 'sass') {
-        const sassLoader = ExtractTextPlugin.extract('style-loader', 'css-loader', 'sass-loader');
-        return Object.assign({}, loader, { loader: sassLoader });
+      if (loaderName === 'sass') {
+        return loader.set('loader', ExtractTextPlugin.extract('style', 'css!sass'));
       }
       return loader;
     }),
-  }),
-  output: {
-    path: path.join(__dirname, '../public/build'),
-    publicPath: '/build/',
-    filename: '[name].js',
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -45,4 +34,5 @@ module.exports = Object.assign({}, base, {
     new webpack.optimize.UglifyJsPlugin({ minimize: true, compress: { warnings: false } }),
     new ExtractTextPlugin('styles.css'),
   ],
-});
+}).toJS();
+module.exports = clientConfig;
