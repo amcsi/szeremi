@@ -21,7 +21,11 @@ const HomePage = React.createClass({
           <img src="/img/attila-szeremi-home.jpg"
             width="263"
             height="263"
-            style={{ marginBottom: 10, border: '1px solid gray' }}
+            style={{
+              marginBottom: 10,
+              border: '1px solid gray',
+              boxShadow: '0 0 4gpx rgba(0, 0, 0, 1)',
+            }}
             alt={t('homepage.photoAlt')}
             className="img-circle"
           />

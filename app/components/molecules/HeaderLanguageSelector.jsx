@@ -4,10 +4,10 @@ import SmallSelectableLanguageIcon from '../atoms/SmallSelectableLanguageIcon';
 
 class HeaderLanguageSelector extends React.Component {
   render() {
-    const containerStyle = {
+    const containerStyle = Object.assign({
       display: 'flex',
       alignItems: 'flex-center',
-    };
+    }, this.props.style);
 
     return (
       <div style={containerStyle}>
@@ -25,6 +25,8 @@ class HeaderLanguageSelector extends React.Component {
   }
 }
 
-HeaderLanguageSelector.propTypes = {};
+HeaderLanguageSelector.propTypes = {
+  style: React.PropTypes.object,
+};
 
 export default (HeaderLanguageSelector);
