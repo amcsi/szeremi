@@ -1,12 +1,12 @@
 import React from 'react';
 
 import { translate } from 'react-i18next';
-import {Navbar, Nav} from 'react-bootstrap';
-import {Link} from 'react-router';
+import { Navbar, Nav } from 'react-bootstrap';
+import { Link } from 'react-router';
 import ExternalLink from '../atoms/ExternalLink';
 import HeaderLanguageSelector from '../molecules/HeaderLanguageSelector';
 
-import './Header.css';
+import './Header.scss';
 
 const Header = React.createClass({
 
@@ -18,7 +18,7 @@ const Header = React.createClass({
     const { t } = this.props;
 
     return (
-      <div>
+      <div className="header">
         <Navbar style={{ fontSize: '115%' }}>
           <Navbar.Header>
             <Navbar.Brand>
@@ -33,8 +33,21 @@ const Header = React.createClass({
               fontSize: '120%',
             }}
           >
-            <li><Link to="/"><span className="fa fa-home" /> {t('home')}</Link></li>
-            <li><Link to="/resume"><span className="fa fa-briefcase" /> {t('resumé')}</Link></li>
+            <li>
+              <Link to="/" activeClassName="active" onlyActiveOnIndex={true}>
+                <span className="fa fa-home" /> {t('home')}
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" activeClassName="active" onlyActiveOnIndex={true}>
+                <span className="fa fa-star" /> {t('about')}
+              </Link>
+            </li>
+            <li>
+              <Link to="/cv" activeClassName="active" onlyActiveOnIndex={true}>
+                <span className="fa fa-briefcase" /> {t('resumé')}
+              </Link>
+            </li>
             <li><ExternalLink href="http://blog.szeremi.org/">{t('blog')}</ExternalLink></li>
           </Nav>
         </Navbar>

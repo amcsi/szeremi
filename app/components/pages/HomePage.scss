@@ -1,3 +1,13 @@
-h1 {
-  text-align: center;
+.homepage {
+  .photo {
+    opacity: 0.8;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+    transition-duration: 0.3s;
+    transition-property: all;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 }

@@ -1,0 +1,16 @@
+.header {
+  .navbar-header {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-nav {
+    >li {
+      >a {
+        &.active {
+          color: #333;
+        }
+      }
+    }
+  }
+}

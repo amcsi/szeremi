@@ -1,5 +1,6 @@
 export default {
   translation: {
+    about: 'Sobre mi',
     blog: 'Blog',
     countryCodes: {
       ES: 'España',

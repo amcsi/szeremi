@@ -1,6 +1,7 @@
 // noinspection SpellCheckingInspection
 export default {
   translation: {
+    about: 'Rólam',
     blog: 'Blog',
     countryCodes: {
       ES: 'Spanyolország',
