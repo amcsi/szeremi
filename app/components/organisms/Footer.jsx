@@ -10,7 +10,7 @@ class Footer extends React.Component {
     };
   }
   render() {
-    const githubLink = 'http://github.com/amcsi/szeremi';
+    const githubLink = 'https://github.com/amcsi/szeremi';
     const GithubLinkComponent = <ExternalLink href={githubLink}>{githubLink}</ExternalLink>;
 
   return (

@@ -89,19 +89,6 @@
       ]
     }
   ],
-  "education": [
-    {
-      "institution": "University of Szeged",
-      "area": "Web Programming",
-      "studyType": "Community college",
-      "releaseDate": "2009",
-      "endDate": "2010",
-      "courses": [
-        "Algorithms and data structures",
-        "Java Introduction"
-      ]
-    }
-  ],
   "publications": [
     {
       "name": "My own website",
@@ -118,7 +105,7 @@
     {
       "name": "Web Programming",
       "level": "Master",
-      "keywords": ["PHP", "JavaScript", "CSS"]
+      "keywords": ["PHP", "JavaScript", "CSS", "Rest APIs"]
     },
     {
       "name": "PHP frameworks",
@@ -128,7 +115,7 @@
     {
       "name": "JavaScript technologies",
       "level": "Advanced",
-      "keywords": ["Webpack", "ReactJS", "AngularJS 1", "Redux", "Isomorphic apps", "NodeJS", "ExtJS"]
+      "keywords": ["ReactJS", "Redux", "Webpack", "Isomorphic apps", "AngularJS 1", "NodeJS", "ExtJS"]
     },
     {
       "name": "Databases",
@@ -138,12 +125,12 @@
     {
       "name": "System administration",
       "level": "Intermediate",
-      "keywords": ["Linux", "Docker", "vim"]
+      "keywords": ["Linux", "Digital Ocean", "Docker", "vim"]
     },
     {
       "name": "Other web technologies",
       "level": "Advanced",
-      "keywords": ["Security", "Git VCS", "Testing"]
+      "keywords": ["Security", "Git", "Testing"]
     }
   ],
   "languages": [
