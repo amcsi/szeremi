@@ -47,6 +47,7 @@ export default {
       reference: 'Referencia',
       references: 'Referenciák',
       skills: 'Képességek',
+      studyType: 'Tanulmány típusa',
       summary: 'Összefoglaló',
       telephone: 'Telefonszám',
       volunteer: 'Önkéntes',

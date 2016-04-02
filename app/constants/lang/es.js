@@ -46,6 +46,7 @@ export default {
       reference: 'Referencia',
       references: 'Referencias',
       skills: 'Habilidades',
+      studyType: 'Tipo del estudo',
       summary: 'Sumario',
       telephone: 'Número teléfono',
       volunteer: 'Voluntario',
