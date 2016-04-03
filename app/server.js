@@ -12,14 +12,6 @@ import serverProvider from './components/factories/serverProvider';
 import calculateInitialState from './core/calculateInitialState';
 
 const app = express();
-// Use gzip compression.g
-app.use(compress());
-
-const publicPath = './public';
-app.use('/', express.static(publicPath, {
-  maxage: 31557600,
-}));
-
 
 app.enable('trust proxy');
 
@@ -65,19 +57,29 @@ function onRoot(req, res) {
     });
   });
 }
-
-app.route('*').get(onRoot);
-
+const publicPath = './public';
+const staticMiddleware = express.static(publicPath, {
+  maxage: 31557600,
+});
 // This tells express to route ALL requests through this middleware
 // This middleware ends up being a "catch all" error handler
-app.use((err, req, res, next) => {
+const errorHandlerMiddleware = (err, req, res, next) => {
   console.error('Error middleware', err);
   if (err) {
     res.send(500, { error: err });
   } else {
     res.send(500, { error: '500 - Internal Server Error' });
   }
-});
+};
+
+// Use gzip compression.
+app.use(compress());
+// This order is necessary, otherwise if staticMiddleware were on top, then for the
+// root route '/' it would just literally load the static index.html file from the public folder.
+app.get('/', onRoot);
+app.use('/', staticMiddleware);
+app.use(onRoot);
+app.use(errorHandlerMiddleware);
 
 const server = app.listen(process.env.PORT || 8080, function listen() {
   const host = server.address().address;
