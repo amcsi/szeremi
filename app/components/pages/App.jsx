@@ -5,6 +5,8 @@ import { Provider } from 'react-redux';
 import TranslatorContext from './TranslatorContext';
 import i18next from '../../core/translator';
 
+import './App.scss';
+
 class App extends React.Component {
   static propTypes() {
     return {
