@@ -1,6 +1,6 @@
 export default {
-    translation: {
-      about: 'About me',
+  translation: {
+    about: 'About me',
     aboutPage: {
       quote: "It's time to code and chew bubble gum. And I'm all out of gum.",
       p1: 'I have been fascinated with computers and its creative potential ever since my family' +
