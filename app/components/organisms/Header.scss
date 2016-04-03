@@ -1,3 +1,5 @@
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
+
 .header {
   .navbar-header {
     display: flex;
@@ -8,9 +10,20 @@
     .navbar-nav {
       > li {
         > a {
+          $strongBorderBottom: 3px solid #22b14c;
+          $weakBorderBottom: 3px solid rgba(34, 177, 76, .3);
+
           &:hover,&.active {
-            background-color: rgba(0, 0, 0, .08);
+            height: $navbar-height;
+            background-color: rgba(34, 177, 76, .08);
+            border-bottom: $strongBorderBottom;
             color: #333;
+          }
+          &:hover {
+            border-bottom: $weakBorderBottom;
+          }
+          &:hover.active {
+            border-bottom: $strongBorderBottom;
           }
         }
       }

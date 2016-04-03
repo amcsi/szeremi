@@ -33,6 +33,7 @@
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
     "bootstrap": "^3.3.6",
+    "bootstrap-sass": "^3.3.6",
     "bootstrap-social": "^4.11.0",
     "compression": "^1.6.1",
     "concurrently": "^2.0.0",
