@@ -4,11 +4,14 @@
     align-items: center;
   }
 
-  .navbar-nav {
-    >li {
-      >a {
-        &.active {
-          color: #333;
+  .navbar-default {
+    .navbar-nav {
+      > li {
+        > a {
+          &:hover,&.active {
+            background-color: rgba(0, 0, 0, .08);
+            color: #333;
+          }
         }
       }
     }

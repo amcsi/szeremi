@@ -19,32 +19,26 @@ const Header = React.createClass({
 
     return (
       <div className="header">
-        <Navbar style={{ fontSize: '115%' }}>
+        <Navbar>
           <Navbar.Header>
             <Navbar.Brand>
-              <Link to="/" style={{ fontSize: '150%' }}>Szeremi</Link>
+              <Link to="/">Szeremi</Link>
             </Navbar.Brand>
             <HeaderLanguageSelector />
           </Navbar.Header>
-          <Nav
-            pullRight
-            style={{
-              textShadow: '1px 1px 2px rgba(0, 0, 0, .5)',
-              fontSize: '120%',
-            }}
-          >
+          <Nav pullRight>
             <li>
-              <Link to="/" activeClassName="active" onlyActiveOnIndex={true}>
+              <Link to="/" activeClassName="active" onlyActiveOnIndex>
                 <span className="fa fa-home" /> {t('home')}
               </Link>
             </li>
             <li>
-              <Link to="/about" activeClassName="active" onlyActiveOnIndex={true}>
+              <Link to="/about" activeClassName="active" onlyActiveOnIndex>
                 <span className="fa fa-star" /> {t('about')}
               </Link>
             </li>
             <li>
-              <Link to="/cv" activeClassName="active" onlyActiveOnIndex={true}>
+              <Link to="/cv" activeClassName="active" onlyActiveOnIndex>
                 <span className="fa fa-briefcase" /> {t('resumé')}
               </Link>
             </li>
