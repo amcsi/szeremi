@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 /**
  * This wrapper component allows for hot module replacement of the translations.
+ * It also allows for the language to be changed.
  */
 class TranslatorContext extends React.Component {
   componentWillReceiveProps({ i18next, currentLanguage }) {

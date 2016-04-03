@@ -1,6 +1,5 @@
 require('source-map-support').install();
 const express = require('express');
-const path = require('path');
 const { renderToString } = require('react-dom/server');
 import routes from './core/routes';
 import { match, RouterContext } from 'react-router';
@@ -8,12 +7,9 @@ const fs = require('fs');
 const React = require('react');
 const compress = require('compression');
 import gaTrackingScriptTemplate from './content/ga.html';
+import serverProvider from './components/factories/serverProvider';
 // Component stuff.
-import { Provider } from 'react-redux';
-import { I18nextProvider } from 'react-i18next';
-import i18next from './core/translator';
 import calculateInitialState from './core/calculateInitialState';
-import configureStore from './core/configureStore';
 
 const app = express();
 // Use gzip compression.g
@@ -41,16 +37,14 @@ function onRoot(req, res) {
         throw err;
       }
       const initialState = calculateInitialState(req);
+      const Provider = serverProvider(initialState);
       const initialStateJson = JSON.stringify(initialState || {});
-      const store = configureStore(initialState);
       // You can also check renderProps.components or renderProps.routes for
       // your "not found" component or route respectively, and send a 404 as
       // below, if you're using a catch-all route.
       const rendered = renderToString(
-        <Provider store={store}>
-          <I18nextProvider i18n={i18next}>
-            <RouterContext {...renderProps} />
-          </I18nextProvider>
+        <Provider>
+          <RouterContext {...renderProps} />
         </Provider>
       );
 
