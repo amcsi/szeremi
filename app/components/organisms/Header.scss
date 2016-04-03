@@ -14,7 +14,10 @@
           $weakBorderBottom: 3px solid rgba(34, 177, 76, .3);
 
           &:hover,&.active {
-            height: $navbar-height;
+            padding-bottom: 7px;
+            @media only screen and (min-width: $screen-sm-min) {
+              padding-bottom: $navbar-padding-vertical - 3;
+            }
             background-color: rgba(34, 177, 76, .08);
             border-bottom: $strongBorderBottom;
             color: #333;
