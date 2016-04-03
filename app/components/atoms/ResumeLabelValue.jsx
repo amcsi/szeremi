@@ -3,7 +3,7 @@ import React from 'react';
 const ResumeLabelValue = React.createClass({
   propTypes: {
     label: React.PropTypes.string.isRequired,
-    value: React.PropTypes.string,
+    value: React.PropTypes.node,
   },
 
   render() {
