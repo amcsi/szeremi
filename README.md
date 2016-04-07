@@ -1,5 +1,5 @@
 # szeremi
-Source code for Attila Szeremi's portfolio website
+Source code for [Attila Szeremi's portfolio website](http://www.szeremi.org/)
 
 Follows atomic design: http://patternlab.io/
 
