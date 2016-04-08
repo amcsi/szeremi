@@ -64,7 +64,8 @@
     "source-map-support": "^0.4.0",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
-    "webpack": "^1.12.12"
+    "webpack": "^1.12.12",
+    "webpack-node-externals": "^1.0.0"
   },
   "devDependencies": {
     "babel-plugin-react-transform": "^2.0.0",
