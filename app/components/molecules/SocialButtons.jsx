@@ -4,7 +4,13 @@ import { Button } from 'react-bootstrap';
 class SocialButtons extends React.Component {
 
   getSocialKeyByProfile(profile) {
-    return profile.network.toLowerCase().replace(/ /g, '');
+    const networkLowercase = profile.network.toLowerCase();
+    switch (networkLowercase) {
+      case 'stackoverflow':
+        return 'stack-overflow';
+      default:
+        return networkLowercase.replace(/ /g, '');
+    }
   }
 
   render() {

@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import TranslatorContext from './TranslatorContext';
 import i18next from '../../core/translator';
 
+import 'font-awesome/scss/font-awesome.scss';
 import './App.scss';
 
 class App extends React.Component {
