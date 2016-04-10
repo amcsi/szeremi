@@ -1,8 +1,6 @@
 import React from 'react';
 import configureStore from '../../core/configureStore';
-import TranslatorContext from '../pages/TranslatorContext';
-import i18next from '../../core/translator';
-import { Provider } from 'react-redux';
+import Contexts from '../pages/Contexts';
 
 /**
  * Returns the root context to use on the server-side.
@@ -20,11 +18,9 @@ function serverProvider(initialState) {
 
     render() {
       return (
-        <Provider store={store}>
-          <TranslatorContext i18next={i18next}>
-            { this.props.children }
-          </TranslatorContext>
-        </Provider>
+        <Contexts store={store}>
+          { this.props.children }
+        </Contexts>
       );
     }
   };
