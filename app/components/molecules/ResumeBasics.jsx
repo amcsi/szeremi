@@ -32,7 +32,7 @@ class ResumeBasics extends React.Component {
           <ResumeLabelValue label={t('resumePage.email')} value={email} />
           <ResumeLabelValue label={t('resumePage.telephone')} value={basics.telephone} />
           <ResumeLabelUrl label={t('resumePage.website')} url={basics.website} />
-          <ResumeLabelValue Value label={t('resumePage.summary')} value={basics.summary} />
+          <ResumeLabelValue label={t('resumePage.summary')} value={basics.summary} />
 
           {addressComponent}
         </div>

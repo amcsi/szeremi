@@ -6,10 +6,11 @@ import { match, RouterContext } from 'react-router';
 const fs = require('fs');
 const React = require('react');
 const compress = require('compression');
-import gaTrackingScriptTemplate from './content/ga.html';
-import serverProvider from './components/factories/serverProvider';
 // Component stuff.
 import calculateInitialState from './core/calculateInitialState';
+import Helmet from 'react-helmet';
+import Contexts from './components/contexts/Contexts';
+import configureStore from './core/configureStore';
 
 const app = express();
 
@@ -32,27 +33,29 @@ function onRoot(req, res) {
       if (err) {
         throw err;
       }
-      const initialState = calculateInitialState(req);
-      const Provider = serverProvider(initialState);
-      const initialStateJson = JSON.stringify(initialState || {});
+      const serverPathname = renderProps.location.pathname;
+      const initialState = Object.assign(
+        calculateInitialState(req),
+        { routing: { serverPathname } }
+      );
+      const store = configureStore(initialState);
+
       // You can also check renderProps.components or renderProps.routes for
       // your "not found" component or route respectively, and send a 404 as
       // below, if you're using a catch-all route.
       const rendered = renderToString(
-        <Provider>
+        <Contexts store={store}>
           <RouterContext {...renderProps} />
-        </Provider>
+        </Contexts>
       );
 
-      let headString = '<link rel="stylesheet" href="/build/styles.css">\n';
-      headString += `<script>state = ${initialStateJson};</script>\n`;
-      // Google analytics script tag.
-      const gaTrackingId = process.env.SZEREMI_GA_TRACKING_ID;
-      if (gaTrackingId) {
-        headString += gaTrackingScriptTemplate.replace('{{ gaTrackingId }}', gaTrackingId);
-      }
-      const html = data.toString().replace('>.<', `>${rendered}<`).
-        replace('<!-- head -->\n', headString);
+      const head = Helmet.rewind();
+      const headString = head.title.toString() + head.meta.toString() + head.link.toString() +
+        head.script.toString();
+      const html = data.toString()
+        .replace('<html>', `<html ${head.htmlAttributes.toString()}>`)
+        .replace('<!-- head -->\n', headString)
+        .replace('>.<', `>${rendered}<`);
       res.status(200).send(html);
     });
   });

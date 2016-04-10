@@ -19,7 +19,7 @@ class App extends React.Component {
 
     return (
       <Contexts store={store}>
-          <Router history={history} routes={routes} />
+        <Router history={history} routes={routes} />
       </Contexts>
     );
   }
