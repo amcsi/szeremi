@@ -1,6 +1,6 @@
 import React from 'react';
 
-import TranslatorContext from '../pages/TranslatorContext';
+import TranslatorLayer from './TranslatorLayer';
 import i18next from '../../core/translator';
 import { Provider } from 'react-redux';
 /**
@@ -8,12 +8,13 @@ import { Provider } from 'react-redux';
  */
 class Contexts extends React.Component {
   render() {
-    const { store } = this.props;
+    const { store, children } = this.props;
+
     return (
       <Provider store={store}>
-        <TranslatorContext i18next={i18next}>
-          { this.props.children }
-        </TranslatorContext>
+        <TranslatorLayer i18next={i18next}>
+          { children }
+        </TranslatorLayer>
       </Provider>
     );
   }

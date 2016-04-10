@@ -28,9 +28,9 @@ const Header = React.createClass({
             <HeaderLanguageSelector />
           </Navbar.Header>
           <Nav pullRight itemScope itemType="http://www.schema.org/SiteNavigationElement">
-            <HeaderNavItem name={t('home')} to="/" faIcon="home" />
-            <HeaderNavItem name={t('about')} to="/about" faIcon="star" />
-            <HeaderNavItem name={t('resumé')} to="/cv" faIcon="briefcase" />
+            <HeaderNavItem to="/" faIcon="home" />
+            <HeaderNavItem to="/about" faIcon="star" />
+            <HeaderNavItem to="/cv" faIcon="briefcase" />
             <li><ExternalLink href="http://blog.szeremi.org/">{t('blog')}</ExternalLink></li>
           </Nav>
         </Navbar>

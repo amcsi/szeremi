@@ -1,6 +1,6 @@
 import React from 'react';
 import configureStore from '../../core/configureStore';
-import Contexts from '../pages/Contexts';
+import Contexts from '../contexts/Contexts';
 
 /**
  * Returns the root context to use on the server-side.

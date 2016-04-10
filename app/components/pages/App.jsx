@@ -1,7 +1,7 @@
 import React from 'react';
 import routes from '../../core/routes';
 import { Router } from 'react-router';
-import Contexts from './Contexts';
+import Contexts from './../contexts/Contexts';
 
 import 'font-awesome/scss/font-awesome.scss';
 import './App.scss';
