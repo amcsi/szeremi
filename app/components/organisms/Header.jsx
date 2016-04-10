@@ -4,6 +4,7 @@ import { translate } from 'react-i18next';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router';
 import ExternalLink from '../atoms/ExternalLink';
+import HeaderNavItem from '../atoms/HeaderNavItem';
 import HeaderLanguageSelector from '../molecules/HeaderLanguageSelector';
 
 import './Header.scss';
@@ -26,22 +27,10 @@ const Header = React.createClass({
             </Navbar.Brand>
             <HeaderLanguageSelector />
           </Navbar.Header>
-          <Nav pullRight>
-            <li>
-              <Link to="/" activeClassName="active" onlyActiveOnIndex>
-                <span className="fa fa-home" /> {t('home')}
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" activeClassName="active" onlyActiveOnIndex>
-                <span className="fa fa-star" /> {t('about')}
-              </Link>
-            </li>
-            <li>
-              <Link to="/cv" activeClassName="active" onlyActiveOnIndex>
-                <span className="fa fa-briefcase" /> {t('resumé')}
-              </Link>
-            </li>
+          <Nav pullRight itemScope itemType="http://www.schema.org/SiteNavigationElement">
+            <HeaderNavItem name={t('home')} to="/" faIcon="home" />
+            <HeaderNavItem name={t('about')} to="/about" faIcon="star" />
+            <HeaderNavItem name={t('resumé')} to="/cv" faIcon="briefcase" />
             <li><ExternalLink href="http://blog.szeremi.org/">{t('blog')}</ExternalLink></li>
           </Nav>
         </Navbar>
