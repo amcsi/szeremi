@@ -6,6 +6,8 @@
   "scripts": {
     "clean": "rimraf dist/* public/build/*",
     "start": "node --harmony ./dist/server.js",
+    "start-dev": "node hot.js",
+    "start-server-refreshing": "nodemon --watch dist --harmony ./dist/server.js",
     "build": "concurrently \"npm run build-server\" \"npm run build-client\"",
     "build-server": "webpack --display-error-details --config configs/webpack.server.js --bail",
     "build-client": "webpack --display-error-details --config configs/webpack.client.js --bail",
@@ -13,7 +15,7 @@
     "prebuild-client": "rimraf public/build/*",
     "watch-server": "npm run prebuild-server && webpack --watch --verbose --display-error-details --config configs/webpack.server.js",
     "watch-client": "npm run prebuild-client && webpack --watch --verbose --display-error-details --config configs/webpack.client.js",
-    "watch": "concurrently \"node hot.js\" \"npm run watch-server\" \"npm run watch-client\" \"nodemon --watch dist --harmony ./dist/server.js\""
+    "watch": "concurrently \"npm run start-dev\" \"npm run watch-server\" \"npm run watch-client\" \"npm run start-server-refreshing\""
   },
   "repository": {
     "type": "git",
