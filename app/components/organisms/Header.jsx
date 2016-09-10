@@ -31,7 +31,6 @@ const Header = React.createClass({
             <HeaderNavItem to="/" faIcon="home" />
             <HeaderNavItem to="/about" faIcon="star" />
             <HeaderNavItem to="/cv" faIcon="briefcase" />
-            <li><ExternalLink href="http://blog.szeremi.org/">{t('blog')}</ExternalLink></li>
           </Nav>
         </Navbar>
       </div>
