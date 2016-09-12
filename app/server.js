@@ -84,7 +84,7 @@ app.use('/', staticMiddleware);
 app.use(onRoot);
 app.use(errorHandlerMiddleware);
 
-const server = app.listen(process.env.PORT || 8080, function listen() {
+const server = app.listen(process.env.PORT || 8080, '0.0.0.0', function listen() {
   const host = server.address().address;
   const port = server.address().port;
 
