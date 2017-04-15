@@ -5,7 +5,7 @@ export default {
       quote: "It's time to code and chew bubble gum. And I'm all out of gum.",
       p1: 'I have been fascinated with computers and its creative potential ever since my family' +
       ' first owned a Macintosh Classic that I was using too when I was only 4 years old. My' +
-      ' creativite background began when I was around 10 years old when I was fooling around' +
+      ' creative background began when I was around 10 years old when I was fooling around' +
       " with Microsoft PowerPoint '97 for creating what was similar to Flash videos, and when I" +
       ' was building my own Duke Nukem 3D maps with its level editing tool.',
       p2: 'After finishing high school, I made the mistake of favoring going to do a prestigious' +
