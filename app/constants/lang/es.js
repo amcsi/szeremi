@@ -4,7 +4,7 @@ export default {
     aboutPage: {
       p1: `
         Me facianaban las computadoras desde tener 4 años cuando mi familia consigieron 
-        un Mahintosh Classic, lo que yo también usaba. Empezé las obras creativas de la informatica teniendo 10 años
+        un Macintosh Classic, lo que yo también usaba. Empezé las obras creativas de la informatica teniendo 10 años
         cuando jugaba con Microsoft PowerPoint '97 creando obras parecido como videos flash, y cuando estaba construyendo
         mis niveles propios para Duke Nukem 3D con su herramiento para crear niveles.
       `,
