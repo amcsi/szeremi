@@ -41,7 +41,7 @@
       "position": "Backend PHP developer",
       "website": "http://workangel.com/",
       "releaseDate": "2015-01",
-      "endDate": "",
+      "endDate": "2018-12",
       "summary": "LifeWorks (formally known as WorkAngel) located in London is a company producing a platform for a benefit system and achieving workplace social engagement in a fun way with the help of gaining achievements and badges. This has been where I have been gaining the most knowledge, being surrounded by very talented and inspirational fellow programmer colleagues, and being exposed to many different points of view for problem solving.",
       "highlights": [
         "Develop with PHP the backend side of the JSON REST API which is used by the Web frontend, Android and iOS",
@@ -120,7 +120,7 @@
     {
       "name": "JavaScript technologies",
       "level": "Advanced",
-      "keywords": ["ReactJS", "Redux", "Webpack", "Isomorphic apps", "AngularJS 1", "NodeJS", "ExtJS"]
+      "keywords": ["ReactJS", "Redux", "VueJS", "Webpack", "Isomorphic apps", "AngularJS 1", "NodeJS", "ExtJS"]
     },
     {
       "name": "Databases",
