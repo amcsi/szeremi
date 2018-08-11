@@ -37,6 +37,17 @@
   },
   "work": [
     {
+      "company": "Toptal",
+      "position": "Freelance full stack developer",
+      "website": "https://toptal.com/",
+      "releaseDate": "2018-04",
+      "endDate": null,
+      "summary": " Toptal is a company who hires the most talented individuals for doing quality freelance work for quality clients.",
+      "highlights": [
+        "Developed an Ethereum-based application's backend and web frontend parts with Laravel and VueJS"
+      ]
+    },
+    {
       "company": "LifeWorks",
       "position": "Backend PHP developer",
       "website": "http://workangel.com/",
@@ -96,14 +107,19 @@
   ],
   "publications": [
     {
-      "name": "My own website",
-      "website": "http://www.szeremi.org/",
-      "summary": "My open-source personal and professional website created with NodeJS and ReactJS. The project is hosted on Digital Ocean and I'm using Docker containers to host each application."
+      "name": "Japanese card game fan translation website",
+      "website": "https://lycee-tcg.eu/",
+      "summary": "My open-source website made with Laravel and VueJS. I make heavy use of regular expressions to replace patterns in Japanese text for translating to English."
     },
     {
-      "name": "Livecoding.tv coding sessions",
-      "website": "https://www.livecoding.tv/amcsi/",
-      "summary": "I livestream as I code my personal open-source projects for entertaining viewers, hoping to give them good ideas to learn and also potentially receive help myself."
+      "name": "Jogging website",
+      "website": "https://jogging.szeremi.org/",
+      "summary": "An open-source website I made with Laravel and VueJS. You can register a user and you can enter how much you jog each day. You can then aggregate data."
+    },
+    {
+      "name": "My own website",
+      "website": "https://www.szeremi.org/",
+      "summary": "My open-source personal and professional website created with NodeJS and ReactJS. The project is hosted on Digital Ocean and I'm using Docker containers to host each application."
     }
   ],
   "skills": [
