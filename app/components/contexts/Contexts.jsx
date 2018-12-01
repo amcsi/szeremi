@@ -1,8 +1,14 @@
 import React from 'react';
-
+import ReactBreakpoints from 'react-breakpoints';
 import TranslatorLayer from './TranslatorLayer';
 import i18next from '../../core/translator';
 import { Provider } from 'react-redux';
+
+const breakpoints = {
+  xs: 480,
+  sm: 768,
+};
+
 /**
  * Component with the common outermost contexts
  */
@@ -13,7 +19,9 @@ class Contexts extends React.Component {
     return (
       <Provider store={store}>
         <TranslatorLayer i18next={i18next}>
-          { children }
+          <ReactBreakpoints breakpoints={breakpoints} guessedBreakpoint="sm">
+            { children }
+          </ReactBreakpoints>
         </TranslatorLayer>
       </Provider>
     );
