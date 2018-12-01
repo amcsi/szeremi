@@ -44,7 +44,9 @@
       "endDate": null,
       "summary": " Toptal is a company who hires the most talented individuals for doing quality freelance work for quality clients.",
       "highlights": [
-        "Developed an Ethereum-based application's backend and web frontend parts with Laravel and VueJS"
+        "Developed an Ethereum-based application's backend and web frontend parts with Laravel and VueJS",
+        "Integrated a brokerage web application with Zoho CRM.",
+        "Generated styled excel spreadsheets for a physician practice management service."
       ]
     },
     {
