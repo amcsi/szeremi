@@ -15,6 +15,7 @@ const HomePage = React.createClass({
     return (
         <div className="text-center homepage">
           <h1>{t('homepage.title')}</h1>
+
           <Link to="/about">
             <img src="/img/attila-szeremi-home.jpg"
               width="263"

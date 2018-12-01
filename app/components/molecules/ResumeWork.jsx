@@ -18,7 +18,6 @@ class ResumeWork extends React.Component {
           return (
               <ResumeSection
                 key={item.company}
-                sizeClassName={items.length > 1 ? 'col-md-6' : ''}
                 title={item.company}
                 titleUrl={item.website}
                 afterTitle={date}

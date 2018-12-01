@@ -15,7 +15,7 @@ class ResumeSkills extends React.Component {
       <div className={className}>
         <h2>{t('resumePage.skills')}</h2>
         {items.map(item => (
-            <ResumeSection sizeClassName="col-md-4" key={item.name} title={item.name}>
+            <ResumeSection key={item.name} title={item.name}>
               <ResumeLabelValue label={t('resumePage.level')} value={item.level} />
               <ResumeKeywords items={item.keywords} />
             </ResumeSection>
