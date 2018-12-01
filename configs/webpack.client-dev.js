@@ -22,6 +22,8 @@ const clientWatchConfig = merge(baseConfigMap, sharedClientConfigMap, {
     new webpack.DefinePlugin({ 'process.env': { NODE_ENV: '"development"' } }),
     new webpack.NoErrorsPlugin(),
     new webpack.HotModuleReplacementPlugin(),
+    // Include OldWatchingPlugin for Windows for file watching to work properly.
+    ...(process.platform === 'win32' ? [new webpack.OldWatchingPlugin()] : []),
   ],
   module: {
     loaders: baseConfigMap.getIn(['module', 'loaders']).map(loader => {
