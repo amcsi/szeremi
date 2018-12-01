@@ -96,8 +96,6 @@ class Resume extends React.Component {
     };
     const resumeCategoryComponents = resumeCategories.reduce(reduceCallback, []);
 
-    console.info(breakpoints[currentBreakpoint], breakpoints, breakpoints.sm);
-
     if (breakpoints[currentBreakpoint] >= breakpoints.sm) {
       return (
         <div className="container resume-container">
