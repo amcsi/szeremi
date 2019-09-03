@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { I18nextProvider } from 'react-i18next';
 import { connect } from 'react-redux';
@@ -23,9 +24,9 @@ class TranslatorLayer extends React.Component {
 }
 
 TranslatorLayer.propTypes = {
-  i18next: React.PropTypes.object.isRequired,
-  currentLanguage: React.PropTypes.string,
-  children: React.PropTypes.node.isRequired,
+  i18next: PropTypes.object.isRequired,
+  currentLanguage: PropTypes.string,
+  children: PropTypes.node.isRequired,
 };
 
 export default connect(({ currentLanguage }) => ({ currentLanguage }))(TranslatorLayer);

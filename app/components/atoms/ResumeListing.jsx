@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { translate } from 'react-i18next';
 
@@ -24,8 +25,8 @@ class ResumeListing extends React.Component {
 }
 
 ResumeListing.propTypes = {
-  title: React.PropTypes.string.isRequired,
-  items: React.PropTypes.array,
+  title: PropTypes.string.isRequired,
+  items: PropTypes.array,
 };
 
 export default (ResumeListing);

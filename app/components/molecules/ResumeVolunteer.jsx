@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { translate } from 'react-i18next';
 import ResumeSection from './ResumeSection';
@@ -36,8 +37,8 @@ class ResumeVolunteer extends React.Component {
 }
 
 ResumeVolunteer.propTypes = {
-  items: React.PropTypes.array,
-  t: React.PropTypes.func.isRequired,
+  items: PropTypes.array,
+  t: PropTypes.func.isRequired,
 };
 
 export default translate(['translation'])(ResumeVolunteer);

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Button } from 'react-bootstrap';
 
@@ -50,7 +51,7 @@ class SocialButtons extends React.Component {
 }
 
 SocialButtons.propTypes = {
-  profiles: React.PropTypes.array,
+  profiles: PropTypes.array,
 };
 
 export default SocialButtons;

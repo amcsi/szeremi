@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactBreakpoints from 'react-breakpoints';
 import TranslatorLayer from './TranslatorLayer';
@@ -29,8 +30,8 @@ class Contexts extends React.Component {
 }
 
 Contexts.propTypes = {
-  store: React.PropTypes.object.isRequired,
-  children: React.PropTypes.node.isRequired,
+  store: PropTypes.object.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default (Contexts);

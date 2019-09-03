@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { translate, Interpolate } from 'react-i18next';
 import HomePageLanguageSelector from '../molecules/HomePageLanguageSelector';
@@ -6,7 +7,7 @@ import ExternalLink from '../atoms/ExternalLink';
 class Footer extends React.Component {
   static propTypes() {
     return {
-      t: React.PropTypes.func.isRequired,
+      t: PropTypes.func.isRequired,
     };
   }
   render() {

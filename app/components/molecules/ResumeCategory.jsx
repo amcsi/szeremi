@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 /**
@@ -30,11 +31,11 @@ class ResumeCategory extends React.Component {
 }
 
 ResumeCategory.propTypes = {
-  children: React.PropTypes.node,
-  title: React.PropTypes.string,
-  shouldClearLeft: React.PropTypes.bool,
-  previousLength: React.PropTypes.number,
-  currentLength: React.PropTypes.number,
+  children: PropTypes.node,
+  title: PropTypes.string,
+  shouldClearLeft: PropTypes.bool,
+  previousLength: PropTypes.number,
+  currentLength: PropTypes.number,
 };
 
 export default (ResumeCategory);

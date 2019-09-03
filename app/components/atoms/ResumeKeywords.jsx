@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Label } from 'react-bootstrap';
 
@@ -23,7 +24,7 @@ class ResumeKeywords extends React.Component {
 }
 
 ResumeKeywords.propTypes = {
-  items: React.PropTypes.arrayOf(React.PropTypes.string),
+  items: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default ResumeKeywords;

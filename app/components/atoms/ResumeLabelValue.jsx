@@ -1,9 +1,10 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const ResumeLabelValue = React.createClass({
   propTypes: {
-    label: React.PropTypes.string.isRequired,
-    value: React.PropTypes.node,
+    label: PropTypes.string.isRequired,
+    value: PropTypes.node,
   },
 
   render() {

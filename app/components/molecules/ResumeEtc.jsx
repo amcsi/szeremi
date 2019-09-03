@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { translate } from 'react-i18next';
 import ResumeKeywords from '../atoms/ResumeKeywords';
@@ -73,10 +74,10 @@ class ResumeEtc extends React.Component {
 }
 
 ResumeEtc.propTypes = {
-  languages: React.PropTypes.array,
-  interests: React.PropTypes.array,
-  references: React.PropTypes.array,
-  t: React.PropTypes.func.isRequired,
+  languages: PropTypes.array,
+  interests: PropTypes.array,
+  references: PropTypes.array,
+  t: PropTypes.func.isRequired,
 };
 
 export default translate(['translation'])(ResumeEtc);

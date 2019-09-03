@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import Header from '../organisms/Header';
 import Footer from '../organisms/Footer';
@@ -34,7 +35,7 @@ class About extends React.Component {
 }
 
 About.propTypes = {
-  t: React.PropTypes.func.isRequired,
+  t: PropTypes.func.isRequired,
 };
 
 export default translate(['translation'])(About);

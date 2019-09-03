@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import ResumeLabelValue from '../atoms/ResumeLabelValue';
 import ResumeLabelUrl from '../atoms/ResumeLabelUrl';
@@ -31,8 +32,8 @@ class ResumeBasics extends React.Component {
 }
 
 ResumeBasics.propTypes = {
-  basics: React.PropTypes.object.isRequired,
-  t: React.PropTypes.func.isRequired,
+  basics: PropTypes.object.isRequired,
+  t: PropTypes.func.isRequired,
 };
 
 export default translate(['translation'])(ResumeBasics);

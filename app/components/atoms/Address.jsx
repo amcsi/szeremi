@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { translate } from 'react-i18next';
 
@@ -55,8 +56,8 @@ class Address extends React.Component {
 }
 
 Address.propTypes = {
-  location: React.PropTypes.object,
-  t: React.PropTypes.func.isRequired,
+  location: PropTypes.object,
+  t: PropTypes.func.isRequired,
 };
 
 export default translate(['translation'])(Address);

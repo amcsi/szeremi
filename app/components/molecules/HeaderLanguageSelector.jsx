@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import languages from '../../constants/lang/langs';
 import SmallSelectableLanguageIcon from '../atoms/SmallSelectableLanguageIcon';
@@ -26,7 +27,7 @@ class HeaderLanguageSelector extends React.Component {
 }
 
 HeaderLanguageSelector.propTypes = {
-  style: React.PropTypes.object,
+  style: PropTypes.object,
 };
 
 export default (HeaderLanguageSelector);

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import configureStore from '../../core/configureStore';
 import Contexts from '../contexts/Contexts';
@@ -12,7 +13,7 @@ function serverProvider(initialState) {
   return class extends React.Component {
     static propTypes() {
       return {
-        children: React.PropTypes.node.isRequired,
+        children: PropTypes.node.isRequired,
       };
     }
 

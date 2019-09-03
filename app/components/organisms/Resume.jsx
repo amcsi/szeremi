@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Media } from 'react-breakpoints';
 import { connect } from 'react-redux';
@@ -137,10 +138,10 @@ class Resume extends React.Component {
 }
 
 Resume.propTypes = {
-  resume: React.PropTypes.object.isRequired,
-  t: React.PropTypes.func.isRequired,
-  breakpoints: React.PropTypes.object.isRequired,
-  currentBreakpoint: React.PropTypes.number.isRequired,
+  resume: PropTypes.object.isRequired,
+  t: PropTypes.func.isRequired,
+  breakpoints: PropTypes.object.isRequired,
+  currentBreakpoint: PropTypes.number.isRequired,
 };
 
 function mapStateToProps(state) {

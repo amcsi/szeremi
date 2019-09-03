@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import { translate } from 'react-i18next';
@@ -7,7 +8,7 @@ import './HomePage.scss';
 
 const HomePage = React.createClass({
   propTypes: {
-    t: React.PropTypes.func.isRequired,
+    t: PropTypes.func.isRequired,
   },
 
   render() {

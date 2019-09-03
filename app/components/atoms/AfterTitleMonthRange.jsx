@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import MonthRange from './MonthRange';
 
@@ -15,8 +16,8 @@ class AfterTitleMonthRange extends React.Component {
 }
 
 AfterTitleMonthRange.propTypes = {
-  startDate: React.PropTypes.string,
-  endDate: React.PropTypes.string,
+  startDate: PropTypes.string,
+  endDate: PropTypes.string,
 };
 
 export default AfterTitleMonthRange;

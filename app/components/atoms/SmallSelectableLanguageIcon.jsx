@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import { connect } from 'react-redux';
@@ -9,11 +10,11 @@ class SelectableLanguage extends React.Component {
 
   static propTypes() {
     return {
-      name: React.PropTypes.string.isRequired,
-      languageCode: React.PropTypes.string.isRequired,
-      countryCode: React.PropTypes.string,
-      dispatch: React.PropTypes.func.isRequired,
-      currentLanguage: React.PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      languageCode: PropTypes.string.isRequired,
+      countryCode: PropTypes.string,
+      dispatch: PropTypes.func.isRequired,
+      currentLanguage: PropTypes.string.isRequired,
     };
   }
 

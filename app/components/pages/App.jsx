@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import routes from '../../core/routes';
 import { Router } from 'react-router';
@@ -9,8 +10,8 @@ import './App.scss';
 class App extends React.Component {
   static propTypes() {
     return {
-      store: React.PropTypes.object,
-      history: React.PropTypes.object,
+      store: PropTypes.object,
+      history: PropTypes.object,
     };
   }
 

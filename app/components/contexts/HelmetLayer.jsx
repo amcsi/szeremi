@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
 import routeTranslationKeyMap from '../../constants/lang/routeTranslationKeyMap';
@@ -66,10 +67,10 @@ class HelmetLayer extends React.Component {
 }
 
 HelmetLayer.propTypes = {
-  t: React.PropTypes.func.isRequired,
-  pathname: React.PropTypes.string,
-  state: React.PropTypes.object.isRequired,
-  children: React.PropTypes.node.isRequired,
+  t: PropTypes.func.isRequired,
+  pathname: PropTypes.string,
+  state: PropTypes.object.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 function mapStateToProps(state) {

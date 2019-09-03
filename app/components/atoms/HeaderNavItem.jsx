@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router';
 import { translate } from 'react-i18next';
@@ -22,10 +23,10 @@ class HeaderNavItem extends React.Component {
 }
 
 HeaderNavItem.propTypes = {
-  t: React.PropTypes.func.isRequired,
-  name: React.PropTypes.string,
-  to: React.PropTypes.string.isRequired,
-  faIcon: React.PropTypes.string,
+  t: PropTypes.func.isRequired,
+  name: PropTypes.string,
+  to: PropTypes.string.isRequired,
+  faIcon: PropTypes.string,
 };
 
 export default translate(['translation'])(HeaderNavItem);

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import { translate } from 'react-i18next';
@@ -12,7 +13,7 @@ import './Header.scss';
 const Header = React.createClass({
 
   propTypes: {
-    t: React.PropTypes.func.isRequired,
+    t: PropTypes.func.isRequired,
   },
 
   render() {

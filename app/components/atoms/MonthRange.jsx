@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { translate } from 'react-i18next';
 import moment from 'moment';
@@ -21,9 +22,9 @@ class MonthRange extends React.Component {
 }
 
 MonthRange.propTypes = {
-  startDate: React.PropTypes.string,
-  endDate: React.PropTypes.string,
-  t: React.PropTypes.func.isRequired,
+  startDate: PropTypes.string,
+  endDate: PropTypes.string,
+  t: PropTypes.func.isRequired,
 };
 
 export default translate(['translation'])(MonthRange);
