@@ -6,30 +6,28 @@ import { Link } from 'react-router';
 
 import './HomePage.scss';
 
-const HomePage = React.createClass({
-  propTypes: {
-    t: PropTypes.func.isRequired,
-  },
+function HomePage({ t }) {
+  return (
+    <div className="text-center homepage">
+      <h1>{t('homepage.title')}</h1>
 
-  render() {
-    const { t } = this.props;
-    return (
-        <div className="text-center homepage">
-          <h1>{t('homepage.title')}</h1>
+      <Link to="/about">
+        <img
+          src="/img/attila-szeremi-home.jpg"
+          width="263"
+          height="263"
+          alt={t('homepage.photoAlt')}
+          title={t('about')}
+          className="img-circle photo"
+        />
+      </Link>
+      <h2 style={{ marginBottom: 20 }}>Attila Szeremi</h2>
+    </div>
+  );
+}
 
-          <Link to="/about">
-            <img src="/img/attila-szeremi-home.jpg"
-              width="263"
-              height="263"
-              alt={t('homepage.photoAlt')}
-              title={t('about')}
-              className="img-circle photo"
-            />
-          </Link>
-          <h2 style={{ marginBottom: 20 }}>Attila Szeremi</h2>
-        </div>
-    );
-  },
-});
+HomePage.propTypes = {
+  t: PropTypes.func.isRequired,
+};
 
 export default translate(['translation'])(HomePage);

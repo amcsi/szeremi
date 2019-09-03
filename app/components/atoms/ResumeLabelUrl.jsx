@@ -2,21 +2,17 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ExternalLink from './ExternalLink';
 
-const ResumeLabelUrl = React.createClass({
-  propTypes: {
-    label: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired,
-  },
+function ResumeLabelUrl({ label, url }) {
+  return (
+    <div>
+      <strong>{label}:</strong> <ExternalLink href={url}>{url}</ExternalLink>
+    </div>
+  );
+}
 
-  render() {
-    const {label, url} = this.props;
-
-    return (
-      <div>
-        <strong>{label}:</strong> <ExternalLink href={url}>{url}</ExternalLink>
-      </div>
-    );
-  },
-});
+ResumeLabelUrl.propTypes = {
+  label: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+};
 
 export default ResumeLabelUrl;
