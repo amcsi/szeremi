@@ -31,7 +31,6 @@ const configMap = Immutable.fromJS({
       { name: 'sass', test: /\.scss/, loader: 'null' },
       { name: 'css', test: /\.css$/, loader: 'null' },
     ],
-    noParse: /\.min\.js/,
   },
   eslint: {
     eslint: {

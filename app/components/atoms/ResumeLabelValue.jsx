@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-function ResumeLabelValue({ label, value }) {
+function ResumeLabelValue({ label, value, ...restProps }) {
   if (!value) {
     return null;
   }
@@ -18,7 +18,7 @@ function ResumeLabelValue({ label, value }) {
     value;
 
   return (
-    <div {...this.props}>
+    <div {...restProps}>
       <strong>{label}:</strong> {valueNl2Br}
     </div>
   );

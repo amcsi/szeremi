@@ -11,7 +11,6 @@ class App extends React.Component {
   static propTypes() {
     return {
       store: PropTypes.object,
-      history: PropTypes.object,
     };
   }
 
