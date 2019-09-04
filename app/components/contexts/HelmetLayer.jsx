@@ -1,16 +1,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
-import routeTranslationKeyMap from '../../constants/lang/routeTranslationKeyMap';
 import { connect } from 'react-redux';
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 /**
  * Layer handling the <head> section and the attributes of <html>
  */
 class HelmetLayer extends React.Component {
   render() {
-    const { pathname, state, t, children } = this.props;
+    const { state, children } = this.props;
     const links = [
       {
         rel: 'stylesheet',
@@ -35,7 +34,6 @@ class HelmetLayer extends React.Component {
       <div>
         <Helmet
           // Current page name.
-          title={t(routeTranslationKeyMap[pathname])}
           titleTemplate="Attila Szeremi - %s"
           defaultTitle="Attila Szeremi"
           htmlAttributes={{ lang: state.currentLanguage }}
@@ -74,11 +72,9 @@ HelmetLayer.propTypes = {
 };
 
 function mapStateToProps(state) {
-  const { locationBeforeTransitions, serverPathname } = state.routing;
   return {
-    pathname: locationBeforeTransitions ? locationBeforeTransitions.pathname : serverPathname,
     state,
   };
 }
 
-export default connect(mapStateToProps)(translate(['translation'])(HelmetLayer));
+export default connect(mapStateToProps)(withNamespaces(['translation'])(HelmetLayer));

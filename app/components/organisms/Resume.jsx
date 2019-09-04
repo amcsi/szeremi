@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Media } from 'react-breakpoints';
 import { connect } from 'react-redux';
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 import ResumePicture from '../atoms/ResumePicture';
 import ResumeBasics from '../molecules/ResumeBasics';
 import ResumeWork from '../molecules/ResumeWork';
@@ -13,11 +12,10 @@ import ResumePublications from '../molecules/ResumePublications';
 import ResumeSkills from '../molecules/ResumeSkills';
 import ResumeCategory from '../molecules/ResumeCategory';
 import ResumeEtc from '../molecules/ResumeEtc';
-import { withBreakpoints } from 'react-breakpoints';
 
 class Resume extends React.Component {
   render() {
-    const { breakpoints, currentBreakpoint, resume, t } = this.props;
+    const { resume, t } = this.props;
     /**
      * These are the categories similar to one another that contain an array of items each.
      * Each array item contains another array item containing the following in order:
@@ -97,9 +95,9 @@ class Resume extends React.Component {
     };
     const resumeCategoryComponents = resumeCategories.reduce(reduceCallback, []);
 
-    if (breakpoints[currentBreakpoint] >= breakpoints.sm) {
-      return (
-        <div className="container resume-container">
+    return (
+      <div>
+        <div className="container resume-container hidden-xs">
           <div className="col-xs-9">
             <ResumeBasics basics={resume.basics} />
             {resumeCategoryComponents}
@@ -114,23 +112,21 @@ class Resume extends React.Component {
             />
           </div>
         </div>
-      );
-    }
 
-    return (
-      <div className="container resume-container">
-        <ResumePicture basics={resume.basics} />
-        <ResumeBasics basics={resume.basics} />
-        <div className="clearfix">
-          {resumeCategoryComponents}
-        </div>
-        <div>
-          <ResumeSkills items={resume.skills} />
-          <ResumeEtc
-            languages={resume.languages}
-            interests={resume.interests}
-            references={resume.references}
-          />
+        <div className="container resume-container visible-xs-block">
+          <ResumePicture basics={resume.basics} />
+          <ResumeBasics basics={resume.basics} />
+          <div className="clearfix">
+            {resumeCategoryComponents}
+          </div>
+          <div>
+            <ResumeSkills items={resume.skills} />
+            <ResumeEtc
+              languages={resume.languages}
+              interests={resume.interests}
+              references={resume.references}
+            />
+          </div>
         </div>
       </div>
     );
@@ -140,8 +136,6 @@ class Resume extends React.Component {
 Resume.propTypes = {
   resume: PropTypes.object.isRequired,
   t: PropTypes.func.isRequired,
-  breakpoints: PropTypes.object.isRequired,
-  currentBreakpoint: PropTypes.number.isRequired,
 };
 
 function mapStateToProps(state) {
@@ -150,5 +144,5 @@ function mapStateToProps(state) {
   };
 }
 
-export default withBreakpoints(translate(['translation'])(connect(mapStateToProps)(Resume)));
+export default withNamespaces(['translation'])(connect(mapStateToProps)(Resume));
 

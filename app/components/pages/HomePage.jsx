@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { translate } from 'react-i18next';
-import { Link } from 'react-router';
+import { withNamespaces } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 import './HomePage.scss';
 
@@ -30,4 +30,4 @@ HomePage.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate(['translation'])(HomePage);
+export default withNamespaces(['translation'])(HomePage);

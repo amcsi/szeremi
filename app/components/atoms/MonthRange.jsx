@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 import moment from 'moment';
 
 /**
@@ -27,4 +27,4 @@ MonthRange.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate(['translation'])(MonthRange);
+export default withNamespaces(['translation'])(MonthRange);

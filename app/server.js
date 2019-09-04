@@ -2,7 +2,7 @@ require('source-map-support').install();
 const express = require('express');
 const { renderToString } = require('react-dom/server');
 import routes from './core/routes';
-import { match, RouterContext } from 'react-router';
+import { matchPath, StaticRouter } from 'react-router';
 const fs = require('fs');
 const React = require('react');
 const compress = require('compression');
@@ -19,7 +19,7 @@ app.enable('trust proxy');
 function onRoot(req, res) {
   // Note that req.url here should be the full URL path from
   // the original request, including the query string.
-  match({ routes, location: req.path }, (error, redirectLocation, renderProps) => {
+  matchPath({ routes, location: req.path }, (error, redirectLocation, renderProps) => {
     if (error) {
       return res.status(500).send(error.message);
     }
@@ -45,7 +45,7 @@ function onRoot(req, res) {
       // below, if you're using a catch-all route.
       const rendered = renderToString(
         <Contexts store={store}>
-          <RouterContext {...renderProps} />
+          <StaticRouter {...renderProps} />
         </Contexts>
       );
 
@@ -66,7 +66,8 @@ const staticMiddleware = express.static(publicPath, {
 });
 // This tells express to route ALL requests through this middleware
 // This middleware ends up being a "catch all" error handler
-const errorHandlerMiddleware = (err, req, res, next) => {
+const errorHandlerMiddleware = (err, req, res) => {
+  //eslint-disable-next-line no-console
   console.error('Error middleware', err);
   if (err) {
     res.send(500, { error: err });
@@ -88,5 +89,6 @@ const server = app.listen(process.env.PORT || 8080, '0.0.0.0', function listen()
   const host = server.address().address;
   const port = server.address().port;
 
+  //eslint-disable-next-line no-console
   console.log('Example app listening at http://%s:%s', host, port);
 });

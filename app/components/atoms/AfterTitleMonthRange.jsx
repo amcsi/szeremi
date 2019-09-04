@@ -8,7 +8,7 @@ import MonthRange from './MonthRange';
 class AfterTitleMonthRange extends React.Component {
   render() {
     return (
-      <span style={{ marginLeft: 10 }} {...this.props}>
+      <span style={{ marginLeft: 10 }}>
          <span className="fa fa-calendar" /> <MonthRange {...this.props} />
       </span>
     );

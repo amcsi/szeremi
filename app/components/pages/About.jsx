@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Header from '../organisms/Header';
-import Footer from '../organisms/Footer';
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 import './About.scss';
 
 class About extends React.Component {
@@ -38,4 +36,4 @@ About.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate(['translation'])(About);
+export default withNamespaces(['translation'])(About);

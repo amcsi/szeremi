@@ -8,7 +8,7 @@ import HelmetLayer from './HelmetLayer';
  * It also allows for the language to be changed.
  */
 class TranslatorLayer extends React.Component {
-  componentWillReceiveProps({ i18next, currentLanguage }) {
+  UNSAFE_componentWillReceiveProps({ i18next, currentLanguage }) {
     i18next.changeLanguage(currentLanguage);
   }
 

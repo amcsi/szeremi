@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 import ResumeSection from './ResumeSection';
 import ResumeLabelValue from '../atoms/ResumeLabelValue';
 import ResumeListing from '../atoms/ResumeListing';
@@ -41,4 +41,4 @@ ResumeVolunteer.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default translate(['translation'])(ResumeVolunteer);
+export default withNamespaces(['translation'])(ResumeVolunteer);
