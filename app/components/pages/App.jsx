@@ -15,12 +15,12 @@ class App extends React.Component {
   }
 
   render() {
-    const { store } = this.props;
+    const { store, children } = this.props;
 
     return (
       <Contexts store={store}>
         <BrowserRouter>
-          <Page />
+          { children }
         </BrowserRouter>
       </Contexts>
     );

@@ -18,16 +18,16 @@ class HelmetLayer extends React.Component {
     ];
 
     const scripts = [];
-    if (__SERVER__) {
+    if (window.__SERVER__) {
       // Google analytics script tag.
       const gaTrackingId = process.env.SZEREMI_GA_TRACKING_ID;
       if (gaTrackingId) {
-        const gaTemplate = require('raw!../../content/ga.js');
+        const gaTemplate = require('raw-loader!../../content/ga.js');
         scripts.push({ innerHTML: gaTemplate.replace('{{ gaTrackingId }}', gaTrackingId) });
       }
       scripts.push({ innerHTML: `state = ${JSON.stringify(state)};` });
     }
-    if (__PRODUCTION__) {
+    if (window.__PRODUCTION__) {
       links.push({ rel: 'stylesheet', href: '/build/styles.css' });
     }
     return (

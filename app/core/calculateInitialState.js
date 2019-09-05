@@ -4,7 +4,7 @@ import translations from '../constants/lang';
 function calculateInitialState(req) {
   const langCodes = Object.keys(translations);
   acceptLanguage.languages(langCodes);
-  const acceptedLanguage = acceptLanguage.get(req.headers['content-encoding']);
+  const acceptedLanguage = acceptLanguage.get(req && req.headers['content-encoding']);
   return { acceptedLanguage };
 }
 

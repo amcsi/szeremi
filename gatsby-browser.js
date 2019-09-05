@@ -4,4 +4,12 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-// You can delete this file if you're not using it
+import React from 'react';
+import App from './app/components/pages/App';
+import configureStore from './app/core/configureStore';
+
+const store = configureStore(window.state);
+
+export function wrapRootElement({ element }) {
+  return <App store={store}>{element}</App>;
+}
