@@ -12,5 +12,5 @@ RUN npm set progress=false && npm install 2>&1
 
 COPY . .
 RUN npm run build
-EXPOSE  8080
+EXPOSE  9000
 CMD ["npm", "run", "start"]

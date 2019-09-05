@@ -2,7 +2,7 @@
 
 [![](https://images.microbadger.com/badges/image/amcsi/szeremi.svg)](https://microbadger.com/images/amcsi/szeremi "Get your own image badge on microbadger.com")
 
-Source code for [Attila Szeremi's portfolio website](http://www.szeremi.org/)
+Source code for [Attila Szeremi's portfolio website](http://www.szeremi.org/) built using Gatsby.
 
 Follows atomic design: http://patternlab.io/
 
