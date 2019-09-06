@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import { withNamespaces } from 'react-i18next';
 import { Link } from 'gatsby';
@@ -9,6 +10,9 @@ import './index.scss';
 function HomePage({ t }) {
   return (
     <div className="text-center homepage">
+      <Helmet>
+        <title>{t('home')}</title>
+      </Helmet>
       <h1>{t('homepage.title')}</h1>
 
       <Link to="/about">

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { withNamespaces } from 'react-i18next';
 import './about.scss';
 
@@ -8,6 +9,9 @@ class About extends React.Component {
     const { t } = this.props;
     return (
       <div className="about container" style={{ marginBottom: 10 }}>
+        <Helmet>
+          <title>{t('about')}</title>
+        </Helmet>
         <div className="col-md-8">
           <blockquote className="blockquote-reverse">{t('aboutPage.quote')}</blockquote>
 

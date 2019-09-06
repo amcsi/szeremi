@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { connect } from 'react-redux';
 import { withNamespaces } from 'react-i18next';
 import ResumePicture from '../atoms/ResumePicture';
@@ -97,6 +98,9 @@ class Cv extends React.Component {
 
     return (
       <div>
+        <Helmet>
+          <title>{t('resumé')}</title>
+        </Helmet>
         <div className="container resume-container hidden-xs">
           <div className="col-xs-9">
             <ResumeBasics basics={resume.basics} />
