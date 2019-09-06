@@ -13,4 +13,4 @@ RUN npm set progress=false && npm install 2>&1
 COPY . .
 RUN npm run build
 EXPOSE  8080
-CMD ["npm", "run", "serve", "--port", "8080"]
+CMD ["npm", "run", "serve", "--", "--port", "8080"]
