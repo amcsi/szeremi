@@ -13,7 +13,7 @@ import ResumeSkills from '../molecules/ResumeSkills';
 import ResumeCategory from '../molecules/ResumeCategory';
 import ResumeEtc from '../molecules/ResumeEtc';
 
-class Resume extends React.Component {
+class Cv extends React.Component {
   render() {
     const { resume, t } = this.props;
     /**
@@ -133,7 +133,7 @@ class Resume extends React.Component {
   }
 }
 
-Resume.propTypes = {
+Cv.propTypes = {
   resume: PropTypes.object.isRequired,
   t: PropTypes.func.isRequired,
 };
@@ -144,5 +144,5 @@ function mapStateToProps(state) {
   };
 }
 
-export default withNamespaces(['translation'])(connect(mapStateToProps)(Resume));
+export default withNamespaces(['translation'])(connect(mapStateToProps)(Cv));
 

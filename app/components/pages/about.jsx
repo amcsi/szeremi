@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { withNamespaces } from 'react-i18next';
-import './About.scss';
+import './about.scss';
 
 class About extends React.Component {
   render() {

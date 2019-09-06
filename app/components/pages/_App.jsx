@@ -3,7 +3,7 @@ import React from 'react';
 import Contexts from './../contexts/Contexts';
 
 import 'font-awesome/scss/font-awesome.scss';
-import './App.scss';
+import './_App.scss';
 
 class App extends React.Component {
   static propTypes() {

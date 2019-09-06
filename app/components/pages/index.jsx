@@ -4,7 +4,7 @@ import React from 'react';
 import { withNamespaces } from 'react-i18next';
 import { Link } from 'gatsby';
 
-import './HomePage.scss';
+import './index.scss';
 
 function HomePage({ t }) {
   return (
