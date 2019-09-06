@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import { withNamespaces } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link } from 'gatsby';
 
 import './HomePage.scss';
 

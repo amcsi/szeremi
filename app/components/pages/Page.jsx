@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Redirect, Route, Switch } from 'react-router-dom';
+import { Redirect, Router } from '@reach/router';
 import Header from '../organisms/Header';
 import Footer from '../organisms/Footer';
 import Resume from '../organisms/Resume';
@@ -13,12 +13,12 @@ class Page extends React.Component {
       <div>
         <Header />
 
-        <Switch>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/about" component={About} />
-          <Route path="/cv" component={Resume} />
-          <Redirect from="/resume" to="cv" />
-        </Switch>
+          <Router>
+            <HomePage path="/" />
+            <About path="/about" />
+            <Resume path="/cv" />
+            <Redirect from="/resume" to="cv" />
+          </Router>
 
         <Footer />
       </div>

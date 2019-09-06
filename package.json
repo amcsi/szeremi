@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/amcsi/szeremi#readme",
   "dependencies": {
+    "@reach/router": "^1.2.1",
     "accept-language": "^2.0.16",
     "babel-core": "^6.4.0",
     "bootstrap": "^3.4.1",
@@ -50,7 +51,6 @@
     "react-helmet": "^5.2.1",
     "react-i18next": "^8.4.0",
     "react-redux": "^7.1.1",
-    "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-router-redux": "^4.0.0",
     "react-router-server": "^4.2.3",

@@ -1,7 +1,6 @@
-function resume(state) {
-  if (!state) {
-    return require('../../data/resume.json');
-  }
+import resumeJson from '../../data/resume.json';
+
+function resume(state = resumeJson) {
   return state;
 }
 

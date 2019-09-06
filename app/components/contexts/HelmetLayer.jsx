@@ -3,6 +3,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 import { withNamespaces } from 'react-i18next';
+import gaTemplate from 'raw-loader!../../content/ga.js';
 
 /**
  * Layer handling the <head> section and the attributes of <html>
@@ -18,17 +19,13 @@ class HelmetLayer extends React.Component {
     ];
 
     const scripts = [];
-    if (window.__SERVER__) {
+    if (typeof window === 'undefined') {
       // Google analytics script tag.
       const gaTrackingId = process.env.SZEREMI_GA_TRACKING_ID;
       if (gaTrackingId) {
-        const gaTemplate = require('raw-loader!../../content/ga.js');
         scripts.push({ innerHTML: gaTemplate.replace('{{ gaTrackingId }}', gaTrackingId) });
       }
       scripts.push({ innerHTML: `state = ${JSON.stringify(state)};` });
-    }
-    if (window.__PRODUCTION__) {
-      links.push({ rel: 'stylesheet', href: '/build/styles.css' });
     }
     return (
       <div>

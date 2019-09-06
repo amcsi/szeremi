@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'gatsby';
 import { withNamespaces } from 'react-i18next';
 import routeTranslationKeyMap from '../../constants/lang/routeTranslationKeyMap';
 
@@ -14,9 +14,9 @@ class HeaderNavItem extends React.Component {
     const displayName = name || t(routeTranslationKeyMap[to]);
     return (
       <li>
-        <NavLink activeClassName="active" exact itemProp="url" to={to}>
+        <Link activeClassName="active" itemProp="url" to={to}>
           <span className={className} /> <span itemProp="name">{displayName}</span>
-        </NavLink>
+        </Link>
       </li>
     );
   }
