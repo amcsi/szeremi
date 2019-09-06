@@ -35,6 +35,13 @@ module.exports = {
       },
     },
     `gatsby-plugin-remove-trailing-slashes`,
+    ...process.env.SZEREMI_GA_TRACKING_ID ? [{
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.SZEREMI_GA_TRACKING_ID,
+        respectDNT: true,
+      },
+    }] : [],
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

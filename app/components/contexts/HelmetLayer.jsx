@@ -3,7 +3,6 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 import { withNamespaces } from 'react-i18next';
-import gaTemplate from 'raw-loader!../../content/ga.js';
 
 /**
  * Layer handling the <head> section and the attributes of <html>
@@ -18,15 +17,6 @@ class HelmetLayer extends React.Component {
       },
     ];
 
-    const scripts = [];
-    if (typeof window === 'undefined') {
-      // Google analytics script tag.
-      const gaTrackingId = process.env.SZEREMI_GA_TRACKING_ID;
-      if (gaTrackingId) {
-        scripts.push({ innerHTML: gaTemplate.replace('{{ gaTrackingId }}', gaTrackingId) });
-      }
-      scripts.push({ innerHTML: `state = ${JSON.stringify(state)};` });
-    }
     return (
       <div>
         <Helmet
@@ -53,7 +43,6 @@ class HelmetLayer extends React.Component {
             },
           ]}
           link={links}
-          script={scripts}
         />
         { children }
       </div>
