@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {Button} from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { CHANGE_LANGUAGE } from '../../constants/actions';
 
@@ -26,13 +25,12 @@ class SelectableLanguage extends React.Component {
     function changeLanguage() { dispatch({ type: CHANGE_LANGUAGE, languageCode }); }
 
     return (
-      <Button
-        className="clickable"
+      <button
         onClick={changeLanguage}
-        bsStyle={currentLanguage === languageCode ? 'success' : 'default'}
+        className={`button is-${currentLanguage === languageCode ? 'success' : 'default'}`}
       >
-        {countryFlag} {name}
-      </Button>
+        <span className="icon"><i className="fab">{countryFlag}</i></span> <span>{name}</span>
+      </button>
     );
   }
 

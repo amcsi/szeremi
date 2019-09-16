@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Label } from 'react-bootstrap';
 
 class ResumeKeywords extends React.Component {
   render() {
@@ -13,9 +12,9 @@ class ResumeKeywords extends React.Component {
       <div>
         {items.map((item, index) => (
           <span key={index}>
-            <Label bsStyle="info">
+            <span className="tag is-info">
               {item}
-            </Label>{' '}
+            </span>{' '}
           </span>
         ))}
       </div>

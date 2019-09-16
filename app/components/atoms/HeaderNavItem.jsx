@@ -13,11 +13,12 @@ class HeaderNavItem extends React.Component {
     // path and translate that.
     const displayName = name || t(routeTranslationKeyMap[to]);
     return (
-      <li>
-        <Link activeClassName="active" itemProp="url" to={to}>
-          <span className={className} /> <span itemProp="name">{displayName}</span>
-        </Link>
-      </li>
+      <Link activeClassName="active" className="navbar-item" itemProp="url" to={to}>
+        <span className="icon">
+          <i className={className} />
+        </span>
+        <span itemProp="name">{displayName}</span>
+      </Link>
     );
   }
 }

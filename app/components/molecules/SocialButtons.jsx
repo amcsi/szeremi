@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import './SocialButtons.scss';
 
 class SocialButtons extends React.Component {
 
@@ -22,9 +22,8 @@ class SocialButtons extends React.Component {
     }
 
     return (
-      <div>
+      <div className="social-icons">
         {profiles.map((profile) => {
-          const buttonText = profile.username || profile.network;
           const socialKey = this.getSocialKeyByProfile(profile);
           const params = {};
           if (profile.url) {
@@ -33,16 +32,9 @@ class SocialButtons extends React.Component {
             params.rel = 'noopener';
           }
           return (
-            <span key={profile.network}>
-              <Button
-                className={`btn-social btn-${socialKey}`}
-                {...params}
-                style={{ marginBottom: 5 }}
-              >
-                <span className={`fa fa-${socialKey}`}/>
-                {buttonText}
-              </Button>{' '}
-            </span>
+            <a key={profile.network} className={`button is-${socialKey}`} {...params}>
+              <span className={`fa fa-${socialKey}`} />
+            </a>
           );
         })}
       </div>

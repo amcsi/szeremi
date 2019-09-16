@@ -2,12 +2,18 @@
 $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 
 @import '~bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+@import '../../css/bulma-social.css';
 @import '~bootstrap-social/bootstrap-social.scss';
+@import '~bulma/bulma';
 
 html {
   overflow-y: scroll;
 }
 
-.btn-stack-overflow {
-  @include btn-social(#f86b23);
+.is-stack-overflow {
+  background-color: #f86b23;
+}
+
+.fa-stack-overflow {
+  color: white;
 }
