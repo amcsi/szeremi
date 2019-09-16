@@ -4,6 +4,9 @@ import Contexts from './../contexts/Contexts';
 
 import 'font-awesome/scss/font-awesome.scss';
 import './_App.scss';
+// These overrides can't be imported in the scss file, because for some reason,
+// Bulma's defaults otherwise override these.
+import '../../css/bulma-social.css';
 
 class App extends React.Component {
   static propTypes() {
