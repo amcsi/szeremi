@@ -2,7 +2,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Contexts from './../contexts/Contexts';
 
-import 'font-awesome/scss/font-awesome.scss';
+import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/brands';
+
 import './_App.scss';
 // These overrides can't be imported in the scss file, because for some reason,
 // Bulma's defaults otherwise override these.
@@ -12,6 +17,7 @@ class App extends React.Component {
   static propTypes() {
     return {
       store: PropTypes.object,
+      children: PropTypes.node,
     };
   }
 

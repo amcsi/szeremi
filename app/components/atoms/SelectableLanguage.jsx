@@ -29,7 +29,10 @@ class SelectableLanguage extends React.Component {
         onClick={changeLanguage}
         className={`button is-${currentLanguage === languageCode ? 'success' : 'default'}`}
       >
-        <span className="icon"><i className="fab">{countryFlag}</i></span> <span>{name}</span>
+        <span className="icon" style={{ marginLeft: 0 }}>
+          <i>{countryFlag}</i>
+        </span>
+        <span>{name}</span>
       </button>
     );
   }

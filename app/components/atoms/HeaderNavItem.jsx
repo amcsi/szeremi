@@ -7,7 +7,7 @@ import routeTranslationKeyMap from '../../constants/lang/routeTranslationKeyMap'
 class HeaderNavItem extends React.Component {
   render() {
     const { t, name, to, faIcon } = this.props;
-    const className = faIcon ? `fa fa-${faIcon}` : '';
+    const className = faIcon ? `fas fa-${faIcon}` : '';
 
     // Use the name if provided, otherwise get the translation key belonging to the route
     // path and translate that.

@@ -33,7 +33,7 @@ class SocialButtons extends React.Component {
           }
           return (
             <a key={profile.network} className={`button is-${socialKey}`} {...params}>
-              <span className={`fa fa-${socialKey}`} />
+              <span className={`fab fa-${socialKey}`} />
             </a>
           );
         })}
