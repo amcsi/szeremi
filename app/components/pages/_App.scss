@@ -4,6 +4,11 @@ $navbar-height: 5rem;
 
 html {
   overflow-y: scroll;
+  height: 100%;
+}
+
+html, body, #___gatsby, #___gatsby > div, div[role="group"][tabindex] {
+  height: 100%;
 }
 
 .is-stack-overflow {
