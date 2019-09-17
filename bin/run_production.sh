@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Exit on any failure
+set -e
+
 # Need to build in docker run step to take env vars into account for e.g. Google Analytics
 npm run build
 
