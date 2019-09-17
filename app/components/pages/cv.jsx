@@ -101,12 +101,12 @@ class Cv extends React.Component {
         <Helmet>
           <title>{t('resumé')}</title>
         </Helmet>
-        <div className="container resume-container hidden-xs">
-          <div className="col-xs-9">
+        <div className="container resume-container is-hidden-mobile columns content">
+          <div className="column is-three-quarters">
             <ResumeBasics basics={resume.basics} />
             {resumeCategoryComponents}
           </div>
-          <div className="col-xs-3">
+          <div className="column is-one-quarter">
             <ResumePicture basics={resume.basics} />
             <ResumeSkills items={resume.skills} />
             <ResumeEtc
@@ -117,7 +117,7 @@ class Cv extends React.Component {
           </div>
         </div>
 
-        <div className="container resume-container visible-xs-block">
+        <div className="container resume-container is-hidden-tablet">
           <ResumePicture basics={resume.basics} />
           <ResumeBasics basics={resume.basics} />
           <div className="clearfix">

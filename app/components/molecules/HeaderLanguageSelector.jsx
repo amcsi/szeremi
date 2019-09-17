@@ -7,7 +7,7 @@ class HeaderLanguageSelector extends React.Component {
   render() {
     const containerStyle = Object.assign({
       display: 'flex',
-      alignItems: 'flex-center',
+      alignItems: 'center',
     }, this.props.style);
 
     return (

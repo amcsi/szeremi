@@ -18,7 +18,7 @@ class ResumePublications extends React.Component {
           return (
             <ResumeSection
               key={item.name}
-              sizeClassName={items.length > 1 ? 'col-md-6' : ''}
+              sizeClassName={items.length > 1 ? 'column is-half' : ''}
               title={item.name}
               titleUrl={item.website}
               afterTitle={date}

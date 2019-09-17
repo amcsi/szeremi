@@ -16,7 +16,7 @@ class ResumeBasics extends React.Component {
     ) : null;
     const email = basics.email ? <a href={`mailto:${basics.email}`}>{basics.email}</a> : null;
     return (
-      <div>
+      <div style={{ marginBottom: '1rem' }}>
         <h3>
           <ResumeLabelValue label={t('resumePage.name')} value={basics.name} />
         </h3>

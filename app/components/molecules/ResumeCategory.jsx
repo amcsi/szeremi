@@ -12,10 +12,10 @@ class ResumeCategory extends React.Component {
     }
     const style = { float: 'left' };
     // If the amount of items here are larger than 1, it means we are going to take up the entire
-    // row. If not, use 'col-md-6' in case the next category also has only 1 item in it to
+    // row. If not, use 'column is-half' in case the next category also has only 1 item in it to
     // fit two next to each other. We're relying on clear-lefts to cancel floats in case e.g.
     // the next category has more than 1 item in it and thus it must start in a new row.
-    const className = currentLength <= 1 ? 'col-md-6' : '';
+    const className = currentLength <= 1 ? 'column is-half' : '';
 
     if (shouldClearLeft) {
       style.clear = 'left';

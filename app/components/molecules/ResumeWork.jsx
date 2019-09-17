@@ -13,20 +13,25 @@ class ResumeWork extends React.Component {
       return null;
     }
     return (
-      <div>
+      <div style={{ marginBottom: '1rem' }}>
         {items.map(item => {
           const date = <AfterTitleMonthRange startDate={item.releaseDate} endDate={item.endDate} />;
           return (
+            <div className="card"
+              key={item.company}
+            >
               <ResumeSection
-                key={item.company}
                 title={item.company}
                 titleUrl={item.website}
                 afterTitle={date}
+                sizeClassName="card-content"
               >
                 <ResumeLabelValue label={t('resumePage.position')} value={item.position} />
                 <ResumeLabelValue label={t('resumePage.summary')} value={item.summary} />
+                <div style={{ height: '1rem' }} />
                 <ResumeHighlights title={t('resumePage.highlights')} items={item.highlights} />
               </ResumeSection>
+            </div>
           );
         })}
       </div>

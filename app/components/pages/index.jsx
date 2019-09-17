@@ -9,23 +9,23 @@ import './index.scss';
 
 function HomePage({ t }) {
   return (
-    <div className="text-center homepage">
+    <div className="has-text-centered homepage">
       <Helmet>
         <title>{t('home')}</title>
       </Helmet>
-      <h1>{t('homepage.title')}</h1>
+      <h1 className="title is-2">{t('homepage.title')}</h1>
 
       <Link to="/about">
-        <img
-          src="/img/attila-szeremi-home.jpg"
-          width="263"
-          height="263"
-          alt={t('homepage.photoAlt')}
-          title={t('about')}
-          className="img-circle photo"
-        />
+        <span className="image" style={{ width: 263, height: 263 }}>
+          <img
+            src="/img/attila-szeremi-home.jpg"
+            alt={t('homepage.photoAlt')}
+            title={t('about')}
+            className="photo is-rounded"
+          />
+        </span>
       </Link>
-      <h2 style={{ marginBottom: 20 }}>Attila Szeremi</h2>
+      <h2 className="title is-3" style={{ marginBottom: 20 }}>Attila Szeremi</h2>
     </div>
   );
 }

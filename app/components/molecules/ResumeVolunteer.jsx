@@ -20,7 +20,7 @@ class ResumeVolunteer extends React.Component {
           return (
             <ResumeSection
               key={item.organization}
-              sizeClassName={items.length > 1 ? 'col-md-6' : ''}
+              sizeClassName={items.length > 1 ? 'column is-half' : ''}
               title={item.organization}
               titleUrl={item.website}
               afterTitle={date}

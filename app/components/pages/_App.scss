@@ -1,7 +1,5 @@
-// https://github.com/jtangelder/sass-loader/issues/40#issuecomment-70269553
-$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+$navbar-height: 5rem;
 
-@import '~bootstrap-sass/assets/stylesheets/_bootstrap.scss';
 @import '~bulma/bulma';
 
 html {

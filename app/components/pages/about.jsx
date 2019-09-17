@@ -8,11 +8,11 @@ class About extends React.Component {
   render() {
     const { t } = this.props;
     return (
-      <div className="about container" style={{ marginBottom: 10 }}>
+      <div className="about container columns content" style={{ marginBottom: 10 }}>
         <Helmet>
           <title>{t('about')}</title>
         </Helmet>
-        <div className="col-md-8">
+        <div className="column is-two-thirds">
           <blockquote className="blockquote-reverse">{t('aboutPage.quote')}</blockquote>
 
           <p>{t('aboutPage.p1')}</p>
@@ -24,7 +24,7 @@ class About extends React.Component {
           <p>{t('aboutPage.p4')}</p>
         </div>
 
-        <div className="col-md-4">
+        <div className="column is-one-third">
           <img className="photo"
             src="/img/attila-szeremi-about.jpg"
             alt="Photo of Attila Szeremi"

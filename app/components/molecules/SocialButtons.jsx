@@ -22,7 +22,7 @@ class SocialButtons extends React.Component {
     }
 
     return (
-      <div className="social-icons">
+      <div className="social-icons" style={{ marginBottom: '1rem' }}>
         {profiles.map((profile) => {
           const socialKey = this.getSocialKeyByProfile(profile);
           const params = {};

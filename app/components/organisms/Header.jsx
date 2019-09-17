@@ -25,9 +25,11 @@ function Header() {
               <span aria-hidden="true" />
               <span aria-hidden="true" />
             </a>
-            <HeaderLanguageSelector />
           </div>
           <div className="navbar-menu">
+            <div className="navbar-start">
+              <HeaderLanguageSelector />
+            </div>
             <div className="navbar-end" itemScope itemType="http://www.schema.org/SiteNavigationElement">
               <HeaderNavItem to="/" faIcon="home" />
               <HeaderNavItem to="/about" faIcon="star" />

@@ -19,7 +19,7 @@ class ResumeEducation extends React.Component {
           return (
             <ResumeSection
               key={item.institution}
-              sizeClassName={items.length > 1 ? 'col-md-6' : ''}
+              sizeClassName={items.length > 1 ? 'column is-half' : ''}
               title={item.institution}
               afterTitle={date}
             >

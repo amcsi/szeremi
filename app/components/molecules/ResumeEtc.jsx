@@ -63,7 +63,7 @@ class ResumeEtc extends React.Component {
       <div className="clearfix">
         <h2>{t('resumePage.other')}</h2>
         {sections.map(({ title, content }, index) => (
-          <div key={index}>
+          <div key={index} style={{ marginBottom: '1.5rem' }}>
             <h3>{title}</h3>
             {content}
           </div>

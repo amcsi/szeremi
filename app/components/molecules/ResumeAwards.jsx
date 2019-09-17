@@ -19,7 +19,7 @@ class ResumeAwards extends React.Component {
           return (
             <ResumeSection
               key={item.title}
-              sizeClassName={items.length > 1 ? 'col-md-6' : ''}
+              sizeClassName={items.length > 1 ? 'column is-half' : ''}
               title={item.title}
               afterTitle={date}
             >
