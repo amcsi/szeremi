@@ -1,6 +1,7 @@
 $navbar-height: 5rem;
 
 @import '~bulma/bulma';
+@import '~bulma-prefers-dark/bulma-prefers-dark.sass';
 
 html {
   overflow-y: scroll;
