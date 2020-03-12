@@ -35,10 +35,10 @@ module.exports = {
       },
     },
     `gatsby-plugin-remove-trailing-slashes`,
-    ...process.env.SZEREMI_GA_TRACKING_ID ? [{
+    ...process.env.GATSBY_GA_TRACKING_ID ? [{
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.SZEREMI_GA_TRACKING_ID,
+        trackingId: process.env.GATSBY_GA_TRACKING_ID,
         respectDNT: true,
       },
     }] : [],
