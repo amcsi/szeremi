@@ -41,7 +41,7 @@
     "gatsby-source-filesystem": "^2.1.21",
     "gatsby-transformer-sharp": "^2.2.13",
     "history": "^2.0.1",
-    "i18next": "^2.0.9",
+    "i18next": "^3.4.4",
     "moment": "^2.24.0",
     "node-sass": "^4.12.0",
     "path": "^0.12.7",
