@@ -37,6 +37,21 @@
   },
   "work": [
     {
+      "company": "Treehouse Technology Group",
+      "position": "Full stack developer",
+      "website": "https://treehousetechgroup.com/",
+      "releaseDate": "2018-04",
+      "endDate": null,
+      "summary": " Treehouse Technology Group is a technology strategy and custom solutions development firm.",
+      "highlights": [
+        "Constructed an economic report editor with KPIs that generates PDFs using ReactJS with TypeScript and hooks.",
+        "Created data aggregation charts for US hospitals in recharts and chart.js.",
+        "Developed an Ethereum-based application's backend and web frontend parts with Laravel and VueJS",
+        "Integrated a brokerage web application with Zoho CRM.",
+        "Generated styled excel spreadsheets for a physician practice management service."
+      ]
+    },
+    {
       "company": "Toptal",
       "position": "Freelance full stack developer",
       "website": "https://toptal.com/",
@@ -44,9 +59,7 @@
       "endDate": null,
       "summary": " Toptal is a company who hires the most talented individuals for doing quality freelance work for quality clients.",
       "highlights": [
-        "Developed an Ethereum-based application's backend and web frontend parts with Laravel and VueJS",
-        "Integrated a brokerage web application with Zoho CRM.",
-        "Generated styled excel spreadsheets for a physician practice management service."
+        "See Treehouse Technology Group above."
       ]
     },
     {
@@ -133,17 +146,17 @@
     {
       "name": "PHP frameworks",
       "level": "Master",
-      "keywords": ["Zend Framework 2", "Laravel 5"]
+      "keywords": ["Laravel", "Zend Framework 2"]
     },
     {
       "name": "JavaScript technologies",
       "level": "Advanced",
-      "keywords": ["ReactJS", "Redux", "VueJS", "Webpack", "Isomorphic apps", "AngularJS 1", "NodeJS", "ExtJS"]
+      "keywords": ["ReactJS Hooks", "VueJS", "Webpack", "TypeScript", "NodeJS"]
     },
     {
       "name": "Databases",
       "level": "Advanced",
-      "keywords": ["MySQL", "MongoDB"]
+      "keywords": ["MySQL", "SQL Server", "MongoDB"]
     },
     {
       "name": "System administration",
