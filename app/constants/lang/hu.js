@@ -18,7 +18,7 @@ export default {
       ' bármiféle pozitív hozzájárulásért a cégen belül. Ez ad a kolegáknak motivációt, hogy' +
       ' többet járuljanak hozzá a céghez egy mókásabb és örömtelibb munkahelyi élményért.',
       p4: 'Egy anime rajongó és kocka vagyok, aki ráadásul szeret elmenni iszogatni emberekkel' +
-      ' és hülyésgkedni. Munka terén próbálok minél pontosabb lenni, amikor ticketeknél' +
+      ' és hülyéskedni. Munka terén próbálok minél pontosabb lenni, amikor ticketeknél' +
       ' információkat közlök, és beleteszek erőfeszítést a kód kommentálásáért, hogy más' +
       ' programozók könnyebben értsék, mi törénik. Nagyon nyitott vagyok új technológiák iránt,' +
       ' és állandóan követem a legújabb trendeket azáltal, hogy rengeteg blog meg Reddit cikket' +
