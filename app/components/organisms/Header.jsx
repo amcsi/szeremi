@@ -10,7 +10,6 @@ const NAVBAR_DESKTOP_MIN_WIDTH = 1024;
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const closeMenu = useCallback(() => setMenuOpen(false), []);
   const toggleMenu = useCallback(() => setMenuOpen((open) => !open), []);
 
   useEffect(() => {
@@ -29,7 +28,7 @@ function Header() {
       <nav className="navbar">
         <div className="container">
           <div className="navbar-brand">
-            <Link to="/" className="navbar-item" onClick={closeMenu}>
+            <Link to="/" className="navbar-item">
               Szeremi
             </Link>
 
@@ -54,9 +53,9 @@ function Header() {
               itemScope
               itemType="http://www.schema.org/SiteNavigationElement"
             >
-              <HeaderNavItem to="/" faIcon="home" onNavigate={closeMenu} />
-              <HeaderNavItem to="/about" faIcon="star" onNavigate={closeMenu} />
-              <HeaderNavItem to="/cv" faIcon="briefcase" onNavigate={closeMenu} />
+              <HeaderNavItem to="/" faIcon="home" />
+              <HeaderNavItem to="/about" faIcon="star" />
+              <HeaderNavItem to="/cv" faIcon="briefcase" />
             </div>
           </div>
         </div>
