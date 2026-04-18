@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import './SocialButtons.scss';
 
@@ -41,9 +40,5 @@ class SocialButtons extends React.Component {
     );
   }
 }
-
-SocialButtons.propTypes = {
-  profiles: PropTypes.array,
-};
 
 export default SocialButtons;

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import ExternalLink from '../atoms/ExternalLink';
 
@@ -28,14 +27,5 @@ class ResumeSection extends React.Component {
     );
   }
 }
-
-ResumeSection.propTypes = {
-  title: PropTypes.string.isRequired,
-  titleUrl: PropTypes.string,
-  afterTitle: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  sizeClassName: PropTypes.string,
-  style: PropTypes.object,
-  children: PropTypes.node,
-};
 
 export default ResumeSection;

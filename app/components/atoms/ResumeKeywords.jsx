@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
 class ResumeKeywords extends React.Component {
@@ -21,9 +20,5 @@ class ResumeKeywords extends React.Component {
     );
   }
 }
-
-ResumeKeywords.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.string),
-};
 
 export default ResumeKeywords;

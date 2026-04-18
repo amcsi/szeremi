@@ -36,7 +36,7 @@ export default {
     },
     footer: {
       openSourceProject: 'This website is an open source project whose source code can be found' +
-      ' at {{link}}.',
+      ' at <gh>{{link}}</gh>.',
     },
     home: 'Home',
     homepage: {

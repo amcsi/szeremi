@@ -1,7 +1,6 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import { Link } from 'gatsby';
-import { withNamespaces } from 'react-i18next';
+import { NavLink } from 'react-router-dom';
+import { withTranslation } from 'react-i18next';
 import routeTranslationKeyMap from '../../constants/lang/routeTranslationKeyMap';
 
 class HeaderNavItem extends React.Component {
@@ -13,21 +12,19 @@ class HeaderNavItem extends React.Component {
     // path and translate that.
     const displayName = name || t(routeTranslationKeyMap[to]);
     return (
-      <Link activeClassName="active" className="navbar-item" itemProp="url" to={to}>
+      <NavLink
+        className={({ isActive }) => `navbar-item${isActive ? ' active' : ''}`}
+        itemProp="url"
+        to={to}
+        end={to === '/'}
+      >
         <span className="icon">
           <i className={className} />
         </span>
         <span itemProp="name">{displayName}</span>
-      </Link>
+      </NavLink>
     );
   }
 }
 
-HeaderNavItem.propTypes = {
-  t: PropTypes.func.isRequired,
-  name: PropTypes.string,
-  to: PropTypes.string.isRequired,
-  faIcon: PropTypes.string,
-};
-
-export default withNamespaces(['translation'])(HeaderNavItem);
+export default withTranslation(['translation'])(HeaderNavItem);

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import TranslatorLayer from './TranslatorLayer';
 import i18next from '../../core/translator';
@@ -14,16 +13,11 @@ class Contexts extends React.Component {
     return (
       <Provider store={store}>
         <TranslatorLayer i18next={i18next}>
-          { children }
+          {children}
         </TranslatorLayer>
       </Provider>
     );
   }
 }
 
-Contexts.propTypes = {
-  store: PropTypes.object.isRequired,
-  children: PropTypes.node.isRequired,
-};
-
-export default (Contexts);
+export default Contexts;

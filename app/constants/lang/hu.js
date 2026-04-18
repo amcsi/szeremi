@@ -37,7 +37,7 @@ export default {
     },
     footer: {
       openSourceProject: 'Ez a honlap egy nyílt forráskódú project, amelynek forráskódját el' +
-      ' lehet érni itt: {{link}}.',
+      ' lehet érni itt: <gh>{{link}}</gh>.',
     },
     home: 'Főoldal',
     homepage: {

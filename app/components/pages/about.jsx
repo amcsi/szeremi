@@ -1,7 +1,6 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import { Helmet } from 'react-helmet';
-import { withNamespaces } from 'react-i18next';
+import { Helmet } from 'react-helmet-async';
+import { withTranslation } from 'react-i18next';
 import './about.scss';
 
 class About extends React.Component {
@@ -36,8 +35,4 @@ class About extends React.Component {
   }
 }
 
-About.propTypes = {
-  t: PropTypes.func.isRequired,
-};
-
-export default withNamespaces(['translation'])(About);
+export default withTranslation(['translation'])(About);

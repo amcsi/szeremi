@@ -1,6 +1,5 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import ResumeKeywords from '../atoms/ResumeKeywords';
 
 class ResumeEtc extends React.Component {
@@ -73,11 +72,4 @@ class ResumeEtc extends React.Component {
   }
 }
 
-ResumeEtc.propTypes = {
-  languages: PropTypes.array,
-  interests: PropTypes.array,
-  references: PropTypes.array,
-  t: PropTypes.func.isRequired,
-};
-
-export default withNamespaces(['translation'])(ResumeEtc);
+export default withTranslation(['translation'])(ResumeEtc);

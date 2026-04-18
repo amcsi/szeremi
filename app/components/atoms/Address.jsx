@@ -1,6 +1,5 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 class Address extends React.Component {
 
@@ -55,9 +54,4 @@ class Address extends React.Component {
   }
 }
 
-Address.propTypes = {
-  location: PropTypes.object,
-  t: PropTypes.func.isRequired,
-};
-
-export default withNamespaces(['translation'])(Address);
+export default withTranslation(['translation'])(Address);

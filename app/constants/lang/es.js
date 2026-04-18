@@ -31,7 +31,7 @@ export default {
     },
     footer: {
       openSourceProject: 'Este sítio web es abierto de código fuente y cuyo código fuente' +
-      ' se puede ver aquí: {{link}}.',
+      ' se puede ver aquí: <gh>{{link}}</gh>.',
     },
     home: 'Página principal',
     homepage: {

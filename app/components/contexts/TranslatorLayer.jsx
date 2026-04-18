@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import { I18nextProvider } from 'react-i18next';
 import { connect } from 'react-redux';
@@ -8,8 +7,18 @@ import HelmetLayer from './HelmetLayer';
  * It also allows for the language to be changed.
  */
 class TranslatorLayer extends React.Component {
-  UNSAFE_componentWillReceiveProps({ i18next, currentLanguage }) {
-    i18next.changeLanguage(currentLanguage);
+  componentDidMount() {
+    const { i18next, currentLanguage } = this.props;
+    if (currentLanguage) {
+      i18next.changeLanguage(currentLanguage);
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    const { i18next, currentLanguage } = this.props;
+    if (prevProps.currentLanguage !== currentLanguage && currentLanguage) {
+      i18next.changeLanguage(currentLanguage);
+    }
   }
 
   render() {
@@ -22,11 +31,5 @@ class TranslatorLayer extends React.Component {
     );
   }
 }
-
-TranslatorLayer.propTypes = {
-  i18next: PropTypes.object.isRequired,
-  currentLanguage: PropTypes.string,
-  children: PropTypes.node.isRequired,
-};
 
 export default connect(({ currentLanguage }) => ({ currentLanguage }))(TranslatorLayer);

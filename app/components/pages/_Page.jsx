@@ -1,8 +1,6 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import Header from '../organisms/Header';
 import Footer from '../organisms/Footer';
-import { hot } from 'react-hot-loader';
 
 class Page extends React.Component {
   render() {
@@ -20,7 +18,7 @@ class Page extends React.Component {
             justifyContent: 'center',
           }}
         >
-          { this.props.children }
+          {this.props.children}
         </div>
 
         <Footer />
@@ -29,8 +27,4 @@ class Page extends React.Component {
   }
 }
 
-Page.propTypes = {
-  children: PropTypes.node,
-};
-
-export default hot(module)(Page);
+export default Page;

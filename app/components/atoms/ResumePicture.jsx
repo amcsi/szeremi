@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import SocialButtons from '../molecules/SocialButtons';
 
@@ -19,8 +18,4 @@ class ResumePicture extends React.Component {
   }
 }
 
-ResumePicture.propTypes = {
-  basics: PropTypes.object.isRequired,
-};
-
-export default (ResumePicture);
+export default ResumePicture;

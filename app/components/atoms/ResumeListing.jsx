@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
 /**
@@ -23,9 +22,4 @@ class ResumeListing extends React.Component {
   }
 }
 
-ResumeListing.propTypes = {
-  title: PropTypes.string.isRequired,
-  items: PropTypes.array,
-};
-
-export default (ResumeListing);
+export default ResumeListing;

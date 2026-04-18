@@ -1,9 +1,8 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
-import { withNamespaces } from 'react-i18next';
-import { Link } from 'gatsby';
+import { withTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 import './index.scss';
 
@@ -30,8 +29,4 @@ function HomePage({ t }) {
   );
 }
 
-HomePage.propTypes = {
-  t: PropTypes.func.isRequired,
-};
-
-export default withNamespaces(['translation'])(HomePage);
+export default withTranslation(['translation'])(HomePage);

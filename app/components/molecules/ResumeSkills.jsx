@@ -1,6 +1,5 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import ResumeSection from './ResumeSection';
 import ResumeLabelValue from '../atoms/ResumeLabelValue';
 import ResumeKeywords from '../atoms/ResumeKeywords';
@@ -26,10 +25,4 @@ class ResumeSkills extends React.Component {
   }
 }
 
-ResumeSkills.propTypes = {
-  items: PropTypes.array,
-  previousLength: PropTypes.number,
-  t: PropTypes.func.isRequired,
-};
-
-export default withNamespaces(['translation'])(ResumeSkills);
+export default withTranslation(['translation'])(ResumeSkills);

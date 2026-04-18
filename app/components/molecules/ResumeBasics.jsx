@@ -1,10 +1,9 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import ResumeLabelValue from '../atoms/ResumeLabelValue';
 import ResumeLabelUrl from '../atoms/ResumeLabelUrl';
 import Address from '../atoms/Address';
 import ResumeSection from './ResumeSection';
-import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 class ResumeBasics extends React.Component {
   render() {
@@ -31,9 +30,4 @@ class ResumeBasics extends React.Component {
   }
 }
 
-ResumeBasics.propTypes = {
-  basics: PropTypes.object.isRequired,
-  t: PropTypes.func.isRequired,
-};
-
-export default withNamespaces(['translation'])(ResumeBasics);
+export default withTranslation(['translation'])(ResumeBasics);

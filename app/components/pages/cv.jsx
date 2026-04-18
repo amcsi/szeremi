@@ -1,8 +1,7 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { connect } from 'react-redux';
-import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import ResumePicture from '../atoms/ResumePicture';
 import ResumeBasics from '../molecules/ResumeBasics';
 import ResumeWork from '../molecules/ResumeWork';
@@ -137,16 +136,11 @@ class Cv extends React.Component {
   }
 }
 
-Cv.propTypes = {
-  resume: PropTypes.object.isRequired,
-  t: PropTypes.func.isRequired,
-};
-
 function mapStateToProps(state) {
   return {
     resume: state.resume,
   };
 }
 
-export default withNamespaces(['translation'])(connect(mapStateToProps)(Cv));
+export default withTranslation(['translation'])(connect(mapStateToProps)(Cv));
 

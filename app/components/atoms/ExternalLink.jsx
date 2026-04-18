@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
 class ExternalLink extends React.Component {
@@ -10,9 +9,5 @@ class ExternalLink extends React.Component {
     );
   }
 }
-
-ExternalLink.propTypes = {
-  children: PropTypes.node,
-};
 
 export default ExternalLink;

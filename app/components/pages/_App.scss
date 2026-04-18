@@ -1,14 +1,13 @@
 $navbar-height: 5rem;
 
-@import '~bulma/bulma';
-@import '~bulma-prefers-dark/bulma-prefers-dark.sass';
+@import 'bulma/bulma.scss';
 
 html {
   overflow-y: scroll;
   height: 100%;
 }
 
-html, body, #___gatsby, #___gatsby > div, div[role="group"][tabindex] {
+html, body, #root {
   height: 100%;
 }
 

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
 function ResumeLabelValue({ label, value, ...restProps }) {
@@ -23,10 +22,5 @@ function ResumeLabelValue({ label, value, ...restProps }) {
     </div>
   );
 }
-
-ResumeLabelValue.propTypes = {
-  label: PropTypes.string.isRequired,
-  value: PropTypes.node,
-};
 
 export default ResumeLabelValue;

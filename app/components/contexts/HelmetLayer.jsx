@@ -1,8 +1,6 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { connect } from 'react-redux';
-import { withNamespaces } from 'react-i18next';
 
 /**
  * Layer handling the <head> section and the attributes of <html>
@@ -26,7 +24,7 @@ class HelmetLayer extends React.Component {
           htmlAttributes={{ lang: state.currentLanguage }}
           meta={[
             {
-              charset: 'UTF-8',
+              charSet: 'UTF-8',
             },
             {
               name: 'keywords',
@@ -44,18 +42,11 @@ class HelmetLayer extends React.Component {
           ]}
           link={links}
         />
-        { children }
+        {children}
       </div>
     );
   }
 }
-
-HelmetLayer.propTypes = {
-  t: PropTypes.func.isRequired,
-  pathname: PropTypes.string,
-  state: PropTypes.object.isRequired,
-  children: PropTypes.node.isRequired,
-};
 
 function mapStateToProps(state) {
   return {
@@ -63,4 +54,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(withNamespaces(['translation'])(HelmetLayer));
+export default connect(mapStateToProps)(HelmetLayer);

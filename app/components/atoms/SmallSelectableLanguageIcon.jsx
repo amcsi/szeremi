@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import { connect } from 'react-redux';
@@ -7,16 +6,6 @@ import { CHANGE_LANGUAGE } from '../../constants/actions';
 import './SmallSelectableLanguageIcon.css';
 
 class SelectableLanguage extends React.Component {
-
-  static propTypes() {
-    return {
-      name: PropTypes.string.isRequired,
-      languageCode: PropTypes.string.isRequired,
-      countryCode: PropTypes.string,
-      dispatch: PropTypes.func.isRequired,
-      currentLanguage: PropTypes.string.isRequired,
-    };
-  }
 
   render() {
     const { dispatch, languageCode, countryCode, currentLanguage, name } = this.props;
