@@ -1,6 +1,7 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { withTranslation } from 'react-i18next';
+
+import Seo from '../../header/seo.jsx';
 import './about.scss';
 
 class About extends React.Component {
@@ -8,9 +9,7 @@ class About extends React.Component {
     const { t } = this.props;
     return (
       <div className="about container columns content" style={{ marginBottom: 10 }}>
-        <Helmet>
-          <title>{t('about')}</title>
-        </Helmet>
+        <Seo title={t('about')} />
         <div className="column is-two-thirds">
           <blockquote className="blockquote-reverse">{t('aboutPage.quote')}</blockquote>
 

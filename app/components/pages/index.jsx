@@ -1,17 +1,15 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 import { withTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
+import Seo from '../../header/seo.jsx';
 import './index.scss';
 
 function HomePage({ t }) {
   return (
     <div className="has-text-centered homepage">
-      <Helmet>
-        <title>{t('home')}</title>
-      </Helmet>
+      <Seo title={t('home')} />
       <h1 className="title is-2">{t('homepage.title')}</h1>
 
       <Link to="/about">

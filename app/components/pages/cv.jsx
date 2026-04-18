@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { connect } from 'react-redux';
 import { withTranslation } from 'react-i18next';
 import ResumePicture from '../atoms/ResumePicture';
@@ -12,6 +11,8 @@ import ResumePublications from '../molecules/ResumePublications';
 import ResumeSkills from '../molecules/ResumeSkills';
 import ResumeCategory from '../molecules/ResumeCategory';
 import ResumeEtc from '../molecules/ResumeEtc';
+
+import Seo from '../../header/seo.jsx';
 
 class Cv extends React.Component {
   render() {
@@ -97,9 +98,7 @@ class Cv extends React.Component {
 
     return (
       <div>
-        <Helmet>
-          <title>{t('resumé')}</title>
-        </Helmet>
+        <Seo title={t('resumé')} />
         <div className="container resume-container is-hidden-mobile columns content">
           <div className="column is-three-quarters">
             <ResumeBasics basics={resume.basics} />

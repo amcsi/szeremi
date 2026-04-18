@@ -18,9 +18,6 @@ class HelmetLayer extends React.Component {
     return (
       <div>
         <Helmet
-          // Current page name.
-          titleTemplate="Attila Szeremi - %s"
-          defaultTitle="Attila Szeremi"
           htmlAttributes={{ lang: state.currentLanguage }}
           meta={[
             {
@@ -34,10 +31,6 @@ class HelmetLayer extends React.Component {
             {
               name: 'viewport',
               content: 'width=device-width, initial-scale=1.0',
-            },
-            {
-              name: 'description',
-              content: "Welcome to Attila Szeremi's personal homepage",
             },
           ]}
           link={links}
