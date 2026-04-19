@@ -37,18 +37,39 @@
   },
   "work": [
     {
+      "company": "Wolf & Company",
+      "position": "Full stack developer and DevOps engineer",
+      "website": "https://wolfandco.com/",
+      "releaseDate": "2024-05",
+      "endDate": null,
+      "summary": "Wolf & Company, P.C. is a top accounting and advisory firm providing assurance, tax, risk management, and business consulting services, known for delivering industry-specific solutions and trusted client partnerships since 1911.",
+      "highlights": [
+        "Rebuilt a CLI application into a Laravel web application within a week using Cursor.",
+        "Extensive use of AI for accelerating work, aiding development, and debugging.",
+        "Implemented OAuth two-factor authentication in a large PHP-Laravel backend with 200-300 routes.",
+        "Ensured complex React & Redux-Toolkit project safety with TypeScript.",
+        "Created multi-environment Terraform projects for AWS with CI and push-to-deploy.",
+        "Used Bitbucket Pipelines as CI to build our apps, run tests, and deploy front-end to S3.",
+        "Covered existing Python ETL projects to use healthcheck monitoring.",
+        "Provided data-accepting API utilizing atomic database upserts to ensure safe concurrency."
+      ]
+    },
+    {
       "company": "Treehouse Technology Group",
       "position": "Full stack developer",
       "website": "https://treehousetechgroup.com/",
       "releaseDate": "2018-04",
-      "endDate": null,
+      "endDate": "2024-04",
       "summary": " Treehouse Technology Group is a technology strategy and custom solutions development firm.",
       "highlights": [
-        "Constructed an economic report editor with KPIs that generates PDFs using ReactJS with TypeScript and hooks.",
-        "Created data aggregation charts for US hospitals in recharts and chart.js.",
-        "Developed an Ethereum-based application's backend and web frontend parts with Laravel and VueJS",
-        "Integrated a brokerage web application with Zoho CRM.",
-        "Generated styled excel spreadsheets for a physician practice management service."
+        "Developed an ERC-20 crypto token wallet SPA with Laravel/Vue.",
+        "Configured AWS Front-End services using S3, CloudFront, and ACM (certificates).",
+        "Used Bitbucket Pipelines as CI to build our apps, run tests, and deploy front-end to S3.",
+        "Created charts in chart.js and Recharts for a hospital patient survey data aggregation SPA.",
+        "Implemented websocket-based job status and progress updating using Pusher channels.",
+        "Managed servers running Laravel using Laravel Forge for configuration and deployment.",
+        "Implemented JWT OAuth token-based two-factor authentication.",
+        "Dynamically generated styled spreadsheets for a physician practice management service."
       ]
     },
     {
@@ -141,32 +162,37 @@
     {
       "name": "Web Programming",
       "level": "Master",
-      "keywords": ["PHP", "JavaScript", "CSS", "Rest APIs"]
+      "keywords": ["TypeScript", "JavaScript", "CSS", "PHP"]
     },
     {
       "name": "PHP frameworks",
       "level": "Master",
-      "keywords": ["Laravel", "Zend Framework 2"]
+      "keywords": ["Laravel"]
     },
     {
       "name": "JavaScript technologies",
       "level": "Advanced",
-      "keywords": ["ReactJS Hooks", "VueJS", "Webpack", "TypeScript", "NodeJS"]
+      "keywords": ["Vue.js", "Node.js"]
     },
     {
       "name": "Databases",
       "level": "Advanced",
-      "keywords": ["MySQL", "SQL Server", "MongoDB"]
+      "keywords": ["MySQL", "SQL Server", "PostgreSQL", "MongoDB"]
     },
     {
-      "name": "System administration",
-      "level": "Intermediate",
-      "keywords": ["Linux", "Digital Ocean", "Docker", "vim"]
+      "name": "DevOps",
+      "level": "Advanced",
+      "keywords": ["Terraform", "AWS", "Docker", "Linux"]
     },
     {
       "name": "Other web technologies",
       "level": "Advanced",
       "keywords": ["Security", "Git", "Testing"]
+    },
+    {
+      "name": "Other programming languages",
+      "level": "Intermediate",
+      "keywords": ["Python"]
     }
   ],
   "languages": [
