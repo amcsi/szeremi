@@ -1,0 +1,70 @@
+@import "https://use.typekit.net/kmj5qkr.css";
+
+:root {
+  --h: polygon(50% 0, 100% 24%, 100% 76%, 50% 100%, 0 76%, 0 24%)
+}
+
+.h {
+  display: inline-block;
+  background: #25a9ef;
+  padding: 6px;
+  clip-path: var(--h)
+}
+
+.a {
+  width: 200px;
+  padding: 24px 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #204ecf;
+  text-align: center;
+  background: radial-gradient(circle at 20% -10%, #00c3ff -80%, #fff 30%), radial-gradient(circle at -20% 20%, #00c3ff -80%, #fff 30%), radial-gradient(circle at 70% 100%, #00c3ff -80%, #fff 30%), radial-gradient(circle at 120% 80%, #00c3ff -80%, #fff 30%);
+  background-blend-mode: multiply;
+  clip-path: var(--h);
+  box-shadow: 0 28px 50px rgba(6, 30, 96, .35)
+}
+
+#r {
+  font-family: proxima-nova, Arial, sans-serif
+}
+
+.b {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1
+}
+
+.c {
+  width: 120px;
+  height: 1px;
+  background: #25a9ef
+}
+
+.d {
+  font-size: 16px;
+  margin-bottom: -6px
+}
+
+.f {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 20px;
+  border-radius: 6px;
+  background: #296bff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration-thickness: .5px;
+  text-underline-offset: 2px
+}
+
+
+#r .b {
+  /* to counteract .content h3 overriding the CSS */
+  color: #204ecf;
+  margin: 0;
+}

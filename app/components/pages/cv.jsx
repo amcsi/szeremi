@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withTranslation } from 'react-i18next';
 import ResumePicture from '../atoms/ResumePicture';
+import ToptalBadge from '../atoms/ToptalBadge.tsx';
 import ResumeBasics from '../molecules/ResumeBasics';
 import ResumeWork from '../molecules/ResumeWork';
 import ResumeVolunteer from '../molecules/ResumeVolunteer';
@@ -112,6 +113,7 @@ class Cv extends React.Component {
               interests={resume.interests}
               references={resume.references}
             />
+            <ToptalBadge />
           </div>
         </div>
 
